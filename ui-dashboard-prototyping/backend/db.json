@@ -2,6 +2,12 @@
   "events": [
     {
       "foo": "bar"
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      }
     }
   ]
 }
