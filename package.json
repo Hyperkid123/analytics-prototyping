@@ -7,5 +7,8 @@
   "license": "MIT",
   "workspaces": [
     "client-prototype", "ui-dashboard-prototyping"
-  ]
+  ],
+  "scripts": {
+    "dev:dashboard": "yarn workspace @analytics-prototyping/ui-dashboard-prototyping dev"
+  }
 }
