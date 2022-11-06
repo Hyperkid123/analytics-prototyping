@@ -1,16 +1,16 @@
-import ClientPrototype, { EventFunction } from '@analytics-prototyping/client-prototype'
+import ClientPrototype, { EventFunction, JourneyHandlers } from '@analytics-prototyping/client-prototype'
 import { createContext, PropsWithChildren, useContext, useEffect, useRef, useState } from 'react'
 
 
 type ReactClientProviderState = {
   ready: boolean;
-  client?: ClientPrototype,
+  client: ClientPrototype,
   user?: Record<string | number, any>
 }
 
 const ReactClientContext = createContext<ReactClientProviderState>({
   ready: false,
-  client: undefined
+  client: undefined as unknown as ClientPrototype
 })
 
 export const useClientContext = () => {
@@ -88,6 +88,58 @@ export const useIdentify = () => {
   return internalEvent
 }
 
+export const useCreateJourney = (journeyName: string) => {
+  const { ready, client } = useClientContext()
+  const mounted = useRef(false)
+  const journeyEvents = useRef<JourneyHandlers>()
+  const buffers = useRef<{
+    event: [journeyStep: string, journeyEvent: string | Record<string | number, any>][],
+    cancel: [],
+    finish: []}
+  >({
+    event: [],
+    cancel: [],
+    finish: []
+  })
+  const internalEvent: JourneyHandlers['event'] = (...args) => {
+    if(ready && journeyEvents.current?.event) {
+      journeyEvents.current.event(...args)
+    } else {
+      buffers.current.event.push(args)
+    }
+  }
+
+  const internalCancel: JourneyHandlers['cancel'] = () => {
+    if(ready && journeyEvents.current?.cancel) {
+      journeyEvents.current.cancel()
+    } else {
+      buffers.current.cancel.push()
+    }
+  }
+
+  const internalFinish: JourneyHandlers['finish'] = () => {
+    if(ready && journeyEvents.current?.finish) {
+      journeyEvents.current.finish()
+    } else {
+      buffers.current.finish.push()
+    }
+  }
+
+  useEffect(() => {
+    if(!mounted.current) {
+      mounted.current = true
+    }
+    if(ready && client && !journeyEvents.current) {
+      journeyEvents.current = client.createJourney(journeyName)
+    }
+  }, [ready, client, journeyName])
+  return {
+    event: internalEvent,
+    cancel: internalCancel,
+    finish: internalFinish
+  }
+}
+
 export type ReactClientProviderProps<
   U extends Record<string, any> = Record<string, any>,
   C extends Record<string, any> = Record<string, any>
@@ -100,17 +152,15 @@ export type ReactClientProviderProps<
 const ReactClientProvider: React.FC<ReactClientProviderProps> = ({ children, endpoint, user, context }) => {
   const [state, setState] = useState<ReactClientProviderState>({
     ready: false,
-    client: undefined
+    client: new ClientPrototype({ endpoint, user, context })
   })
 
   useEffect(() => {
-    const client = new ClientPrototype({ endpoint, user, context })
-    client.identify(user).then(() => {
-      setState({
+    state.client.identify(user).then(() => {
+      setState(prev =>({
+        ...prev,
         ready: true,
-        client,
-        user,
-      })
+      }))
     })
   }, [])
 

@@ -2,6 +2,13 @@ export type EventFunction = (eventName: string, eventPayload?: string | Record<s
 export type IdentifyFunction<U extends Record<string, any> = Record<string, any>> = (user: U) => Promise<any>
 export type UpdateContextFunction<C extends Record<string, any> = {}> = (context: C) => void
 
+export type JourneyHandlers = {
+  event: (journeyStep: string, journeyEvent: string | Record<string | number, any>) => void,
+  cancel: () => void,
+  finish: () => void,
+}
+export type CreateJourneyFunction = (journeyName: string) => JourneyHandlers
+
 
 class AnalyticsClient<
   U extends Record<string, any> = Record<string, any>,
@@ -67,6 +74,53 @@ class AnalyticsClient<
         context: this._context
       }
       this.emit(this._customEventEndpoint, event)
+    }
+  }
+
+  createJourney: CreateJourneyFunction = (journeyName) => {
+    // create proper journey ID generator
+    const journeyId = `${Date.now()}-${Math.random()}`
+    const startEvent = {
+      type: 'journey-start',
+      journeyName,
+      journeyId,
+      user: this._user,
+      context: this._context
+    }
+    this.emit(this._customEventEndpoint, startEvent)
+    return {
+      cancel: () => {
+        const event = {
+          type: 'journey-cancel',
+          journeyId,
+          journeyName,
+          user: this._user,
+          context: this._context,
+        }
+        this.emit(this._customEventEndpoint, event)
+      },
+      finish: () => {
+        const event = {
+          type: 'journey-finish',
+          journeyId,
+          journeyName,
+          user: this._user,
+          context: this._context,
+        }
+        this.emit(this._customEventEndpoint, event)
+      },
+      event: (journeyStep, journeyEvent) => {
+        const event = {
+          type: 'journey-event',
+          journeyId,
+          journeyName,
+          journeyStep,
+          journeyEvent,
+          user: this._user,
+          context: this._context,
+        }
+        this.emit(this._customEventEndpoint, event)
+      },
     }
   }
 }

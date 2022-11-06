@@ -1,6 +1,7 @@
 import { Button, Grid } from '@mui/material';
 import { createRandomContext, EventContext } from '../mock/context';
 import { createRandomUser, User } from '../mock/user';
+import HorizontalLinearStepper from '../src/EventStepper';
 import { useCustomEvent, useIdentify, useUpdateContext } from '../src/ReactClient';
 
 const ClickCollection = () => {
@@ -29,6 +30,9 @@ const ClickCollection = () => {
         }}>
           Click to update client context
         </Button>
+      </Grid>
+      <Grid item xs={12}>
+        <HorizontalLinearStepper />
       </Grid>
     </Grid>
   )
