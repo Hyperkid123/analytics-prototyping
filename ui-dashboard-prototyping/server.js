@@ -28,12 +28,10 @@ app.prepare().then(() => {
           })
           req.on('end', () => {
             const body = JSON.parse(rb.join(""));
-            console.log(body)
             res.writeHead(200,{"Content-Type":"application/json","Access-Control-Allow-Origin": "*"});
             res.end(JSON.stringify({ error: false, 'recieved': body}))
-
+            handleEventEmit(body)
           })
-          // handleEventEmit()
         }
       } else {
         await handle(req, res, parsedUrl)
