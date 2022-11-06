@@ -1,11 +1,13 @@
 const fse = require('fs-extra');
 const path = require('path')
+const crypto = require('crypto')
 
 const DATABASE_FILE = path.resolve(__dirname, './db.json')
 const BASE_STRUCTURE = {}
 
 const handleEventEmit = (event) => {
   fse.ensureFileSync(DATABASE_FILE)
+  let uuid
 
   let data = {}
   try {
@@ -22,6 +24,8 @@ const handleEventEmit = (event) => {
 
   if(event.type === 'identify') {
     data.users.push(event.payload)
+    // session UUID
+    uuid = crypto.randomUUID()
   } else {
     data.events.push(event)
   }
@@ -29,6 +33,8 @@ const handleEventEmit = (event) => {
   fse.writeJsonSync(DATABASE_FILE, data, {
     spaces: 2
   })
+
+  return uuid
 }
 
 module.exports.handleEventEmit = handleEventEmit

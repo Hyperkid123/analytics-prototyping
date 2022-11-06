@@ -29,8 +29,16 @@ app.prepare().then(() => {
           req.on('end', () => {
             const body = JSON.parse(rb.join(""));
             res.writeHead(200,{"Content-Type":"application/json","Access-Control-Allow-Origin": "*"});
-            res.end(JSON.stringify({ error: false, 'recieved': body}))
-            handleEventEmit(body)
+            const uuid = handleEventEmit(body)
+            const response = {
+               error: false,
+               'recieved': body,
+               ...(uuid ? {
+                init: true,
+                uuid
+               } : {})
+            }
+            res.end(JSON.stringify(response))
           })
         }
       } else {

@@ -11,6 +11,7 @@ class AnalyticsClient<
   private _customEventEndpoint = '/event'
   private _user: U
   private _context?: C
+  private _sessionId?: string;
   constructor({
     endpoint,
     user,
@@ -32,8 +33,16 @@ class AnalyticsClient<
         headers: {
           'Content-type': typeof eventPayload === 'string' ? 'text' : 'application/json'
         },
-        body: typeof eventPayload === 'string' ? eventPayload : JSON.stringify(eventPayload)
+        body: typeof eventPayload === 'string' ? eventPayload : JSON.stringify({
+          ...eventPayload,
+          sessionId: this._sessionId
+        })
       })
+    }).then(data => data.json()).then(data => {
+      if(data?.init && data?.uuid) {
+        this._sessionId = data.uuid
+      }
+      return data
     })
   }
 
