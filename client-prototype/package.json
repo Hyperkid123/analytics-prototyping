@@ -1,6 +1,12 @@
 {
-  "name": "client-prototype",
+  "name": "@analytics-prototyping/client-prototype",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
 }

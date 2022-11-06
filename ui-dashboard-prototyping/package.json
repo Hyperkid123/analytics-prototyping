@@ -1,5 +1,5 @@
 {
-  "name": "ui-dashboard-prototyping",
+  "name": "@analytics-prototyping/ui-dashboard-prototyping",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@analytics-prototyping/client-prototype": "*",
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
@@ -23,5 +24,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.8.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2"
   }
 }
