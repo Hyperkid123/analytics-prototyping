@@ -1,0 +1,11 @@
+{
+  "name": "analytics-prototyping",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "git@github.com:Hyperkid123/analytics-prototyping.git",
+  "author": "Martin Maroši <marvusm.mmi@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "client-prototype", "ui-dashboard-prototyping"
+  ]
+}
