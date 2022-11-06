@@ -4,7 +4,8 @@ import { createContext, PropsWithChildren, useContext, useEffect, useRef, useSta
 
 type ReactClientProviderState = {
   ready: boolean;
-  client?: ClientPrototype
+  client?: ClientPrototype,
+  user?: Record<string | number, any>
 }
 
 const ReactClientContext = createContext<ReactClientProviderState>({
@@ -41,21 +42,48 @@ export const useCustomEvent = () => {
   return internalEvent
 }
 
-export type ReactClientProviderProps = PropsWithChildren<{
-  endpoint: string
+export const useIdentify = () => {
+  const { ready, client } = useClientContext()
+  const buffer = useRef<Record<string | number, any>[]>([])
+  const internalEvent = <U extends Record<string, any> = Record<string, any>>(user: U) => {
+    if(!ready) {
+      buffer.current.push(user)
+    } else {
+      client?.identify(user)
+    }
+  }
+
+  useEffect(() => {
+    if(ready && buffer.current.length > 0) {
+      buffer.current.forEach(user => {
+        client?.identify(user)
+      })
+      buffer.current = []
+    }
+  }, [ready, client])
+
+  return internalEvent
+}
+
+export type ReactClientProviderProps<U extends Record<string, any> = Record<string, any>> = PropsWithChildren<{
+  endpoint: string,
+  user: U
 }>
 
-const ReactClientProvider: React.FC<ReactClientProviderProps> = ({ children, endpoint }) => {
+const ReactClientProvider: React.FC<ReactClientProviderProps> = ({ children, endpoint, user }) => {
   const [state, setState] = useState<ReactClientProviderState>({
     ready: false,
     client: undefined
   })
 
   useEffect(() => {
-    const client = new ClientPrototype({ endpoint })
-    setState({
-      ready: true,
-      client,
+    const client = new ClientPrototype({ endpoint, user })
+    client.identify(user).then(() => {
+      setState({
+        ready: true,
+        client,
+        user,
+      })
     })
   }, [])
 

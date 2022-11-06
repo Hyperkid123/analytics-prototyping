@@ -16,8 +16,16 @@ const handleEventEmit = (event) => {
   if(!data.events) {
     data.events = []
   }
+  if(!data.users) {
+    data.users = []
+  }
 
-  data.events.push(event)
+  if(event.type === 'identify') {
+    data.users.push(event.payload)
+  } else {
+    data.events.push(event)
+  }
+
   fse.writeJsonSync(DATABASE_FILE, data, {
     spaces: 2
   })
