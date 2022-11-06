@@ -41,7 +41,8 @@ class AnalyticsClient<U extends Record<string, any> = Record<string, any>> {
     if(eventName) {
       const event = {
         type: eventName,
-        payload: eventPayload
+        payload: eventPayload,
+        user: this._user
       }
       this.emit(this._customEventEndpoint, event)
     }
