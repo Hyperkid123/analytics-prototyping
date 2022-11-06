@@ -1,5 +1,5 @@
 import ClientPrototype from '@analytics-prototyping/client-prototype'
-import { createContext, PropsWithChildren, useEffect, useState } from 'react'
+import { createContext, PropsWithChildren, useContext, useEffect, useState } from 'react'
 
 
 type ReactClientProviderState = {
@@ -12,11 +12,18 @@ const ReactClientContext = createContext<ReactClientProviderState>({
   client: undefined
 })
 
+export const useClientContext = () => {
+  const client = useContext(ReactClientContext)
+
+  return client
+}
+
 const ReactClientProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [state, setState] = useState<ReactClientProviderState>({
     ready: false,
     client: undefined
   })
+
   useEffect(() => {
     const client = new ClientPrototype()
     setState({
@@ -24,6 +31,11 @@ const ReactClientProvider: React.FC<PropsWithChildren> = ({ children }) => {
       client,
     })
   }, [])
+
+  function event(eventName: string, eventValue?: string | Record<string | number, any>) {
+    
+  }
+
   return (
     <ReactClientContext.Provider value={state}>
       {children}

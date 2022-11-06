@@ -1,6 +1,7 @@
 const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
+const { handleEventEmit } = require('./backend/database')
 
 const dev = process.env.NODE_ENV !== 'production'
 const hostname = 'localhost'
@@ -17,10 +18,23 @@ app.prepare().then(() => {
       const parsedUrl = parse(req.url, true)
       const { pathname, query } = parsedUrl
 
-      if (pathname === '/a') {
-        await app.render(req, res, '/a', query)
-      } else if (pathname === '/b') {
-        await app.render(req, res, '/b', query)
+      if(pathname.match(/^\/api/)) {
+        if(pathname === '/api/event' && req.method === 'POST') {
+          // console.log('req.method', req)
+          req.setEncoding('utf-8')
+          const rb = [];
+          req.on('data', (chunks) => {
+            rb.push(chunks)
+          })
+          req.on('end', () => {
+            const body = JSON.parse(rb.join(""));
+            console.log(body)
+            res.writeHead(200,{"Content-Type":"application/json","Access-Control-Allow-Origin": "*"});
+            res.end(JSON.stringify({ error: false, 'recieved': body}))
+
+          })
+          // handleEventEmit()
+        }
       } else {
         await handle(req, res, parsedUrl)
       }
