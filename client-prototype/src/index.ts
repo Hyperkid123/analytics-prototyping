@@ -42,7 +42,8 @@ class AnalyticsClient<
         },
         body: typeof eventPayload === 'string' ? eventPayload : JSON.stringify({
           ...eventPayload,
-          sessionId: this._sessionId
+          sessionId: this._sessionId,
+          timestamp: Date.now()
         })
       })
     }).then(data => data.json()).then(data => {
