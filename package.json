@@ -6,7 +6,7 @@
   "author": "Martin Maroši <marvusm.mmi@gmail.com>",
   "license": "MIT",
   "workspaces": [
-    "client-prototype", "ui-dashboard-prototyping"
+    "client-prototype", "ui-dashboard-prototyping", "pendo-like-overlay-prototype"
   ],
   "scripts": {
     "dev:dashboard": "yarn workspace @analytics-prototyping/ui-dashboard-prototyping dev"
