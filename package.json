@@ -11,9 +11,10 @@
     "pendo-like-overlay-prototype"
   ],
   "scripts": {
-    "dev:dashboard": "yarn workspace @analytics-prototyping/ui-dashboard-prototyping dev"
+    "dev:dashboard": "concurrently \"yarn workspace @analytics-prototyping/ui-dashboard-prototyping dev\" \"yarn workspace @analytics-prototyping/client-prototype build -w \" \"yarn workspace @analytics-prototyping/pendo-like-overlay-prototype build -w \""
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.0"
