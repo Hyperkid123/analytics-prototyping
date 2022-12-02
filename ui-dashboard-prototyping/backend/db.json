@@ -4002,6 +4002,668 @@
       },
       "sessionId": "d9b3ac1c-cdcf-4307-8319-21538152583a",
       "timestamp": 1669975727973
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5959f6d0-205d-4720-920f-5916882107b5",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+        "birthday": "1972-12-09T08:21:38.460Z",
+        "email": "Alanis81@yahoo.com",
+        "firstName": "Meaghan",
+        "lastName": "Bahringer",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669975946173
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5959f6d0-205d-4720-920f-5916882107b5",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+        "birthday": "1972-12-09T08:21:38.460Z",
+        "email": "Alanis81@yahoo.com",
+        "firstName": "Meaghan",
+        "lastName": "Bahringer",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669975946178
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "866cd7a4-447a-4cd6-88c2-3c2b15f98f80",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/49.jpg",
+        "birthday": "1979-02-23T23:06:12.701Z",
+        "email": "Anais87@hotmail.com",
+        "firstName": "Verla",
+        "lastName": "Brakus",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669976497752
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "866cd7a4-447a-4cd6-88c2-3c2b15f98f80",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/49.jpg",
+        "birthday": "1979-02-23T23:06:12.701Z",
+        "email": "Anais87@hotmail.com",
+        "firstName": "Verla",
+        "lastName": "Brakus",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669976497758
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "d57565e8-4b19-4353-8fad-17ab0de502d8",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/666.jpg",
+        "birthday": "1955-07-17T13:16:44.319Z",
+        "email": "Khalid_Wiegand@yahoo.com",
+        "firstName": "Jazmin",
+        "lastName": "Turner",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669976502153
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "d57565e8-4b19-4353-8fad-17ab0de502d8",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/666.jpg",
+        "birthday": "1955-07-17T13:16:44.319Z",
+        "email": "Khalid_Wiegand@yahoo.com",
+        "firstName": "Jazmin",
+        "lastName": "Turner",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669976502159
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "176eab4a-d2bb-4277-b3e7-8f05cad803f8",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/491.jpg",
+        "birthday": "1977-11-12T20:39:50.046Z",
+        "email": "Israel_Hilpert63@gmail.com",
+        "firstName": "Jedidiah",
+        "lastName": "Hermann",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1669976507377
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "176eab4a-d2bb-4277-b3e7-8f05cad803f8",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/491.jpg",
+        "birthday": "1977-11-12T20:39:50.046Z",
+        "email": "Israel_Hilpert63@gmail.com",
+        "firstName": "Jedidiah",
+        "lastName": "Hermann",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1669976507385
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1669976513173
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1669976513178
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976644659
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976646414
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976647906
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976649273
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976754995
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976770696
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976774975
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976781718
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1669976784053-0.89862880066004",
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976784053
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976784054
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976785726
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976786229
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976788422
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976788655
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976788848
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976789018
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976789806
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+        "birthday": "2001-03-02T17:26:24.342Z",
+        "email": "Judge_Schneider@yahoo.com",
+        "firstName": "Cordia",
+        "lastName": "Bechtelar",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "a2dd49a9-d70d-4139-ad84-f1fed5676a4e",
+      "timestamp": 1669976791207
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669976795314
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669976795321
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976802477
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976812408
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976815066
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976816329
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976821154
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1669976822561-0.8571066363518745",
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976822561
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976822561
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+        "birthday": "2001-07-09T23:33:37.253Z",
+        "email": "Jamaal_Howe17@gmail.com",
+        "firstName": "Carmen",
+        "lastName": "Howe",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
+      "timestamp": 1669976824394
     }
   ],
   "users": [
@@ -5893,6 +6555,114 @@
       "email": "Maximo21@hotmail.com",
       "firstName": "Aisha",
       "lastName": "Bernhard",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "5959f6d0-205d-4720-920f-5916882107b5",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+      "birthday": "1972-12-09T08:21:38.460Z",
+      "email": "Alanis81@yahoo.com",
+      "firstName": "Meaghan",
+      "lastName": "Bahringer",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "5959f6d0-205d-4720-920f-5916882107b5",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+      "birthday": "1972-12-09T08:21:38.460Z",
+      "email": "Alanis81@yahoo.com",
+      "firstName": "Meaghan",
+      "lastName": "Bahringer",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "866cd7a4-447a-4cd6-88c2-3c2b15f98f80",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/49.jpg",
+      "birthday": "1979-02-23T23:06:12.701Z",
+      "email": "Anais87@hotmail.com",
+      "firstName": "Verla",
+      "lastName": "Brakus",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "866cd7a4-447a-4cd6-88c2-3c2b15f98f80",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/49.jpg",
+      "birthday": "1979-02-23T23:06:12.701Z",
+      "email": "Anais87@hotmail.com",
+      "firstName": "Verla",
+      "lastName": "Brakus",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "d57565e8-4b19-4353-8fad-17ab0de502d8",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/666.jpg",
+      "birthday": "1955-07-17T13:16:44.319Z",
+      "email": "Khalid_Wiegand@yahoo.com",
+      "firstName": "Jazmin",
+      "lastName": "Turner",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "d57565e8-4b19-4353-8fad-17ab0de502d8",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/666.jpg",
+      "birthday": "1955-07-17T13:16:44.319Z",
+      "email": "Khalid_Wiegand@yahoo.com",
+      "firstName": "Jazmin",
+      "lastName": "Turner",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "176eab4a-d2bb-4277-b3e7-8f05cad803f8",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/491.jpg",
+      "birthday": "1977-11-12T20:39:50.046Z",
+      "email": "Israel_Hilpert63@gmail.com",
+      "firstName": "Jedidiah",
+      "lastName": "Hermann",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "176eab4a-d2bb-4277-b3e7-8f05cad803f8",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/491.jpg",
+      "birthday": "1977-11-12T20:39:50.046Z",
+      "email": "Israel_Hilpert63@gmail.com",
+      "firstName": "Jedidiah",
+      "lastName": "Hermann",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+      "birthday": "2001-03-02T17:26:24.342Z",
+      "email": "Judge_Schneider@yahoo.com",
+      "firstName": "Cordia",
+      "lastName": "Bechtelar",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "4f89258a-d473-410c-ad42-0bcba179e217",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/476.jpg",
+      "birthday": "2001-03-02T17:26:24.342Z",
+      "email": "Judge_Schneider@yahoo.com",
+      "firstName": "Cordia",
+      "lastName": "Bechtelar",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+      "birthday": "2001-07-09T23:33:37.253Z",
+      "email": "Jamaal_Howe17@gmail.com",
+      "firstName": "Carmen",
+      "lastName": "Howe",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "fa1826c8-4b64-430c-a4b0-781c5d198a65",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/419.jpg",
+      "birthday": "2001-07-09T23:33:37.253Z",
+      "email": "Jamaal_Howe17@gmail.com",
+      "firstName": "Carmen",
+      "lastName": "Howe",
       "subscriptionTier": "business"
     }
   ]
