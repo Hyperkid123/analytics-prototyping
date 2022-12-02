@@ -5656,6 +5656,92 @@
         "subscriptionTier": "free"
       },
       "timestamp": 1669986091044
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "8de18a5b-eb99-4b0e-9861-9fb917ec289e",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1132.jpg",
+        "birthday": "2004-07-11T03:36:51.861Z",
+        "email": "Madyson_Schimmel88@gmail.com",
+        "firstName": "Rowan",
+        "lastName": "Marks",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "e5d78cdd-787d-4c5b-961e-370255082e62",
+      "timestamp": 1669988349208
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "ed0255e2-8339-4dd6-a35b-c6ca93fe4148",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/920.jpg",
+        "birthday": "1994-07-31T09:53:35.951Z",
+        "email": "Tommie.Dach88@hotmail.com",
+        "firstName": "Conner",
+        "lastName": "Haag",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669988355405
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "ed0255e2-8339-4dd6-a35b-c6ca93fe4148",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/920.jpg",
+        "birthday": "1994-07-31T09:53:35.951Z",
+        "email": "Tommie.Dach88@hotmail.com",
+        "firstName": "Conner",
+        "lastName": "Haag",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669988355409
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "8ac593b8-74c0-4e8b-922b-f7619e609a7f",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg",
+        "birthday": "1949-07-27T13:28:14.274Z",
+        "email": "Dayne46@hotmail.com",
+        "firstName": "Maude",
+        "lastName": "Considine",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1669988511359
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "8ac593b8-74c0-4e8b-922b-f7619e609a7f",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg",
+        "birthday": "1949-07-27T13:28:14.274Z",
+        "email": "Dayne46@hotmail.com",
+        "firstName": "Maude",
+        "lastName": "Considine",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1669988511368
     }
   ],
   "users": [
@@ -7745,6 +7831,42 @@
       "email": "Madyson_Schimmel88@gmail.com",
       "firstName": "Rowan",
       "lastName": "Marks",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "ed0255e2-8339-4dd6-a35b-c6ca93fe4148",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/920.jpg",
+      "birthday": "1994-07-31T09:53:35.951Z",
+      "email": "Tommie.Dach88@hotmail.com",
+      "firstName": "Conner",
+      "lastName": "Haag",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "ed0255e2-8339-4dd6-a35b-c6ca93fe4148",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/920.jpg",
+      "birthday": "1994-07-31T09:53:35.951Z",
+      "email": "Tommie.Dach88@hotmail.com",
+      "firstName": "Conner",
+      "lastName": "Haag",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "8ac593b8-74c0-4e8b-922b-f7619e609a7f",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg",
+      "birthday": "1949-07-27T13:28:14.274Z",
+      "email": "Dayne46@hotmail.com",
+      "firstName": "Maude",
+      "lastName": "Considine",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "8ac593b8-74c0-4e8b-922b-f7619e609a7f",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/442.jpg",
+      "birthday": "1949-07-27T13:28:14.274Z",
+      "email": "Dayne46@hotmail.com",
+      "firstName": "Maude",
+      "lastName": "Considine",
       "subscriptionTier": "free"
     }
   ]

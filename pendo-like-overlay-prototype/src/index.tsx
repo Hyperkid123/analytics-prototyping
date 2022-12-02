@@ -154,7 +154,7 @@ const PendoDevMode = () => {
     <div
       style={{
         position: "absolute",
-        top: 0,
+        top: 32,
         left: 0,
         height: "100vh",
         background: "tomato",
@@ -170,7 +170,7 @@ const PendoDevMode = () => {
         style={{
           position: "fixed",
           transition: "transform .5s",
-          top: 0,
+          top: 32,
           transform: `translate(${isOpen ? "-300px" : "200px"})`,
         }}
         onClick={() => setIsOpen(true)}
