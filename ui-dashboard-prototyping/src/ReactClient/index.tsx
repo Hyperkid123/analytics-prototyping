@@ -88,6 +88,11 @@ export const useIdentify = () => {
   return internalEvent
 }
 
+export const usePageEvent = () => {
+  const { client } = useClientContext()
+  return client.page
+}
+
 export const useCreateJourney = (journeyName: string) => {
   const { ready, client } = useClientContext()
   const mounted = useRef(false)

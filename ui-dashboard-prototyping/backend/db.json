@@ -3880,6 +3880,128 @@
       },
       "sessionId": "3a158ebb-d41d-4f6e-ad0f-59ae56994c44",
       "timestamp": 1669741677495
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "0274415a-b796-4a69-90d0-7057ad9827cf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/371.jpg",
+        "birthday": "1980-01-21T01:35:22.305Z",
+        "email": "Forrest98@hotmail.com",
+        "firstName": "Brad",
+        "lastName": "Hermann",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "5370e5b4-4716-4b7d-8b7d-c2d4473bfa00",
+      "timestamp": 1669975671316
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "0274415a-b796-4a69-90d0-7057ad9827cf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/371.jpg",
+        "birthday": "1980-01-21T01:35:22.305Z",
+        "email": "Forrest98@hotmail.com",
+        "firstName": "Brad",
+        "lastName": "Hermann",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "5370e5b4-4716-4b7d-8b7d-c2d4473bfa00",
+      "timestamp": 1669975671317
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/_error",
+        "url": "http://localhost:3000/about"
+      },
+      "user": {
+        "id": "b9ef4839-929e-4d75-a0c5-b7d7eb5b48d9",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/11.jpg",
+        "birthday": "1999-01-09T04:47:15.066Z",
+        "email": "Dena88@gmail.com",
+        "firstName": "Erling",
+        "lastName": "Gerlach",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669975696551
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/_error",
+        "url": "http://localhost:3000/about"
+      },
+      "user": {
+        "id": "b9ef4839-929e-4d75-a0c5-b7d7eb5b48d9",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/11.jpg",
+        "birthday": "1999-01-09T04:47:15.066Z",
+        "email": "Dena88@gmail.com",
+        "firstName": "Erling",
+        "lastName": "Gerlach",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669975696557
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "f473658d-2435-42da-b4b4-3b64bf6dcdda",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/670.jpg",
+        "birthday": "1996-11-04T16:51:22.030Z",
+        "email": "Maximo21@hotmail.com",
+        "firstName": "Aisha",
+        "lastName": "Bernhard",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669975705315
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "f473658d-2435-42da-b4b4-3b64bf6dcdda",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/670.jpg",
+        "birthday": "1996-11-04T16:51:22.030Z",
+        "email": "Maximo21@hotmail.com",
+        "firstName": "Aisha",
+        "lastName": "Bernhard",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669975705320
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "f473658d-2435-42da-b4b4-3b64bf6dcdda",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/670.jpg",
+        "birthday": "1996-11-04T16:51:22.030Z",
+        "email": "Maximo21@hotmail.com",
+        "firstName": "Aisha",
+        "lastName": "Bernhard",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "d9b3ac1c-cdcf-4307-8319-21538152583a",
+      "timestamp": 1669975727973
     }
   ],
   "users": [
@@ -5708,6 +5830,69 @@
       "email": "Lucienne.Hamill@gmail.com",
       "firstName": "Reggie",
       "lastName": "Bruen",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "0274415a-b796-4a69-90d0-7057ad9827cf",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/371.jpg",
+      "birthday": "1980-01-21T01:35:22.305Z",
+      "email": "Forrest98@hotmail.com",
+      "firstName": "Brad",
+      "lastName": "Hermann",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "0274415a-b796-4a69-90d0-7057ad9827cf",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/371.jpg",
+      "birthday": "1980-01-21T01:35:22.305Z",
+      "email": "Forrest98@hotmail.com",
+      "firstName": "Brad",
+      "lastName": "Hermann",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "0274415a-b796-4a69-90d0-7057ad9827cf",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/371.jpg",
+      "birthday": "1980-01-21T01:35:22.305Z",
+      "email": "Forrest98@hotmail.com",
+      "firstName": "Brad",
+      "lastName": "Hermann",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "b9ef4839-929e-4d75-a0c5-b7d7eb5b48d9",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/11.jpg",
+      "birthday": "1999-01-09T04:47:15.066Z",
+      "email": "Dena88@gmail.com",
+      "firstName": "Erling",
+      "lastName": "Gerlach",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "b9ef4839-929e-4d75-a0c5-b7d7eb5b48d9",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/11.jpg",
+      "birthday": "1999-01-09T04:47:15.066Z",
+      "email": "Dena88@gmail.com",
+      "firstName": "Erling",
+      "lastName": "Gerlach",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "f473658d-2435-42da-b4b4-3b64bf6dcdda",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/670.jpg",
+      "birthday": "1996-11-04T16:51:22.030Z",
+      "email": "Maximo21@hotmail.com",
+      "firstName": "Aisha",
+      "lastName": "Bernhard",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "f473658d-2435-42da-b4b4-3b64bf6dcdda",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/670.jpg",
+      "birthday": "1996-11-04T16:51:22.030Z",
+      "email": "Maximo21@hotmail.com",
+      "firstName": "Aisha",
+      "lastName": "Bernhard",
       "subscriptionTier": "business"
     }
   ]

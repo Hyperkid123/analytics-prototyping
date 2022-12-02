@@ -1,6 +1,12 @@
-export type EventFunction = (eventName: string, eventPayload?: string | Record<string | number, any>) => void
+export type EventFunction = (eventName: string, eventPayload?: string | Record<string | number, any>, context?: Record<string, any>) => void
 export type IdentifyFunction<U extends Record<string, any> = Record<string, any>> = (user: U) => Promise<any>
 export type UpdateContextFunction<C extends Record<string, any> = {}> = (context: C) => void
+
+export type PageEvent = Record<string, any> & {
+  pathname?: string;
+  url?: string;
+}
+export type PageEventFunction<D extends PageEvent = Record<string, any>, C extends Record<string, any> = {}> = (pageEvent?: D, context?: C) => void
 
 export type JourneyHandlers = {
   event: (journeyStep: string, journeyEvent: string | Record<string | number, any>) => void,
@@ -12,7 +18,8 @@ export type CreateJourneyFunction = (journeyName: string) => JourneyHandlers
 
 class AnalyticsClient<
   U extends Record<string, any> = Record<string, any>,
-  C extends Record<string, any> = {}
+  C extends Record<string, any> = {},
+  P extends PageEvent = Record<string, any>,
 > {
   private _endpoint: string
   private _customEventEndpoint = '/event'
@@ -66,16 +73,26 @@ class AnalyticsClient<
     return this.emit(this._customEventEndpoint, event)
   }
 
-  event: EventFunction = (eventName, eventPayload) => {    
+  event: EventFunction = (eventName, eventPayload, context) => {    
     if(eventName) {
       const event = {
         type: eventName,
         payload: eventPayload,
         user: this._user,
-        context: this._context
+        context: context ?? this._context
       }
       this.emit(this._customEventEndpoint, event)
     }
+  }
+
+  page: PageEventFunction<P, C> = (pageEvent, context) => {
+    const location = window.location;
+    const internalPageEvent = {
+      pathname: location.pathname,
+      url: location.href,
+      ...pageEvent
+    }
+    this.event('page', internalPageEvent, context)
   }
 
   createJourney: CreateJourneyFunction = (journeyName) => {
