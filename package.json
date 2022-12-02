@@ -6,9 +6,16 @@
   "author": "Martin Maroši <marvusm.mmi@gmail.com>",
   "license": "MIT",
   "workspaces": [
-    "client-prototype", "ui-dashboard-prototyping", "pendo-like-overlay-prototype"
+    "client-prototype",
+    "ui-dashboard-prototyping",
+    "pendo-like-overlay-prototype"
   ],
   "scripts": {
     "dev:dashboard": "yarn workspace @analytics-prototyping/ui-dashboard-prototyping dev"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.0"
   }
 }

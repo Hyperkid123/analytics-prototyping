@@ -1,6 +1,6 @@
-import { faker } from '@faker-js/faker';
+import { faker } from "@faker-js/faker";
 
-type SubscriptionTier = 'free' | 'basic' | 'business';
+type SubscriptionTier = "free" | "basic" | "business";
 
 export type User = {
   id: string;
@@ -10,7 +10,7 @@ export type User = {
   firstName: string;
   lastName: string;
   subscriptionTier: SubscriptionTier;
-}
+};
 
 export function createRandomUser(): User {
   return {
@@ -20,6 +20,6 @@ export function createRandomUser(): User {
     email: faker.internet.email(),
     firstName: faker.name.firstName(),
     lastName: faker.name.lastName(),
-    subscriptionTier: faker.helpers.arrayElement(['free', 'basic', 'business']),
+    subscriptionTier: faker.helpers.arrayElement(["free", "basic", "business"]),
   };
 }

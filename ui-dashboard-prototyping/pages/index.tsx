@@ -1,17 +1,17 @@
-import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText'
-import Avatar from '@mui/material/Avatar';
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-import { ListItemButton } from '@mui/material';
+import * as React from "react";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import Avatar from "@mui/material/Avatar";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import { ListItemButton } from "@mui/material";
 
-import Link from '../src/Link';
-import navigationData from '../src/Navigation/navigation-data'
+import Link from "../src/Link";
+import navigationData from "../src/Navigation/navigation-data";
 
 export default function Home() {
   return (
@@ -19,10 +19,10 @@ export default function Home() {
       <Box
         sx={{
           my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <Typography variant="h4" component="h1" gutterBottom>
@@ -32,7 +32,9 @@ export default function Home() {
           Feel free to roam around. We will be watching.
         </Typography>
         <RemoveRedEyeIcon color="info" fontSize="large" />
-        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+        <List
+          sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+        >
           {navigationData.map(({ href, primary, secondary, Icon }) => (
             <ListItem key={href}>
               <ListItemButton href={href} component={Link}>
@@ -44,7 +46,6 @@ export default function Home() {
                 <ListItemText primary={primary} secondary={secondary} />
               </ListItemButton>
             </ListItem>
-
           ))}
         </List>
       </Box>

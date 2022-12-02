@@ -1,0 +1,12 @@
+# Ignore artifacts:
+**/build
+**/dist
+coverage
+**/.next
+docs
+**/node_modules
+**/tsconfig.tsbuildinfo
+**/yarn.lock
+
+# Ignore all HTML files:
+*.html
