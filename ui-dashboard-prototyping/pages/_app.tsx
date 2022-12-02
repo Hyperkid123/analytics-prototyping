@@ -12,6 +12,9 @@ import ReactClientProvider, {
 } from "../src/ReactClient";
 import { createRandomUser, User } from "../mock/user";
 import { useRouter } from "next/router";
+import { AppBar, Box, Button, Typography } from "@mui/material";
+import navigationData from "../src/Navigation/navigation-data";
+import Link from "../src/Link";
 
 const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
@@ -21,6 +24,43 @@ const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
     page({ pathname });
   }, [pathname, page]);
   return <>{children}</>;
+};
+
+const NestedLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
+  const { pathname } = useRouter();
+  if (pathname === "/") {
+    return <>{children}</>;
+  }
+
+  return (
+    <Box sx={{ display: "flex" }}>
+      <AppBar component="nav">
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Typography
+            sx={{ color: "white", p: 2, mr: 2, flexGrow: 1 }}
+            variant="h6"
+            href="/"
+            component={Link}
+          >
+            Analytics service prototype
+          </Typography>
+          <Box>
+            {navigationData.map(({ primary, href }) => (
+              <Link sx={{ color: "white", p: 2 }} key={href} href={href}>
+                {primary}
+              </Link>
+            ))}
+          </Box>
+        </Box>
+      </AppBar>
+      <Box sx={{ paddingTop: 8, width: "100%" }}>{children}</Box>
+    </Box>
+  );
 };
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -48,7 +88,9 @@ export default function MyApp(props: MyAppProps) {
           <ThemeProvider theme={theme}>
             {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
             <CssBaseline />
-            <Component {...pageProps} />
+            <NestedLayout>
+              <Component {...pageProps} />
+            </NestedLayout>
           </ThemeProvider>
         </PageEventWrapper>
       </ReactClientProvider>

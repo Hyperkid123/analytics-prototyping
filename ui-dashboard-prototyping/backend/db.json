@@ -4664,6 +4664,808 @@
       },
       "sessionId": "6612fcb2-8959-4794-b792-e2db04689c15",
       "timestamp": 1669976824394
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669977889856
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1669977889874
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669977890472
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669977892963
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669977906749
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669977915688
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669977961650
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669977984611
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978005775
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978014625
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978036570
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978044515
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978059120
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978062850
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978065413
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978068225
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978080562
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978088787
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1669978114115-0.6632604740130739",
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978114115
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978114115
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978115766
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978116946
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978198864
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978238648
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978246468
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978249867
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978264089
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978278301
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978297618
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978314182
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978332649
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978336778
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978358476
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978364976
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978366402
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1669978369454-0.9197992669531088",
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978369454
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978369455
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978371589
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978374122
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1669978375816-0.4476606676312591",
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978375816
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978375816
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978376821
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978378943
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/",
+        "url": "http://localhost:3000/"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978381007
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building"
+      },
+      "user": {
+        "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+        "birthday": "1985-01-03T14:38:02.274Z",
+        "email": "Syble_Rau6@hotmail.com",
+        "firstName": "Peggie",
+        "lastName": "Emmerich",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "213c2e9d-fd35-4f1f-91a5-202824c235ab",
+      "timestamp": 1669978385564
     }
   ],
   "users": [
@@ -6663,6 +7465,24 @@
       "email": "Jamaal_Howe17@gmail.com",
       "firstName": "Carmen",
       "lastName": "Howe",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+      "birthday": "1985-01-03T14:38:02.274Z",
+      "email": "Syble_Rau6@hotmail.com",
+      "firstName": "Peggie",
+      "lastName": "Emmerich",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "5a2ad962-8261-4bff-844a-2b6f26ca9efd",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/317.jpg",
+      "birthday": "1985-01-03T14:38:02.274Z",
+      "email": "Syble_Rau6@hotmail.com",
+      "firstName": "Peggie",
+      "lastName": "Emmerich",
       "subscriptionTier": "business"
     }
   ]
