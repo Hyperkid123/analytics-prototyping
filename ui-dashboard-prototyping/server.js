@@ -8,6 +8,7 @@ const {
   getEventsByDate,
   getActiveUsers,
   getUserActivityHeatmap,
+  getPageEvents,
 } = require("./backend/database");
 
 const dev = process.env.NODE_ENV !== "production";
@@ -45,6 +46,13 @@ app.prepare().then(() => {
           const endTimestamp = query.end;
           const heatmap = getUserActivityHeatmap(startTimestamp, endTimestamp);
           res.end(JSON.stringify({ heatmap }));
+          return;
+        }
+        if (pathname === "/api/event/page" && req.method === "GET") {
+          const startTimestamp = query.start;
+          const endTimestamp = query.end;
+          const page = getPageEvents(startTimestamp, endTimestamp);
+          res.end(JSON.stringify({ page }));
           return;
         }
         if (pathname === "/api/event/journeys" && req.method === "GET") {

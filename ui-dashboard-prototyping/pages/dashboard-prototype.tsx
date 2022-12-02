@@ -269,6 +269,39 @@ const ActivityHeatmap = ({
   );
 };
 
+const PageEventsGraph = ({ data }: { data: string[] }) => {
+  const sum = Object.entries(
+    data.reduce<{ [key: string]: number }>((acc, curr) => {
+      return {
+        ...acc,
+        [curr]: acc[curr] ? acc[curr] + 1 : 1,
+      };
+    }, {})
+  )
+    .map(([pathname, count]) => ({ pathname, count }))
+    .sort((a, b) => (a.count < b.count ? 1 : -1));
+  const series = sum.map(({ pathname, count }) => ({
+    x: pathname,
+    y: count,
+  }));
+  return (
+    <div>
+      <Typography variant="h4">Most visited pages</Typography>
+      <ReactApexChart
+        type="bar"
+        options={{
+          series: [
+            {
+              data: series,
+            },
+          ],
+        }}
+        series={[{ name: "visited pages", data: series }]}
+      />
+    </div>
+  );
+};
+
 const DashboardPrototype = () => {
   const [data, setData] = useState<
     { name: string; value: number }[] | undefined
@@ -281,7 +314,13 @@ const DashboardPrototype = () => {
       activeSessions: string[];
     }[];
   }>({});
+  const [pageData, setPageData] = useState<string[]>([]);
   useEffect(() => {
+    fetch("/api/event/page")
+      .then((r) => r.json())
+      .then(({ page }: { page: { payload: { pathname: string } }[] }) => {
+        setPageData(page.map(({ payload: { pathname } }) => pathname));
+      });
     fetch("/api/event/active/users")
       .then((r) => r.json())
       .then(({ users }: { [key: string]: number }) => {
@@ -393,6 +432,9 @@ const DashboardPrototype = () => {
         </Grid>
         <Grid item sm={12}>
           <ActivityHeatmap data={heatmap} />
+        </Grid>
+        <Grid item sm={6}>
+          <PageEventsGraph data={pageData} />
         </Grid>
       </Grid>
     </Container>

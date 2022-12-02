@@ -150,6 +150,12 @@ const getUserActivityHeatmap = (startTimestamp, endTimestamp) => {
   return activeByDays;
 };
 
+const getPageEvents = (startTimestamp, endTimestamp) => {
+  const events = getEventsByTime(startTimestamp, endTimestamp);
+  return events.filter(({ type }) => type === "page");
+};
+
+module.exports.getPageEvents = getPageEvents;
 module.exports.getUserActivityHeatmap = getUserActivityHeatmap;
 module.exports.getActiveUsers = getActiveUsers;
 module.exports.getEventsByDate = getEventsByDate;
