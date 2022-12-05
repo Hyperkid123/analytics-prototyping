@@ -7355,6 +7355,774 @@
       },
       "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
       "timestamp": 1670244238243
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244313199
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670244316752
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670244316744
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244370946-0.3710088473574802",
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244370946
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244370946
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244511950-0.07246297702874216",
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244511950
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244511951
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244511955
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244611998-0.7429404194844074",
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244611998
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244612000
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244612002
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244620211-0.5663107914230132",
+      "user": {
+        "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+        "birthday": "1967-12-24T16:16:07.081Z",
+        "email": "Pauline7@hotmail.com",
+        "firstName": "Easton",
+        "lastName": "Stokes",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "1bb3837d-f31d-462f-8572-8cc4362af035",
+      "timestamp": 1670244620211
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244628737
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244628741
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244917337-0.375168779506613",
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670244922625
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244917337-0.375168779506613",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670244927614
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244917337-0.375168779506613",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670244933758
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244917337-0.375168779506613",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-back"
+      },
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670244934960
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244917337-0.375168779506613",
+      "journeyName": "journey-events",
+      "journeyStep": "Select campaign settings",
+      "journeyEvent": {
+        "action": "going-back"
+      },
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670244935896
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244917337-0.375168779506613",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670244938659
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244917337-0.375168779506613",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+        "birthday": "1964-05-31T01:25:56.539Z",
+        "email": "Heloise45@gmail.com",
+        "firstName": "Dario",
+        "lastName": "Carter",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f9a34836-4469-477d-8768-374b11bfd239",
+      "timestamp": 1670245123199
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670245127079
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670245127084
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245128689
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245183218
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245189198
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245190705
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245191414
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245192193
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Select campaign settings",
+      "journeyEvent": {
+        "action": "reset"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245194221
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245201047
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245201222
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245201464
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Select campaign settings",
+      "journeyEvent": {
+        "action": "reset"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245201670
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245201846
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245202031
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245202204
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Select campaign settings",
+      "journeyEvent": {
+        "action": "reset"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245202403
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245202600
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245202777
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245202958
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670245127122-0.8569064510616542",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245203512
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+        "birthday": "1955-03-28T14:45:12.401Z",
+        "email": "Durward.King@hotmail.com",
+        "firstName": "Rickey",
+        "lastName": "Mills",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "8f626a22-0fd4-45ed-97f3-9e058f0a2948",
+      "timestamp": 1670245208223
     }
   ],
   "users": [
@@ -9598,6 +10366,33 @@
       "firstName": "Mittie",
       "lastName": "Nolan",
       "subscriptionTier": "basic"
+    },
+    {
+      "id": "966771fd-1ff9-4ffc-b4c5-41a81da9adcf",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/577.jpg",
+      "birthday": "1967-12-24T16:16:07.081Z",
+      "email": "Pauline7@hotmail.com",
+      "firstName": "Easton",
+      "lastName": "Stokes",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "0cdea0e5-19bc-48b0-9f06-1ad4cd823c16",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/185.jpg",
+      "birthday": "1964-05-31T01:25:56.539Z",
+      "email": "Heloise45@gmail.com",
+      "firstName": "Dario",
+      "lastName": "Carter",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "4870bbd0-fa93-4942-9d64-bdd06724bfff",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/940.jpg",
+      "birthday": "1955-03-28T14:45:12.401Z",
+      "email": "Durward.King@hotmail.com",
+      "firstName": "Rickey",
+      "lastName": "Mills",
+      "subscriptionTier": "free"
     }
   ]
 }

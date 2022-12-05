@@ -53,6 +53,7 @@ export const useCreateJourney = (journeyName: string) => {
   const mounted = useRef(false);
   const journeyEvents = useRef<JourneyHandlers>();
   const buffers = useRef<{
+    start: [];
     event: [
       journeyStep: string,
       journeyEvent: string | Record<string | number, any>
@@ -60,6 +61,7 @@ export const useCreateJourney = (journeyName: string) => {
     cancel: [];
     finish: [];
   }>({
+    start: [],
     event: [],
     cancel: [],
     finish: [],
@@ -88,6 +90,14 @@ export const useCreateJourney = (journeyName: string) => {
     }
   };
 
+  const internalStart: JourneyHandlers["start"] = () => {
+    if (ready && journeyEvents.current?.start) {
+      journeyEvents.current.start();
+    } else {
+      buffers.current.start.push();
+    }
+  };
+
   useEffect(() => {
     if (!mounted.current) {
       mounted.current = true;
@@ -97,6 +107,7 @@ export const useCreateJourney = (journeyName: string) => {
     }
   }, [ready, client, journeyName]);
   return {
+    start: internalStart,
     event: internalEvent,
     cancel: internalCancel,
     finish: internalFinish,

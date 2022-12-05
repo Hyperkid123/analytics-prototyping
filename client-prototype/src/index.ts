@@ -145,8 +145,10 @@ class AnalyticsClient<
       user: this._user,
       context: this._context,
     };
-    this.emit(this._customEventEndpoint, startEvent);
     return {
+      start: () => {
+        this.emit(this._customEventEndpoint, startEvent);
+      },
       cancel: () => {
         const event = {
           type: "journey-cancel",
