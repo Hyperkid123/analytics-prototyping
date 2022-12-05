@@ -108,6 +108,7 @@ class AnalyticsClient<
     if(this._buffer.length > 0) {
       this._buffer.forEach(({ url, payload }) => this.fetchData(url, payload))
     }
+    this._buffer = []
     return data
   };
 
