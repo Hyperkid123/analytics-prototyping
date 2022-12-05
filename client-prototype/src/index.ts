@@ -39,6 +39,8 @@ class AnalyticsClient<
   private _user: U;
   private _context?: C;
   private _sessionId?: string;
+  private _ready: boolean = false;
+  private _buffer: {url: string, payload: string}[] = []
   constructor({
     endpoint,
     user,
@@ -53,25 +55,14 @@ class AnalyticsClient<
     this._context = context;
   }
 
-  private emit(
-    url: string,
-    eventPayload: string | Record<string | number, any>
-  ) {
+  private fetchData(url: string, body?: string) {
     return fetch(`${this._endpoint}${url}`, {
       method: "POST",
-      ...(eventPayload && {
+      ...(body && {
         headers: {
-          "Content-type":
-            typeof eventPayload === "string" ? "text" : "application/json",
+          "Content-type": "application/json",
         },
-        body:
-          typeof eventPayload === "string"
-            ? eventPayload
-            : JSON.stringify({
-                ...eventPayload,
-                sessionId: this._sessionId,
-                timestamp: Date.now(),
-              }),
+        body
       }),
     })
       .then((data) => data.json())
@@ -83,17 +74,44 @@ class AnalyticsClient<
       });
   }
 
+  private emit(
+    url: string,
+    eventPayload: Record<string | number, any>
+  ) {
+    const payload = typeof eventPayload === "string"
+    ? eventPayload
+    : JSON.stringify({
+        ...eventPayload,
+        sessionId: this._sessionId,
+        timestamp: Date.now(),
+      })
+      if(this.getReady()) {
+        this.fetchData(url, payload)
+      } else {
+        this._buffer.push({url, payload})
+      }
+      
+  }
+
   updateContext: UpdateContextFunction<C> = (context) => {
     this._context = context;
   };
 
-  identify: IdentifyFunction<U> = (user) => {
+  identify: IdentifyFunction<U> = async (user) => {
     const event = {
       type: "identify",
       payload: user,
     };
-    return this.emit(this._customEventEndpoint, event);
+    this._ready = false
+    const data = await this.emit(this._customEventEndpoint, event);
+    this._ready = true
+    if(this._buffer.length > 0) {
+      this._buffer.forEach(({ url, payload }) => this.fetchData(url, payload))
+    }
+    return data
   };
+
+  getReady = () => this._ready
 
   event: EventFunction = (eventName, eventPayload, context) => {
     if (eventName) {

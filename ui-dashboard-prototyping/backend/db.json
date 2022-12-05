@@ -5900,6 +5900,1461 @@
       },
       "sessionId": "dd116688-be87-41e1-bb2e-04402ed1a8f1",
       "timestamp": 1669991342338
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+        "birthday": "2003-01-25T03:37:45.149Z",
+        "email": "Jon.Greenholt3@yahoo.com",
+        "firstName": "Bennie",
+        "lastName": "Kihn",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "d8664d3c-3e99-4ba3-a848-278e3c021f7c",
+      "timestamp": 1670242984574
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+        "birthday": "2003-01-25T03:37:45.149Z",
+        "email": "Jon.Greenholt3@yahoo.com",
+        "firstName": "Bennie",
+        "lastName": "Kihn",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "d8664d3c-3e99-4ba3-a848-278e3c021f7c",
+      "timestamp": 1670242984638
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+        "birthday": "2003-01-25T03:37:45.149Z",
+        "email": "Jon.Greenholt3@yahoo.com",
+        "firstName": "Bennie",
+        "lastName": "Kihn",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "21cbda80-de89-4485-9b95-92cbb14a0e02",
+      "timestamp": 1670243112823
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+        "birthday": "2003-01-25T03:37:45.149Z",
+        "email": "Jon.Greenholt3@yahoo.com",
+        "firstName": "Bennie",
+        "lastName": "Kihn",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "21cbda80-de89-4485-9b95-92cbb14a0e02",
+      "timestamp": 1670243112884
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+        "birthday": "2003-01-25T03:37:45.149Z",
+        "email": "Jon.Greenholt3@yahoo.com",
+        "firstName": "Bennie",
+        "lastName": "Kihn",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "fe4e7d9a-7391-43b5-9dd5-c0ac7b259b4e",
+      "timestamp": 1670243158675
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+        "birthday": "2003-01-25T03:37:45.149Z",
+        "email": "Jon.Greenholt3@yahoo.com",
+        "firstName": "Bennie",
+        "lastName": "Kihn",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "fe4e7d9a-7391-43b5-9dd5-c0ac7b259b4e",
+      "timestamp": 1670243158775
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+        "birthday": "1943-06-10T02:21:03.471Z",
+        "email": "Eden.Bartoletti@yahoo.com",
+        "firstName": "Lucinda",
+        "lastName": "Strosin",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670243169403
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+        "birthday": "1943-06-10T02:21:03.471Z",
+        "email": "Eden.Bartoletti@yahoo.com",
+        "firstName": "Lucinda",
+        "lastName": "Strosin",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670243169486
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+        "birthday": "1943-06-10T02:21:03.471Z",
+        "email": "Eden.Bartoletti@yahoo.com",
+        "firstName": "Lucinda",
+        "lastName": "Strosin",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670243246068
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+        "birthday": "1943-06-10T02:21:03.471Z",
+        "email": "Eden.Bartoletti@yahoo.com",
+        "firstName": "Lucinda",
+        "lastName": "Strosin",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670243246179
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670243252906
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670243252917
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "6d446d9e-9c3b-4eb1-8327-514756764bfc",
+      "timestamp": 1670243371613
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "6d446d9e-9c3b-4eb1-8327-514756764bfc",
+      "timestamp": 1670243371724
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "6d446d9e-9c3b-4eb1-8327-514756764bfc",
+      "timestamp": 1670243630976
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "6d446d9e-9c3b-4eb1-8327-514756764bfc",
+      "timestamp": 1670243631102
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "6d446d9e-9c3b-4eb1-8327-514756764bfc",
+      "timestamp": 1670243824641
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+        "birthday": "1988-08-16T05:05:24.183Z",
+        "email": "Marvin78@yahoo.com",
+        "firstName": "Carlotta",
+        "lastName": "Wehner",
+        "subscriptionTier": "free"
+      },
+      "sessionId": "6d446d9e-9c3b-4eb1-8327-514756764bfc",
+      "timestamp": 1670243824746
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670243832242
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670243832233
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670243901012
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670243901108
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670243934994
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670243935100
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244039659
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244039805
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244045282-0.7898966069149171",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045282
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045282-0.7898966069149171",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045283
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045285
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045282-0.7898966069149171",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045283
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045284
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045285
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244045671
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049883
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244049884-0.48484618761929665",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049884
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049887
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049884
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049885
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244049886-0.7037657376680269",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049886
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244049887
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244054858
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244055521
+    },
+    {
+      "type": "foo",
+      "payload": {
+        "foo": "bar"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244055917
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057735
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244057739-0.7331234755011036",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057739
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057741
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057743
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244057747-0.6508122278021458",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057747
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057749
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244057752
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-back"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063400
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244063401-0.6429292827985367",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063401
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063405
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063402
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063402
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244063403-0.5007585893564797",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063403
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244063404
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244076604-0.8963024326707618",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244076605
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244076605
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244076606
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244076607-0.11198347524513186",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244076607
+    },
+    {
+      "type": "journey-cancel",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244076608
+    },
+    {
+      "type": "journey-finish",
+      "journeyId": "1670244045284-0.1781783634061298",
+      "journeyName": "journey-events",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244076609
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244077032-0.6767037310108406",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244077032
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244077033-0.056071489955554554",
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244077033
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244077105
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+        "birthday": "2000-02-03T14:11:32.533Z",
+        "email": "Corene51@hotmail.com",
+        "firstName": "Kristofer",
+        "lastName": "Anderson",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "20af2f41-b35b-4c6d-a983-332ca74955a0",
+      "timestamp": 1670244077106
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244081610-0.21131366667844098",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244081610
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244081610-0.5909245738931526",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244081610
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244081654
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244081659
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244081693-0.21731760273052814",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244081693
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244081694-0.9187974234779108",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670244081694
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244081610-0.5909245738931526",
+      "journeyName": "journey-events",
+      "journeyStep": "Create an ad group",
+      "journeyEvent": {
+        "action": "going-next"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244098017
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244098018-0.2725936888540714",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244098018
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244098019-0.924971015287696",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244098019
+    },
+    {
+      "type": "journey-event",
+      "journeyId": "1670244081610-0.5909245738931526",
+      "journeyName": "journey-events",
+      "journeyStep": "Select campaign settings",
+      "journeyEvent": {
+        "action": "going-back"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244119226
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244119227-0.2198048314442087",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244119227
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244119228-0.7691782789323993",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244119228
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244136714
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244170131-0.9010447064463809",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244170131
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244170131-0.885935402055783",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244170131
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244170434
+    },
+    {
+      "type": "journey-start",
+      "journeyName": "journey-events",
+      "journeyId": "1670244238241-0.03703809395143853",
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244238241
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244238242
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/click-collection",
+        "url": "http://localhost:3000/click-collection"
+      },
+      "user": {
+        "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "2004-01-07T23:51:56.818Z",
+        "email": "Willow.Pacocha65@gmail.com",
+        "firstName": "Mittie",
+        "lastName": "Nolan",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "ff31c8f5-b890-48e1-a6e2-61c0f5542dc0",
+      "timestamp": 1670244238243
     }
   ],
   "users": [
@@ -8062,6 +9517,87 @@
       "firstName": "Frieda",
       "lastName": "Gerlach",
       "subscriptionTier": "business"
+    },
+    {
+      "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+      "birthday": "2003-01-25T03:37:45.149Z",
+      "email": "Jon.Greenholt3@yahoo.com",
+      "firstName": "Bennie",
+      "lastName": "Kihn",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+      "birthday": "2003-01-25T03:37:45.149Z",
+      "email": "Jon.Greenholt3@yahoo.com",
+      "firstName": "Bennie",
+      "lastName": "Kihn",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "d646979c-d47c-4899-8a7d-abf3da048b7b",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1100.jpg",
+      "birthday": "2003-01-25T03:37:45.149Z",
+      "email": "Jon.Greenholt3@yahoo.com",
+      "firstName": "Bennie",
+      "lastName": "Kihn",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+      "birthday": "1943-06-10T02:21:03.471Z",
+      "email": "Eden.Bartoletti@yahoo.com",
+      "firstName": "Lucinda",
+      "lastName": "Strosin",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+      "birthday": "1943-06-10T02:21:03.471Z",
+      "email": "Eden.Bartoletti@yahoo.com",
+      "firstName": "Lucinda",
+      "lastName": "Strosin",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "8bc3edc9-bb02-4904-a27f-828913917097",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/217.jpg",
+      "birthday": "1943-06-10T02:21:03.471Z",
+      "email": "Eden.Bartoletti@yahoo.com",
+      "firstName": "Lucinda",
+      "lastName": "Strosin",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "85bb6fd9-88e1-47eb-a5ca-a01a0410e442",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/462.jpg",
+      "birthday": "1988-08-16T05:05:24.183Z",
+      "email": "Marvin78@yahoo.com",
+      "firstName": "Carlotta",
+      "lastName": "Wehner",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "73b078f6-4455-4080-b4cf-0cbbeecb8fc0",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+      "birthday": "2000-02-03T14:11:32.533Z",
+      "email": "Corene51@hotmail.com",
+      "firstName": "Kristofer",
+      "lastName": "Anderson",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "c95e3572-8f7c-4579-b368-5c3321588b28",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+      "birthday": "2004-01-07T23:51:56.818Z",
+      "email": "Willow.Pacocha65@gmail.com",
+      "firstName": "Mittie",
+      "lastName": "Nolan",
+      "subscriptionTier": "basic"
     }
   ]
 }
