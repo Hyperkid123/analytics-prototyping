@@ -12,7 +12,7 @@ import ReactClientProvider, {
 } from "../src/ReactClient";
 import { createRandomUser, User } from "../mock/user";
 import { useRouter } from "next/router";
-import { AppBar, Box, Button, Typography } from "@mui/material";
+import { AppBar, Box, Typography } from "@mui/material";
 import navigationData from "../src/Navigation/navigation-data";
 import Link from "../src/Link";
 

@@ -26,7 +26,7 @@ const ClickCollection = () => {
       <Grid item xs={4}>
         <Button
           onClick={() => {
-            identify<User>(createRandomUser());
+            identify(createRandomUser());
           }}
         >
           Click to identify new user
