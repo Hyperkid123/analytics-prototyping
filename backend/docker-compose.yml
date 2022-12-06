@@ -1,0 +1,12 @@
+version: '3'
+services:
+  analytics-service-db:
+    build:
+      context: .
+      dockerfile: Dockerfile-db.centos
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_DATABASE=analytics-service-db
+      - POSTGRESQL_USER=analytics-service-user
+      - POSTGRESQL_PASSWORD=analytics-service-password
