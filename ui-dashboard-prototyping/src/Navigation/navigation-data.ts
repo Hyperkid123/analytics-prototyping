@@ -1,6 +1,7 @@
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import BuildIcon from "@mui/icons-material/Build";
+import BiotechIcon from "@mui/icons-material/Biotech";
 
 const navigationData = [
   {
@@ -16,10 +17,16 @@ const navigationData = [
     Icon: CloudUploadIcon,
   },
   {
-    href: "/pendo-building",
-    primary: "Pendo overlay building page",
-    secondary: "create pendo components",
+    href: "/create-guide",
+    primary: "Create pendo guide",
+    secondary: "create pendo guides",
     Icon: BuildIcon,
+  },
+  {
+    href: "/pendo-building",
+    primary: "Pendo overlay testing page",
+    secondary: "test pendo guide components",
+    Icon: BiotechIcon,
   },
 ];
 
