@@ -20,6 +20,7 @@ export type PageEventFunction<
 > = (pageEvent?: D, context?: C) => void;
 
 export type JourneyHandlers = {
+  start: () => void;
   event: (
     journeyStep: string,
     journeyEvent: string | Record<string | number, any>
