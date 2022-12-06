@@ -4,6 +4,7 @@ import (
 	"os"
 	"flag"
 	"fmt"
+
 	"encoding/json"
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/models"
