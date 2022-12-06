@@ -1,0 +1,1 @@
+module github.com/Hyperkid123/analytics-prototyping/config

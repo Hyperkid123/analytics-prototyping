@@ -1,0 +1,30 @@
+FROM centos/postgresql-12-centos7:latest
+
+USER 0
+RUN yum -y install rh-postgresql12-postgresql-devel gcc gcc-c++ make
+RUN yum -y remove wget
+RUN yum clean all
+
+ENV PG_CONFIG=/opt/rh/rh-postgresql12/root/usr/bin/pg_config
+ENV VER=2.14
+
+WORKDIR /tmp
+RUN curl https://github.com/citusdata/postgresql-hll/archive/v${VER}.tar.gz -JLO
+RUN tar xvfz postgresql-hll-${VER}.tar.gz
+WORKDIR postgresql-hll-${VER}
+RUN PG_CONFIG=/opt/rh/rh-postgresql12/root/usr/bin/pg_config make
+RUN PG_CONFIG=/opt/rh/rh-postgresql12/root/usr/bin/pg_config make install
+RUN echo "shared_preload_libraries = 'hll,pg_stat_statements'" >> /usr/share/container-scripts/postgresql/openshift-custom-postgresql.conf.template
+RUN echo "pg_stat_statements.track=all" >> /usr/share/container-scripts/postgresql/openshift-custom-postgresql.conf.template
+WORKDIR /tmp
+RUN rm -fr postgresql-hll*
+
+RUN mkdir -p /opt/app-root/src/postgresql-start
+RUN echo 'psql -c "ALTER USER \"${POSTGRESQL_USER}\" WITH SUPERUSER;"' >> /opt/app-root/src/postgresql-start/grant_createdb.sh
+
+RUN chmod -R a+rwx /var/run/postgresql
+RUN chmod -R a+rwx /var/lib/pgsql
+
+WORKDIR /var/lib/pgsql
+
+USER 26
