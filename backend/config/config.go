@@ -1,20 +1,20 @@
 package config
 
 import (
+	"github.com/joho/godotenv"
 	"os"
 	"strconv"
-	"github.com/joho/godotenv"
 )
 
 type AnalyticsServiceConfig struct {
-	WebPort         int
-	DbHost          string
-	DbUser          string
-	DbPassword      string
-	DbPort          int
-	DbName          string
-	DbSSLMode       string
-	DbSSLRootCert   string
+	WebPort       int
+	DbHost        string
+	DbUser        string
+	DbPassword    string
+	DbPort        int
+	DbName        string
+	DbSSLMode     string
+	DbSSLRootCert string
 }
 
 var config *AnalyticsServiceConfig
