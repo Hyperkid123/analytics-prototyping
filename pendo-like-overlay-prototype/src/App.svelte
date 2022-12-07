@@ -1,6 +1,9 @@
 <script>
+  import GuidesMainControls from "./lib/GuidesMainControls.svelte";
+
   let containerPositionTop = 0
   let containerPositionLeft = 0
+
 
   var isMouseDown = false;
   addEventListener("mousedown", ()=>isMouseDown = true);
@@ -32,6 +35,7 @@
     <h1>There will be dragons</h1>
   </div>
 </div>
+<GuidesMainControls />
 
 <style>
   .overlay {
