@@ -1,22 +1,16 @@
 <script>
-  import { selectedElement } from '../stores/selectedElement'
+  import TargetElementSelector from "./TargetElementSelector.svelte";
   let controlsAlign = 'bottom'
   const controlAlignOptions = [
     'left', 'top', 'right', 'bottom'
   ]
-
-  function selectElement() {
-    selectedElement.set(document.getElementById('random-target'))
-  }
 </script>
 
 <div class="controls {controlsAlign}" id="guide-builder-controls">
   <select bind:value={controlsAlign}>
     {#each controlAlignOptions as value}<option {value}>{value}</option>{/each}
   </select>
-  <button on:click={selectElement}>
-    Select element with random-target ID
-  </button>
+  <TargetElementSelector />
 </div>
 
 <style>

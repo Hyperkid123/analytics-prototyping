@@ -9,6 +9,7 @@ if(prevRoot) {
 
 const element = document.createElement('div')
 element.id = 'ENTRY_ELEM_ID'
+element.dataset.guideControl = 'true'
 document.body.append(element)
 
 const app = new App({
