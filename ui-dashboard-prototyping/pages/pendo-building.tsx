@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import {
   Button,
   Card,
@@ -14,11 +14,18 @@ const importGuideBuildingBundle = async () => {
   const SCRIPT_ID = "guide-building-entry";
   const prevScript = document.getElementById(SCRIPT_ID);
   if (prevScript) {
-    document.body.removeChild(prevScript);
+    return;
   }
   const base = "http://localhost:9009";
   const manifest = await fetch(`${base}/manifest.json`).then((r) => r.json());
   const jsEntry = manifest["index.html"].file;
+  const cssFiles = manifest["index.html"].css || [];
+  cssFiles.forEach((file: string) => {
+    const linkElement = document.createElement("link");
+    linkElement.href = `${base}/${file}`;
+    linkElement.rel = "stylesheet";
+    document.head.appendChild(linkElement);
+  });
   const script = document.createElement("script");
   script.src = `${base}/${jsEntry}`;
   script.id = SCRIPT_ID;
@@ -26,13 +33,13 @@ const importGuideBuildingBundle = async () => {
 };
 
 const PendoBuilding = () => {
+  const isMounted = useRef(false);
   useEffect(() => {
-    importGuideBuildingBundle();
-    // import(
-    //   // @ts-ignore
-    //   "@analytics-prototyping/pendo-like-overlay-prototype/dist/assets/index.8b09186b"
-    // );
-  });
+    if (!isMounted.current) {
+      importGuideBuildingBundle();
+      isMounted.current = true;
+    }
+  }, []);
   return (
     <Container maxWidth="xl" style={{ paddingTop: 36 }}>
       <Grid container spacing={3}>
