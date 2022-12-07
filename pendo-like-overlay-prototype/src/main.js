@@ -1,4 +1,3 @@
-import './app.css'
 import App from './App.svelte'
 
 const ENTRY_ELEM_ID = '__guide-building-root__'
