@@ -41,7 +41,15 @@ const createHtml = (layout: LayoutNode) => {
   return element;
 };
 
-const RenderPreview = ({ layout }: { layout: DefaultLayout }) => {
+const RenderPreview = ({
+  layout,
+  handleSelect,
+  isSelected,
+}: {
+  layout: DefaultLayout;
+  handleSelect: () => void;
+  isSelected: boolean;
+}) => {
   const mounted = useRef<boolean>(false);
   const rootRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -51,7 +59,11 @@ const RenderPreview = ({ layout }: { layout: DefaultLayout }) => {
     }
   }, [layout]);
   return (
-    <Paper sx={{ p: 3 }}>
+    <Paper
+      variant={isSelected ? "outlined" : "elevation"}
+      sx={{ p: 3, cursor: "pointer" }}
+      onClick={handleSelect}
+    >
       <Typography variant="h4" component="h2">
         {layout.title}
       </Typography>
@@ -63,6 +75,9 @@ const RenderPreview = ({ layout }: { layout: DefaultLayout }) => {
 const CreateGuidePage = () => {
   const [layouts, setLayouts] = useState<DefaultLayout[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedLayout, setSelectedLayout] = useState<string | undefined>(
+    undefined
+  );
   useEffect(() => {
     fetch("/api/layout")
       .then((r) => r.json())
@@ -88,11 +103,22 @@ const CreateGuidePage = () => {
       ) : (
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <GuideBuildTrigger layoutId="simple-banner" />
+            {!selectedLayout ? (
+              <Typography variant="h2" component="h4">
+                Select guide layout
+              </Typography>
+            ) : (
+              <GuideBuildTrigger layoutId={selectedLayout} />
+            )}
           </Grid>
           <Grid item xs={3}>
             {layouts.map((item, index) => (
-              <RenderPreview key={index} layout={item} />
+              <RenderPreview
+                isSelected={selectedLayout === item.id}
+                handleSelect={() => setSelectedLayout(item.id)}
+                key={index}
+                layout={item}
+              />
             ))}
           </Grid>
         </Grid>
