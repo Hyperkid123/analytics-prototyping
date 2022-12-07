@@ -4,8 +4,8 @@ Gather frontend analytics for services.
 
 Pre-requisites
 --------------
-Golang
-Docker (for local development)
+- Golang
+- Docker (for local development)
 
 Configuration
 -------------
