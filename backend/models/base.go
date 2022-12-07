@@ -2,10 +2,8 @@ package models
 
 import (
     "time"
-    "errors"
     "gorm.io/gorm"
-    "database/sql/driver"
-    "encoding/json"
+    "github.com/jackc/pgtype"
 )
 
 // Generic Struct used throughout models in this service.
@@ -18,31 +16,35 @@ type BaseModel struct {
 
 // Events
 type Event struct{
-    base
-    Journey     Journey `json:"journey"` // Link associated Journeys
-    Session     Session `json:"session"` // Link associated Sessions
-    Data        JSONB   `json:"data"` // Store additional metadata as a JSON blob
+    BaseModel
+    Journey     *Journey        `gorm:"foreignKey:JourneyID;references:ID" json:"journey"` // Link associated Journeys
+    JourneyID   int             `json:"journeyId"` // FK Int
+    Session     *Session        `gorm:"foreignKey:SessionID;references:ID" json:"session"` // Link associated Sessions
+    SessionID   int             `json:"sessionId"` // FK IN
+    Data        pgtype.JSONB    `json:"-" gorm:"column:data"` // Store additional metadata as a JSON blob
 }
 
 // Journeys
 type Journey struct{
-    base
-    Name        string  `json:"name"`
-    Status      string  `json:"status"` // ‘cancelled,’ ‘finished,’ ‘in-progress’, ‘not-started?’
-    Session     Session `json:"session"` // Link a Journey to a specific User Session
+    BaseModel
+    Name        string      `json:"name"`
+    Status      string      `json:"status"` // ‘cancelled,’ ‘finished,’ ‘in-progress’, ‘not-started?’
+    Session     *Session    `gorm:"foreignKey:SessionID;references:ID" json:"session"` // Link associated Sessions
+    SessionID   int         `json:"sessionId"` // FK IN
 }
 
 // Sessions
 type Session struct{
-    base
-    SessionID   uint    `json:"sessionID"` // Store the UUID for the Session for tracking
-    User        User    `json:"user"` // Link the Session with a User
-    Data        JSONB   `gorm:"type:jsonb" json:"data"` // Store additional metadata as a JSON blob
+    BaseModel
+    SessionID   uint            `json:"sessionId"` // Store the UUID for the Session for tracking
+    User        *User           `gorm:"foreignKey:UserID;references:ID" json:"user"` // Link the Session with a User
+    UserID      int             `json:"userId"`
+    Data        pgtype.JSONB    `json:"-" gorm:"column:data"` // Store additional metadata as a JSON blob
 }
 
 // Users
 type User struct{
-    base
-    UserID  uint    `json:"userID"` // Store the internal UUID for that user
-    Data    JSONB   `gorm:"type:jsonb" json:"data"` // Store additional metadata for users
+    BaseModel
+    UserID  uint         `json:"userID"` // Store the internal UUID for that user
+    Data    pgtype.JSONB `json:"-" gorm:"column:data"` // Store additional metadata for users
 }
