@@ -10,6 +10,7 @@ const {
   getUserActivityHeatmap,
   getPageEvents,
 } = require("./backend/database");
+const { getLayoutById, layouts } = require("./backend/guide-layouts");
 
 const dev = process.env.NODE_ENV !== "production";
 const hostname = "localhost";
@@ -27,6 +28,17 @@ app.prepare().then(() => {
       const { pathname, query } = parsedUrl;
 
       if (pathname.match(/^\/api/)) {
+        if (pathname === "/api/layout" && req.method === "GET") {
+          req.setEncoding("utf-8");
+          const layoutId = query.layout;
+          if (!layoutId) {
+            res.end(JSON.stringify({ layouts }));
+            return;
+          }
+          const layout = getLayoutById(layoutId);
+          res.end(JSON.stringify({ layout }));
+          return;
+        }
         if (pathname === "/api/event/users" && req.method === "GET") {
           req.setEncoding("utf-8");
           const email = query.email;

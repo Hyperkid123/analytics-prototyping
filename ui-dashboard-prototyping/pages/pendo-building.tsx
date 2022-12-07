@@ -1,5 +1,4 @@
-import { useLayoutEffect } from "react";
-import { init } from "@analytics-prototyping/pendo-like-overlay-prototype";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import {
   Button,
   Card,
@@ -10,13 +9,36 @@ import {
   Typography,
 } from "@mui/material";
 
+// this script would be hosted on CDN and inject into DOM if a correct query param is in the URL after mount
+const importGuideBuildingBundle = async () => {
+  const SCRIPT_ID = "guide-building-entry";
+  const prevScript = document.getElementById(SCRIPT_ID);
+  if (prevScript) {
+    return;
+  }
+  const base = "http://localhost:9009";
+  const manifest = await fetch(`${base}/manifest.json`).then((r) => r.json());
+  const jsEntry = manifest["index.html"].file;
+  const cssFiles = manifest["index.html"].css || [];
+  cssFiles.forEach((file: string) => {
+    const linkElement = document.createElement("link");
+    linkElement.href = `${base}/${file}`;
+    linkElement.rel = "stylesheet";
+    document.head.appendChild(linkElement);
+  });
+  const script = document.createElement("script");
+  script.src = `${base}/${jsEntry}`;
+  script.id = SCRIPT_ID;
+  document.body.appendChild(script);
+};
+
 const PendoBuilding = () => {
-  useLayoutEffect(() => {
-    const { render, unmount } = init();
-    render();
-    return () => {
-      unmount();
-    };
+  const isMounted = useRef(false);
+  useEffect(() => {
+    if (!isMounted.current) {
+      importGuideBuildingBundle();
+      isMounted.current = true;
+    }
   }, []);
   return (
     <Container maxWidth="xl" style={{ paddingTop: 36 }}>
