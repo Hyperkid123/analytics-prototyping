@@ -1,5 +1,4 @@
-import { useLayoutEffect } from "react";
-import { init } from "@analytics-prototyping/pendo-like-overlay-prototype";
+import { useEffect, useLayoutEffect } from "react";
 import {
   Button,
   Card,
@@ -10,14 +9,30 @@ import {
   Typography,
 } from "@mui/material";
 
+// this script would be hosted on CDN and inject into DOM if a correct query param is in the URL after mount
+const importGuideBuildingBundle = async () => {
+  const SCRIPT_ID = "guide-building-entry";
+  const prevScript = document.getElementById(SCRIPT_ID);
+  if (prevScript) {
+    document.body.removeChild(prevScript);
+  }
+  const base = "http://localhost:9009";
+  const manifest = await fetch(`${base}/manifest.json`).then((r) => r.json());
+  const jsEntry = manifest["index.html"].file;
+  const script = document.createElement("script");
+  script.src = `${base}/${jsEntry}`;
+  script.id = SCRIPT_ID;
+  document.body.appendChild(script);
+};
+
 const PendoBuilding = () => {
-  useLayoutEffect(() => {
-    const { render, unmount } = init();
-    render();
-    return () => {
-      unmount();
-    };
-  }, []);
+  useEffect(() => {
+    importGuideBuildingBundle();
+    // import(
+    //   // @ts-ignore
+    //   "@analytics-prototyping/pendo-like-overlay-prototype/dist/assets/index.8b09186b"
+    // );
+  });
   return (
     <Container maxWidth="xl" style={{ paddingTop: 36 }}>
       <Grid container spacing={3}>
