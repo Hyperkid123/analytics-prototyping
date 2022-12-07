@@ -8,6 +8,7 @@ import {
   NodeEventTypes,
 } from "../src/Guides/default-layouts";
 import objToString from "../src/utils/jsToCss";
+import GuideBuildTrigger from "../src/Guides/BuilderTrigger";
 
 const eventHandlers: { [key in NodeEventTypes]: (args: any[]) => any } = {
   [NodeEventTypes.click]: console.log,
@@ -87,7 +88,7 @@ const CreateGuidePage = () => {
       ) : (
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            There will be dragons
+            <GuideBuildTrigger layoutId="simple-banner" />
           </Grid>
           <Grid item xs={3}>
             {layouts.map((item, index) => (

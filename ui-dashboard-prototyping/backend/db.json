@@ -10347,6 +10347,108 @@
         "subscriptionTier": "basic"
       },
       "timestamp": 1670403419496
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide"
+      },
+      "user": {
+        "id": "f20ff245-d4ff-4517-b195-150a90d58b43",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/747.jpg",
+        "birthday": "1997-05-16T22:35:51.480Z",
+        "email": "Brad55@yahoo.com",
+        "firstName": "Lilla",
+        "lastName": "Morar",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670403551150
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide"
+      },
+      "user": {
+        "id": "f20ff245-d4ff-4517-b195-150a90d58b43",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/747.jpg",
+        "birthday": "1997-05-16T22:35:51.480Z",
+        "email": "Brad55@yahoo.com",
+        "firstName": "Lilla",
+        "lastName": "Morar",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670403551151
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide?guide-launch=simple-banner"
+      },
+      "user": {
+        "id": "47f72f73-5d53-416e-b8b1-2606ae06e53c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/701.jpg",
+        "birthday": "1978-11-03T21:06:29.501Z",
+        "email": "Althea_Brakus@gmail.com",
+        "firstName": "Laury",
+        "lastName": "Morissette",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670404032563
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide?guide-launch=simple-banner"
+      },
+      "user": {
+        "id": "47f72f73-5d53-416e-b8b1-2606ae06e53c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/701.jpg",
+        "birthday": "1978-11-03T21:06:29.501Z",
+        "email": "Althea_Brakus@gmail.com",
+        "firstName": "Laury",
+        "lastName": "Morissette",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670404032569
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building?guide-launch=simple-banner"
+      },
+      "user": {
+        "id": "b22c50fa-cfe7-4a7c-aff8-f5ebd372fa96",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+        "birthday": "1963-02-16T01:24:56.399Z",
+        "email": "Gwen_Muller@gmail.com",
+        "firstName": "Sister",
+        "lastName": "Goyette",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670404075014
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building?guide-launch=simple-banner"
+      },
+      "user": {
+        "id": "b22c50fa-cfe7-4a7c-aff8-f5ebd372fa96",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+        "birthday": "1963-02-16T01:24:56.399Z",
+        "email": "Gwen_Muller@gmail.com",
+        "firstName": "Sister",
+        "lastName": "Goyette",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670404075020
     }
   ],
   "users": [
@@ -12968,6 +13070,33 @@
       "firstName": "Alayna",
       "lastName": "Stanton",
       "subscriptionTier": "basic"
+    },
+    {
+      "id": "f20ff245-d4ff-4517-b195-150a90d58b43",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/747.jpg",
+      "birthday": "1997-05-16T22:35:51.480Z",
+      "email": "Brad55@yahoo.com",
+      "firstName": "Lilla",
+      "lastName": "Morar",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "47f72f73-5d53-416e-b8b1-2606ae06e53c",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/701.jpg",
+      "birthday": "1978-11-03T21:06:29.501Z",
+      "email": "Althea_Brakus@gmail.com",
+      "firstName": "Laury",
+      "lastName": "Morissette",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "b22c50fa-cfe7-4a7c-aff8-f5ebd372fa96",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+      "birthday": "1963-02-16T01:24:56.399Z",
+      "email": "Gwen_Muller@gmail.com",
+      "firstName": "Sister",
+      "lastName": "Goyette",
+      "subscriptionTier": "business"
     }
   ]
 }
