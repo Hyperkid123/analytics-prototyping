@@ -1,7 +1,9 @@
 <script>
+  import { onDestroy, onMount } from "svelte";
+  import { selectedElement } from "../stores/selectedElement";
+
   let containerPositionTop = 0
   let containerPositionLeft = 0
-
 
   var isMouseDown = false;
   addEventListener("mousedown", ()=>isMouseDown = true);
@@ -25,7 +27,15 @@
     ev.dataTransfer.dropEffect = "move";
     ev.dataTransfer
     .setData("text", ev.target.getAttribute('id'));
-}
+  }
+
+  onMount(() => {
+    if($selectedElement) {
+      // update initial position to prevent target element blocking
+      const rect = $selectedElement.getBoundingClientRect()
+      containerPositionTop = rect.top + rect.height + 8
+    }
+  })
 </script>
 
 
