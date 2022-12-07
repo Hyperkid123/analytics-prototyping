@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/database"
@@ -65,43 +66,34 @@ func GetEvents(response http.ResponseWriter, request *http.Request) {
 func GetUsers(response http.ResponseWriter, request *http.Request) {
 	payload := "Fetch users from the database after we get models."
 	logrus.Infoln("handled request on /users ")
-	user := models.UserModel{}
-	fmt.Println(user)
 
 	respondWithJSON(response, http.StatusOK, payload)
 }
 
 func PostUser(w http.ResponseWriter, r *http.Request) {
-	var userJson models.UserJSON
-	userID := uuid.New()
+	var user models.User
+	var pMsg strings.Builder
+
+	user.UserID = uuid.New()
 
 	// Try to decode the request body into the struct. If there is an error,
 	// respond to the client with the error message and a 400 status code.
-	err := json.NewDecoder(r.Body).Decode(&userJson)
+	err := json.NewDecoder(r.Body).Decode(&user)
+
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
 
-	fmt.Println(userJson)
+	payload := user.Data.Get().(map[string]interface{})
+	pMsg.WriteString("Inserting user into DB:")
 
-	var response = models.UserJSON{}
+	for key, value := range payload {
+		pMsg.WriteString(fmt.Sprintf(" %s=%s ", key, value))
+	}
+	logrus.Infoln(pMsg.String())
 
-	logrus.Infoln(
-		"Inserting user into DB: " +
-			"ID = " + userID.String() + // What we generate above, this sucks
-			" Avatar = " + userJson.Avatar +
-			" Birthday = " + userJson.Birthday.String() +
-			" Email = " + userJson.Email +
-			" FirstName = " + userJson.FirstName +
-			" LastName = " + userJson.LastName +
-			" SubscriptionTier = " + userJson.SubscriptionTier)
-
-	// if err != nil {
-	// 	panic(fmt.Sprintf("Inserting user into database failed: %s", err.Error()))
-	// }
-
-	logrus.Infoln("User inserted successfully")
-
-	json.NewEncoder(w).Encode(response)
+	respondWithJSON(w, http.StatusOK, user)
 }
+
+// TODO: Create User in DB
