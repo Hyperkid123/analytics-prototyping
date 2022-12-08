@@ -16,6 +16,8 @@ import (
 	"gorm.io/gorm"
 )
 
+var DB *gorm.DB
+
 func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	response, _ := json.Marshal(payload)
 
@@ -26,7 +28,7 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 
 func initDependencies() *gorm.DB {
 	config.Init()
-	DB := database.Init()
+	DB = database.Init()
 
 	return DB
 }
@@ -36,10 +38,10 @@ func main() {
 	initDependencies()
 	router := chi.NewRouter()
 
-	router.Get("/", HealthProbe)
-	router.Get("/events", GetEvents)
-	router.Get("/users", GetUsers)
-	router.Post("/users", PostUser)
+	router.Get("/", healthProbe)
+	router.Get("/events", getEvents)
+	router.Get("/users", getUsers)
+	router.Post("/users", postUser)
 
 	
 	logrus.Infoln("----------------------------------")
@@ -50,30 +52,32 @@ func main() {
 	}
 }
 
-func HealthProbe(response http.ResponseWriter, request *http.Request) {
+func healthProbe(response http.ResponseWriter, request *http.Request) {
 	payload := "Lookin' good"
 	logrus.Infoln("handled request on / ")
+
 	respondWithJSON(response, http.StatusOK, payload)
 }
 
-func GetEvents(response http.ResponseWriter, request *http.Request) {
+func getEvents(response http.ResponseWriter, request *http.Request) {
 	payload := "Fetch stuff from the database after we get models."
 	logrus.Infoln("handled request on /events ")
 
 	respondWithJSON(response, http.StatusOK, payload)
 }
 
-func GetUsers(response http.ResponseWriter, request *http.Request) {
+func getUsers(response http.ResponseWriter, request *http.Request) {
 	payload := "Fetch users from the database after we get models."
 	logrus.Infoln("handled request on /users ")
 
 	respondWithJSON(response, http.StatusOK, payload)
 }
 
-func PostUser(w http.ResponseWriter, r *http.Request) {
+func postUser(w http.ResponseWriter, r *http.Request) {
 	var user models.User
 	var pMsg strings.Builder
 
+	userRepo := models.UserRepoInterface(DB)
 	user.UserID = uuid.New()
 
 	// Try to decode the request body into the struct. If there is an error,
@@ -93,7 +97,11 @@ func PostUser(w http.ResponseWriter, r *http.Request) {
 	}
 	logrus.Infoln(pMsg.String())
 
+	err = userRepo.CreateUser(user)
+
+	if err != nil {
+		logrus.Fatal(err)
+	}
+
 	respondWithJSON(w, http.StatusOK, user)
 }
-
-// TODO: Create User in DB
