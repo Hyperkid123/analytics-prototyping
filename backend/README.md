@@ -33,7 +33,4 @@ page. MRs should be submitted against the master branch for any new features or 
 Authors and Acknowledgement
 -----------------------------
 Dr. Brantley (dr.brantley@redhat.com)  
-Ryan Long (rlong@redhat.com)  
-Martin Marosi (mmarosi@redhat.com)  
-Blake Hollifield (bholifie@redhat.com)  
 Brandon Schneider (bschneid@redhat.com)
