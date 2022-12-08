@@ -27,18 +27,24 @@ func Init() *gorm.DB {
 	DB, err = gorm.Open(dialector, &gorm.Config{})
 
 	// Migration/Creation of data tables for DB
-	if !DB.Migrator().HasTable(&models.Event{}) {
-		DB.Migrator().CreateTable(&models.Event{})
-	}
-	if !DB.Migrator().HasTable(&models.Journey{}) {
-		DB.Migrator().CreateTable(&models.Journey{})
+	// NOTE: Order of table creation matters
+	// Dependent tables must be created in the right
+	// order so that relations and keys exist.
+	if !DB.Migrator().HasTable(&models.User{}) {
+		DB.Migrator().CreateTable(&models.User{})
 	}
 	if !DB.Migrator().HasTable(&models.Session{}) {
 		DB.Migrator().CreateTable(&models.Session{})
 	}
-	if !DB.Migrator().HasTable(&models.User{}) {
-		DB.Migrator().CreateTable(&models.User{})
+	if !DB.Migrator().HasTable(&models.Journey{}) {
+		DB.Migrator().CreateTable(&models.Journey{})
 	}
+	if !DB.Migrator().HasTable(&models.Event{}) {
+		DB.Migrator().CreateTable(&models.Event{})
+	}
+
+	DB.AutoMigrate(&models.User{},&models.Session{},&models.Journey{},&models.Event{})
+	
 	if err != nil {
 		panic(fmt.Sprintf("Database connection failed: %s", err.Error()))
 	}
