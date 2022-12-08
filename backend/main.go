@@ -40,7 +40,9 @@ func main() {
 	router.Get("/", healthProbe)
 	router.Get("/events", getEvents)
 	router.Get("/users", getUsers)
-	router.Post("/users", postUser)
+	router.Get("/user", getUser)
+	router.Post("/user", postUser)
+	router.Delete("/user", deleteUser)
 
 	
 	logrus.Infoln("----------------------------------")
@@ -73,6 +75,28 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 	respondWithJSON(response, http.StatusOK, payload)
 }
 
+func getUser(w http.ResponseWriter, r *http.Request) {
+	var user models.User
+
+	// Try to decode the request body into the struct. If there is an error,
+	// respond to the client with the error message and a 400 status code.
+	err := json.NewDecoder(r.Body).Decode(&user)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	payload, payloadError := models.GetUser(DB, user.ID)
+
+	if payloadError != nil {
+		http.Error(w, payloadError.Error(), http.StatusBadRequest)
+		return
+	}
+
+	respondWithJSON(w, http.StatusOK, payload)
+}
+
 func postUser(w http.ResponseWriter, r *http.Request) {
 	var user models.User
 	var pMsg strings.Builder
@@ -98,4 +122,26 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 	user.CreateUser(DB, user)
 
 	respondWithJSON(w, http.StatusOK, user)
+}
+
+func deleteUser(w http.ResponseWriter, r *http.Request) {
+	var user models.User
+
+	// Try to decode the request body into the struct. If there is an error,
+	// respond to the client with the error message and a 400 status code.
+	err := json.NewDecoder(r.Body).Decode(&user)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	err = models.DeleteUser(DB, user.ID)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	respondWithJSON(w, http.StatusOK, err)
 }

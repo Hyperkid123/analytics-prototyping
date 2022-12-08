@@ -1,13 +1,15 @@
 package models
 
 import (
+	"fmt"
+
 	"github.com/jackc/pgtype"
 	"gorm.io/gorm"
 )
 
 // Users
 type User struct {
-	BaseModel              // Store the internal UUID for that user
+	BaseModel              // Store the internal ID for that user
 	Data      pgtype.JSONB `json:"data" gorm:"type:jsonb;column:data"` // Store additional metadata for users
 }
 
@@ -21,4 +23,29 @@ func GetUsers(db *gorm.DB) []User {
 	db.Find(&users)
 
 	return users
+}
+
+func GetUser(db *gorm.DB, id uint) (User, error) {
+	var user User
+
+	result := db.First(&user, id)
+
+	if result.Error != nil {
+		return user, result.Error
+	}
+
+	return user, nil
+}
+
+func DeleteUser(db *gorm.DB, id uint) error {
+	var user User
+
+	result := db.Delete(&user, id)
+	fmt.Println(result)
+
+	if result.Error != nil {
+		return result.Error
+	}
+
+	return nil
 }
