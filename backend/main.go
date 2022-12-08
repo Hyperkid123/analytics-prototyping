@@ -10,7 +10,6 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/database"
 	"github.com/Hyperkid123/analytics-prototyping/models"
 	"github.com/go-chi/chi/v5"
-	"github.com/google/uuid"
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
@@ -67,8 +66,9 @@ func getEvents(response http.ResponseWriter, request *http.Request) {
 }
 
 func getUsers(response http.ResponseWriter, request *http.Request) {
-	payload := "Fetch users from the database after we get models."
-	logrus.Infoln("handled request on /users ")
+	payload := models.GetUsers(DB)
+
+	logrus.Infoln(payload)
 
 	respondWithJSON(response, http.StatusOK, payload)
 }
@@ -76,9 +76,6 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 func postUser(w http.ResponseWriter, r *http.Request) {
 	var user models.User
 	var pMsg strings.Builder
-
-	userRepo := models.UserRepoInterface(DB)
-	user.UserID = uuid.New()
 
 	// Try to decode the request body into the struct. If there is an error,
 	// respond to the client with the error message and a 400 status code.
@@ -90,6 +87,7 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	payload := user.Data.Get().(map[string]interface{})
+
 	pMsg.WriteString("Inserting user into DB:")
 
 	for key, value := range payload {
@@ -97,11 +95,7 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 	}
 	logrus.Infoln(pMsg.String())
 
-	err = userRepo.CreateUser(user)
-
-	if err != nil {
-		logrus.Fatal(err)
-	}
+	user.CreateUser(DB, user)
 
 	respondWithJSON(w, http.StatusOK, user)
 }
