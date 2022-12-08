@@ -3,12 +3,12 @@ package models
 import (
     "time"
     "gorm.io/gorm"
-    "github.com/jackc/pgtype"
+    "github.com/google/uuid"
 )
 
 // Generic Struct used throughout models in this service.
 type BaseModel struct {
-    ID        uint           `gorm:"primarykey" json:"id,omitempty"`
+    ID        uuid.UUID      `gorm:"primarykey" json:"id,omitempty"`
     CreatedAt time.Time      `json:"createdAt,omitempty"`
     UpdatedAt time.Time      `json:"updatedAt,omitempty"`
     DeletedAt gorm.DeletedAt `json:"deletedAt,omitempty"`
@@ -17,17 +17,17 @@ type BaseModel struct {
 // Users
 type User struct{
     BaseModel
-    UserID  uint            `json:"userID"` // Store the internal UUID for that user
-    Data    pgtype.JSONB    `json:"-" gorm:"column:data"` // Store additional metadata for users
+    UserID  uuid.UUID       `json:"userID"` // Store the internal UUID for that user
+    Data    []byte          `json:"-" gorm:"type:jsonb;column:data"` // Store additional metadata for users
 }
 
 // Sessions
 type Session struct{
     BaseModel
-    SessionID    uint            `json:"sessionId"` // Store the UUID for the Session for tracking
+    SessionID    uuid.UUID       `json:"sessionId"` // Store the UUID for the Session for tracking
     UserRefID    int             `json:"userId"`
     UserRef     *User            `gorm:"foreignKey:UserRefID;references:ID" json:"user"` // Link the Session with a User
-    Data         pgtype.JSONB    `json:"-" gorm:"column:data"` // Store additional metadata as a JSON blob
+    Data         []byte          `json:"-" gorm:"type:jsonb;column:data"` // Store additional metadata as a JSON blob
 }
 
 // Journeys
@@ -46,5 +46,5 @@ type Event struct{
     Journey        *Journey         `gorm:"foreignKey:JourneyRefID;references:ID" json:"journey"` // Link associated Journeys
     SessionRefID    int             `json:"sessionId"` // FK IN
     SessionRef     *Session         `gorm:"foreignKey:SessionRefID;references:ID" json:"session"` // Link associated Sessions
-    Data            pgtype.JSONB    `json:"-" gorm:"column:data"` // Store additional metadata as a JSON blob
+    Data           []byte           `json:"-" gorm:"type:jsonb;column:data"` // Store additional metadata as a JSON blob
 }

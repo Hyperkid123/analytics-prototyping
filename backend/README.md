@@ -16,14 +16,22 @@ accordingly for your local db configuration.
 
 Running the thing
 -----------------
-Start the DB (local development).
+- Start the DB (local development).  
+
 ```
 systemctl start docker
 docker-compose up analytics-service-db
-```
+```  
 
-Start the backend.
-`go run main.go`
+- Migrate the DB (if you need to).  
+`go run main.go --migrate-db`  
+
+- Seed the DB (if you want to).  
+`go run main.go --seed-db=db.json`  
+
+- Start the backend.  
+`go run main.go`  
+
 
 Contributing
 --------------------
