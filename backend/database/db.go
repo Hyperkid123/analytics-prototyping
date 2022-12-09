@@ -1,16 +1,19 @@
 package database
 
 import (
-	"os"
 	"flag"
 	"fmt"
+	"os"
+
 	"encoding/json"
+
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/models"
+	"github.com/google/uuid"
+	"github.com/jackc/pgtype"
+	"github.com/sirupsen/logrus"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"github.com/google/uuid"
-	"github.com/sirupsen/logrus"
 )
 
 var DB *gorm.DB
@@ -66,9 +69,9 @@ func Init() *gorm.DB {
 		}
 
 		logrus.Infoln("Running auto-migration...")
-		DB.AutoMigrate(&models.User{},&models.Session{},&models.Journey{},&models.Event{})
+		DB.AutoMigrate(&models.User{}, &models.Session{}, &models.Journey{}, &models.Event{})
 	}
-	
+
 	if err != nil {
 		logrus.Fatal("Database connection failed:", err.Error())
 	}
@@ -90,8 +93,8 @@ func Init() *gorm.DB {
 		// Unmarshal Raw JSON file bytes
 		var seedData interface{}
 		unmarshalErr := json.Unmarshal(rawData, &seedData)
-		if unmarshalErr != nil { 
-		    logrus.Fatal("Seed JSON Unmarshal failed:", unmarshalErr.Error())
+		if unmarshalErr != nil {
+			logrus.Fatal("Seed JSON Unmarshal failed:", unmarshalErr.Error())
 		}
 		seedJson := seedData.(map[string]interface{})
 
@@ -101,10 +104,11 @@ func Init() *gorm.DB {
 		logrus.Infoln("Number of users found:", lenUsers)
 
 		usersCreated := 0
-		userIDs := make(map[string]uuid.UUID) // Keep track of UserIDs for later reference
+		userIDs := make(map[string]uint) // Keep track of UserIDs for later reference
 
 		for i := 0; i < lenUsers; i++ {
 			user := users[i].(map[string]interface{})
+			userB := users[i].(interface{})
 
 			// Bail if there isnt a user ID
 			if user["id"] == nil {
@@ -124,21 +128,14 @@ func Init() *gorm.DB {
 			}
 
 			delete(user, "id") // Delete the ID, Store the rest in the "data" JSON blob
-			userMarshal, userMarshalErr := json.Marshal(user)
-			if userMarshalErr != nil {
-				logrus.Fatal("User Marshal failed:", userMarshalErr.Error())
-			}
-			
-			newUser := models.User{UserID:userUUID, Data:userMarshal}
-			newUserUUID := uuid.New()
-			newUser.ID = newUserUUID
+			newUser := models.User{UserID: userUUID, Data: userB.(pgtype.JSONB)}
 			result := DB.Create(&newUser)
 
 			if result.Error != nil {
 				logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
 			} else {
 				usersCreated++
-				userIDs[userIdString] = newUserUUID // Track ref user ID
+				userIDs[userIdString] = newUser.ID // Track ref user ID
 			}
 		}
 
@@ -153,7 +150,7 @@ func Init() *gorm.DB {
 		logrus.Infoln("Events found for Sessions:", lenEvents)
 
 		sessionsCreated := 0
-		sessionIDs := make(map[string]uuid.UUID) // Keep Track of Session IDs for later reference
+		sessionIDs := make(map[string]uint) // Keep Track of Session IDs for later reference
 
 		for i := 0; i < lenEvents; i++ {
 			event := events[i].(map[string]interface{})
@@ -189,18 +186,16 @@ func Init() *gorm.DB {
 
 			// Create Session
 			sessionData := []byte("{}")
-			newSession := models.Session{SessionID:sessionUUID,
-										 UserRefID:userRefID,
-										 Data:sessionData}
-			newSessionUUID := uuid.New()
-			newSession.ID = newSessionUUID
+			newSession := models.Session{SessionID: sessionUUID,
+				UserRefID: userRefID,
+				Data:      sessionData}
 			result := DB.Create(&newSession)
 
 			if result.Error != nil {
 				logrus.Fatal("Error creating session:", sessionUUID, result.Error.Error())
 			} else {
 				sessionsCreated++
-				sessionIDs[event["sessionId"].(string)] = newSessionUUID
+				sessionIDs[event["sessionId"].(string)] = newSession.ID
 
 			}
 

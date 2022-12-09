@@ -5,13 +5,14 @@ go 1.18
 require (
 	github.com/Hyperkid123/analytics-prototyping/config v0.0.0
 	github.com/Hyperkid123/analytics-prototyping/database v0.0.0
+	github.com/Hyperkid123/analytics-prototyping/models v0.0.0
 	github.com/go-chi/chi/v5 v5.0.7
 	github.com/joho/godotenv v1.4.0
 	github.com/sirupsen/logrus v1.9.0
+	gorm.io/gorm v1.24.2
 )
 
 require (
-	github.com/Hyperkid123/analytics-prototyping/models v0.0.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
 	github.com/jackc/pgconn v1.13.0 // indirect
@@ -27,7 +28,6 @@ require (
 	golang.org/x/sys v0.2.0 // indirect
 	golang.org/x/text v0.5.0 // indirect
 	gorm.io/driver/postgres v1.4.5 // indirect
-	gorm.io/gorm v1.24.2 // indirect
 )
 
 replace (
