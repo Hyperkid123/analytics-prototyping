@@ -11299,6 +11299,346 @@
         "subscriptionTier": "free"
       },
       "timestamp": 1670413119089
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "86b5c16f-551f-4a31-93e3-4a1a1e8a867b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1159.jpg",
+        "birthday": "2002-02-20T08:29:40.493Z",
+        "email": "Cynthia_Raynor@gmail.com",
+        "firstName": "Aliya",
+        "lastName": "Auer",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670574490051
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "86b5c16f-551f-4a31-93e3-4a1a1e8a867b",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1159.jpg",
+        "birthday": "2002-02-20T08:29:40.493Z",
+        "email": "Cynthia_Raynor@gmail.com",
+        "firstName": "Aliya",
+        "lastName": "Auer",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670574490056
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "05239f1d-edad-490e-a81a-35e1316da360",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/623.jpg",
+        "birthday": "1982-02-17T10:56:01.025Z",
+        "email": "Marlon31@yahoo.com",
+        "firstName": "Gunner",
+        "lastName": "Thiel",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670574501169
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "05239f1d-edad-490e-a81a-35e1316da360",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/623.jpg",
+        "birthday": "1982-02-17T10:56:01.025Z",
+        "email": "Marlon31@yahoo.com",
+        "firstName": "Gunner",
+        "lastName": "Thiel",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670574501177
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "03a351d6-b196-4fab-ae6a-ffc0ad335de4",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/853.jpg",
+        "birthday": "1953-05-03T08:05:17.065Z",
+        "email": "Yadira_Kemmer99@hotmail.com",
+        "firstName": "Alvena",
+        "lastName": "Ryan",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670574874710
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "03a351d6-b196-4fab-ae6a-ffc0ad335de4",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/853.jpg",
+        "birthday": "1953-05-03T08:05:17.065Z",
+        "email": "Yadira_Kemmer99@hotmail.com",
+        "firstName": "Alvena",
+        "lastName": "Ryan",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670574874721
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "075b61ed-64c6-465f-9ffa-c110c8ada46c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg",
+        "birthday": "1954-02-11T19:55:42.870Z",
+        "email": "Asha_Franecki@yahoo.com",
+        "firstName": "Arnulfo",
+        "lastName": "Stiedemann",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670575596857
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "075b61ed-64c6-465f-9ffa-c110c8ada46c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg",
+        "birthday": "1954-02-11T19:55:42.870Z",
+        "email": "Asha_Franecki@yahoo.com",
+        "firstName": "Arnulfo",
+        "lastName": "Stiedemann",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670575596859
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "6b363c7a-9cb3-47f0-a87a-1dc1415d23cd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/27.jpg",
+        "birthday": "1951-02-16T18:10:34.212Z",
+        "email": "Marlon.Kiehn35@hotmail.com",
+        "firstName": "Dee",
+        "lastName": "Hackett",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670575696013
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "6b363c7a-9cb3-47f0-a87a-1dc1415d23cd",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/27.jpg",
+        "birthday": "1951-02-16T18:10:34.212Z",
+        "email": "Marlon.Kiehn35@hotmail.com",
+        "firstName": "Dee",
+        "lastName": "Hackett",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670575696021
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "e2e62813-ec7d-400a-9b56-0770d06ec787",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/682.jpg",
+        "birthday": "1961-12-22T12:34:10.209Z",
+        "email": "Kendra_Senger65@hotmail.com",
+        "firstName": "Heaven",
+        "lastName": "Wunsch",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670575703049
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "e2e62813-ec7d-400a-9b56-0770d06ec787",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/682.jpg",
+        "birthday": "1961-12-22T12:34:10.209Z",
+        "email": "Kendra_Senger65@hotmail.com",
+        "firstName": "Heaven",
+        "lastName": "Wunsch",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670575703056
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "56ce04a6-c3a7-4945-98d0-19b0b989c8a6",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/723.jpg",
+        "birthday": "1975-08-11T02:02:36.539Z",
+        "email": "Garth.Kerluke21@hotmail.com",
+        "firstName": "Elvie",
+        "lastName": "Moen",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670575709437
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "56ce04a6-c3a7-4945-98d0-19b0b989c8a6",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/723.jpg",
+        "birthday": "1975-08-11T02:02:36.539Z",
+        "email": "Garth.Kerluke21@hotmail.com",
+        "firstName": "Elvie",
+        "lastName": "Moen",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670575709451
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "bad083d5-caf2-4772-8fcd-8f439d6a8e18",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/25.jpg",
+        "birthday": "1981-05-15T23:47:32.871Z",
+        "email": "Lelia.Tromp@gmail.com",
+        "firstName": "Casimer",
+        "lastName": "Sporer",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670575737237
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "bad083d5-caf2-4772-8fcd-8f439d6a8e18",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/25.jpg",
+        "birthday": "1981-05-15T23:47:32.871Z",
+        "email": "Lelia.Tromp@gmail.com",
+        "firstName": "Casimer",
+        "lastName": "Sporer",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670575737245
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5c5d092b-4c49-4da0-8ca6-84d6837aed7d",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/535.jpg",
+        "birthday": "1953-08-05T09:09:33.366Z",
+        "email": "Javier.Wisoky@gmail.com",
+        "firstName": "Julian",
+        "lastName": "Christiansen",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670575823797
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "5c5d092b-4c49-4da0-8ca6-84d6837aed7d",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/535.jpg",
+        "birthday": "1953-08-05T09:09:33.366Z",
+        "email": "Javier.Wisoky@gmail.com",
+        "firstName": "Julian",
+        "lastName": "Christiansen",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670575823805
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "4a6950c8-7e76-490f-9386-ebcc555d263c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg",
+        "birthday": "1963-10-07T22:23:49.677Z",
+        "email": "Lorenz_Legros@yahoo.com",
+        "firstName": "Kyleigh",
+        "lastName": "MacGyver",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670575894758
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "4a6950c8-7e76-490f-9386-ebcc555d263c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg",
+        "birthday": "1963-10-07T22:23:49.677Z",
+        "email": "Lorenz_Legros@yahoo.com",
+        "firstName": "Kyleigh",
+        "lastName": "MacGyver",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670575894767
     }
   ],
   "users": [
@@ -14171,6 +14511,96 @@
       "email": "Emely_Daniel@hotmail.com",
       "firstName": "Braulio",
       "lastName": "Farrell",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "86b5c16f-551f-4a31-93e3-4a1a1e8a867b",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1159.jpg",
+      "birthday": "2002-02-20T08:29:40.493Z",
+      "email": "Cynthia_Raynor@gmail.com",
+      "firstName": "Aliya",
+      "lastName": "Auer",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "05239f1d-edad-490e-a81a-35e1316da360",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/623.jpg",
+      "birthday": "1982-02-17T10:56:01.025Z",
+      "email": "Marlon31@yahoo.com",
+      "firstName": "Gunner",
+      "lastName": "Thiel",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "03a351d6-b196-4fab-ae6a-ffc0ad335de4",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/853.jpg",
+      "birthday": "1953-05-03T08:05:17.065Z",
+      "email": "Yadira_Kemmer99@hotmail.com",
+      "firstName": "Alvena",
+      "lastName": "Ryan",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "075b61ed-64c6-465f-9ffa-c110c8ada46c",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/487.jpg",
+      "birthday": "1954-02-11T19:55:42.870Z",
+      "email": "Asha_Franecki@yahoo.com",
+      "firstName": "Arnulfo",
+      "lastName": "Stiedemann",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "6b363c7a-9cb3-47f0-a87a-1dc1415d23cd",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/27.jpg",
+      "birthday": "1951-02-16T18:10:34.212Z",
+      "email": "Marlon.Kiehn35@hotmail.com",
+      "firstName": "Dee",
+      "lastName": "Hackett",
+      "subscriptionTier": "free"
+    },
+    {
+      "id": "e2e62813-ec7d-400a-9b56-0770d06ec787",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/682.jpg",
+      "birthday": "1961-12-22T12:34:10.209Z",
+      "email": "Kendra_Senger65@hotmail.com",
+      "firstName": "Heaven",
+      "lastName": "Wunsch",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "56ce04a6-c3a7-4945-98d0-19b0b989c8a6",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/723.jpg",
+      "birthday": "1975-08-11T02:02:36.539Z",
+      "email": "Garth.Kerluke21@hotmail.com",
+      "firstName": "Elvie",
+      "lastName": "Moen",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "bad083d5-caf2-4772-8fcd-8f439d6a8e18",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/25.jpg",
+      "birthday": "1981-05-15T23:47:32.871Z",
+      "email": "Lelia.Tromp@gmail.com",
+      "firstName": "Casimer",
+      "lastName": "Sporer",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "5c5d092b-4c49-4da0-8ca6-84d6837aed7d",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/535.jpg",
+      "birthday": "1953-08-05T09:09:33.366Z",
+      "email": "Javier.Wisoky@gmail.com",
+      "firstName": "Julian",
+      "lastName": "Christiansen",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "4a6950c8-7e76-490f-9386-ebcc555d263c",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg",
+      "birthday": "1963-10-07T22:23:49.677Z",
+      "email": "Lorenz_Legros@yahoo.com",
+      "firstName": "Kyleigh",
+      "lastName": "MacGyver",
       "subscriptionTier": "free"
     }
   ]

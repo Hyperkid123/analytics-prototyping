@@ -16,6 +16,10 @@ import { AppBar, Box, Typography } from "@mui/material";
 import navigationData from "../src/Navigation/navigation-data";
 import Link from "../src/Link";
 
+// grid layout CSS
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
+
 const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
   const page = usePageEvent();

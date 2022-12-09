@@ -28,6 +28,11 @@ app.prepare().then(() => {
       const { pathname, query } = parsedUrl;
 
       if (pathname.match(/^\/api/)) {
+        if (pathname === "/api/event/all" && req.method === "GET") {
+          req.setEncoding("utf-8");
+          res.end(JSON.stringify({ events: getEventsByDate() }));
+          return;
+        }
         if (pathname === "/api/layout" && req.method === "GET") {
           req.setEncoding("utf-8");
           const layoutId = query.layout;
