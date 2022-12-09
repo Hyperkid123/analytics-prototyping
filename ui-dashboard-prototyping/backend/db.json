@@ -14499,6 +14499,40 @@
         "subscriptionTier": "basic"
       },
       "timestamp": 1670593733975
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "2a41303f-cb99-4e59-9687-3c760206ccde",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1157.jpg",
+        "birthday": "1965-05-18T21:51:35.577Z",
+        "email": "Glenna_Hauck2@hotmail.com",
+        "firstName": "Esperanza",
+        "lastName": "Larkin",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670594980657
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "2a41303f-cb99-4e59-9687-3c760206ccde",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1157.jpg",
+        "birthday": "1965-05-18T21:51:35.577Z",
+        "email": "Glenna_Hauck2@hotmail.com",
+        "firstName": "Esperanza",
+        "lastName": "Larkin",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670594980662
     }
   ],
   "users": [
@@ -18200,24 +18234,24 @@
       "firstName": "Elenor",
       "lastName": "Thiel",
       "subscriptionTier": "basic"
+    },
+    {
+      "id": "2a41303f-cb99-4e59-9687-3c760206ccde",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1157.jpg",
+      "birthday": "1965-05-18T21:51:35.577Z",
+      "email": "Glenna_Hauck2@hotmail.com",
+      "firstName": "Esperanza",
+      "lastName": "Larkin",
+      "subscriptionTier": "free"
     }
   ],
   "layout": {
     "gridLayout": [
       {
-        "w": 3,
-        "h": 4,
-        "x": 0,
-        "y": 0,
-        "i": "ActiveUsers-1670593673587",
-        "moved": false,
-        "static": false
-      },
-      {
         "w": 6,
         "h": 14,
         "x": 0,
-        "y": 4,
+        "y": 0,
         "i": "1",
         "moved": false,
         "static": false
@@ -18235,7 +18269,7 @@
         "w": 6,
         "h": 12,
         "x": 0,
-        "y": 23,
+        "y": 19,
         "i": "3",
         "moved": false,
         "static": false
@@ -18244,7 +18278,7 @@
         "w": 6,
         "h": 5,
         "x": 0,
-        "y": 18,
+        "y": 14,
         "i": "4",
         "moved": false,
         "static": false
@@ -18253,7 +18287,7 @@
         "w": 12,
         "h": 20,
         "x": 0,
-        "y": 35,
+        "y": 31,
         "i": "5",
         "moved": false,
         "static": false
@@ -18274,8 +18308,7 @@
       "3": "EventActivity",
       "4": "ActiveUsers",
       "5": "ActivityHeatmap",
-      "6": "PageEventsGraph",
-      "ActiveUsers-1670593673587": "ActiveUsers"
+      "6": "PageEventsGraph"
     }
   },
   "widgets": [

@@ -1,14 +1,8 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  Paper,
-  styled,
-} from "@mui/material";
+import { Box, Card, CardContent, IconButton, styled } from "@mui/material";
 import React, { useContext, useState } from "react";
 import GridLayout, { Layout } from "react-grid-layout";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
+import DeleteIcon from "@mui/icons-material/Delete";
 import componentMapper, {
   ComponentTypes,
   DataContextValueType,
@@ -28,7 +22,7 @@ const LayoutComponentWrapper = ({
   return <Cmp data={data} />;
 };
 
-const DragHandle = () => {
+const DragHandle = ({ handleRemoveItem }: { handleRemoveItem: () => void }) => {
   const [isDragging, setIsDragging] = useState(false);
   return (
     <Box
@@ -36,17 +30,44 @@ const DragHandle = () => {
       onMouseUp={() => setIsDragging(false)}
       className="drag-handle"
       sx={{
+        position: "relative",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         p: 1,
         cursor: isDragging ? "grabbing" : "grab",
         transition: "backgroundColor, .15s ease-in",
         ":hover": {
           backgroundColor: "#E6E6E6",
+          ".remove-container": {
+            opacity: "0.8",
+          },
         },
       }}
     >
-      <DragHandleIcon />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flex: 1,
+        }}
+      >
+        <DragHandleIcon />
+      </Box>
+      <Box
+        sx={{ opacity: 0, position: "absolute", right: 0, top: 0 }}
+        className="remove-container"
+      >
+        <IconButton
+          onClick={(e) => {
+            e.stopPropagation();
+            handleRemoveItem();
+          }}
+          color="error"
+          aria-label="delete"
+        >
+          <DeleteIcon />
+        </IconButton>
+      </Box>
     </Box>
   );
 };
@@ -59,6 +80,7 @@ const DnDLayout = ({
   allEvents,
   layout,
   handleLayoutUpdate,
+  handleRemoveItem,
 }: {
   allEvents: DataContextValueType;
   layout: {
@@ -69,6 +91,7 @@ const DnDLayout = ({
     gridLayout: DnDLayoutItem[],
     componentMapping: { [key: string]: ComponentTypes }
   ) => void;
+  handleRemoveItem: (itemId: string) => void;
 }) => {
   return (
     <LayoutWrapper>
@@ -85,7 +108,7 @@ const DnDLayout = ({
         >
           {layout.gridLayout.map(({ i, ...rest }) => (
             <Card key={i} data-grid={rest} sx={{ overflow: "hidden" }}>
-              <DragHandle />
+              <DragHandle handleRemoveItem={() => handleRemoveItem(i)} />
               <CardContent>
                 <LayoutComponentWrapper
                   component={layout.componentMapping[i]}

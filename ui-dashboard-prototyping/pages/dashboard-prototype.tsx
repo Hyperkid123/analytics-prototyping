@@ -79,6 +79,23 @@ const DashboardPrototype = () => {
     }));
   };
 
+  const handleRemoveItem = (itemId: string) => {
+    setLayout((prev) => ({
+      gridLayout: prev?.gridLayout.filter(({ i }) => i !== itemId) || [],
+      componentMapping: Object.entries(prev?.componentMapping || {}).reduce<{
+        [key: string]: ComponentTypes;
+      }>((acc, [key, value]) => {
+        if (key !== itemId) {
+          return {
+            ...acc,
+            [key]: value,
+          };
+        }
+        return acc;
+      }, {}),
+    }));
+  };
+
   return (
     <Container maxWidth="lg">
       <Grid container spacing={3}>
@@ -91,6 +108,7 @@ const DashboardPrototype = () => {
         <Grid item sm={12}>
           {allEvents && layout ? (
             <DnDLayout
+              handleRemoveItem={handleRemoveItem}
               handleLayoutUpdate={handleLayoutUpdate}
               layout={layout}
               allEvents={allEvents}
