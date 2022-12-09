@@ -3,6 +3,7 @@ package models
 import (
 	"fmt"
 
+	"github.com/google/uuid"
 	"github.com/jackc/pgtype"
 	"gorm.io/gorm"
 )
@@ -10,6 +11,7 @@ import (
 // Users
 type User struct {
 	BaseModel              // Store the internal ID for that user
+	UserID    uuid.UUID    `json:"userID"`
 	Data      pgtype.JSONB `json:"data" gorm:"type:jsonb;column:data"` // Store additional metadata for users
 }
 

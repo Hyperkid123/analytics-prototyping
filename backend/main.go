@@ -10,6 +10,7 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/database"
 	"github.com/Hyperkid123/analytics-prototyping/models"
 	"github.com/go-chi/chi/v5"
+	"github.com/google/uuid"
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
@@ -100,6 +101,7 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 func postUser(w http.ResponseWriter, r *http.Request) {
 	var user models.User
 	var pMsg strings.Builder
+	userUUID := uuid.New()
 
 	// Try to decode the request body into the struct. If there is an error,
 	// respond to the client with the error message and a 400 status code.
@@ -110,10 +112,12 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	user.UserID = userUUID
 	payload := user.Data.Get().(map[string]interface{})
 
 	pMsg.WriteString("Inserting user into DB:")
 
+	pMsg.WriteString(fmt.Sprintf(" uuid=%v ", user.UserID))
 	for key, value := range payload {
 		pMsg.WriteString(fmt.Sprintf(" %s=%s ", key, value))
 	}
