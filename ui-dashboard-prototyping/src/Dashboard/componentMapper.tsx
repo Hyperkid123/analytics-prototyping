@@ -89,7 +89,7 @@ const JourneyIndicator = ({ data }: { data: DataContextValueType }) => {
       <ReactApexChart
         options={{
           chart: {
-            width: 400,
+            height: "100%",
             type: "donut",
           },
           labels: internalData.map(({ name }) => name),
@@ -140,7 +140,7 @@ const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
         options={{
           chart: {
             type: "bar",
-            height: 350,
+            height: "100%",
           },
           labels: parsedData.map(({ name }) => name),
         }}
@@ -355,7 +355,6 @@ const PageEventsGraph = ({ data = [] }: { data: DataContextValueType }) => {
     x: pathname,
     y: count,
   }));
-  console.log({ sum, series, pathnames });
   return (
     <div>
       <Typography variant="h4">Most visited pages</Typography>

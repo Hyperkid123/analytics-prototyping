@@ -26,15 +26,15 @@ const DnDLayout = ({
   allEvents,
   layout,
 }: {
-  allEvents?: DataContextValueType;
+  allEvents: DataContextValueType;
   layout: DnDLayoutItem[];
 }) => {
   return (
     <div>
       <DataContext.Provider value={allEvents}>
-        <GridLayout className="layout" cols={12} width={1200}>
+        <GridLayout className="layout" cols={12} width={1200} rowHeight={30}>
           {layout.map(({ i, component, ...rest }) => (
-            <Paper key={i} data-grid={rest}>
+            <Paper sx={{ overflow: "hidden" }} key={i} data-grid={rest}>
               <LayoutComponentWrapper component={component} />
             </Paper>
           ))}
