@@ -3,20 +3,84 @@ import { Box } from "@mui/system";
 import { DateRangePicker, LocalizationProvider } from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dynamic from "next/dynamic";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
+
+export type EventType = {
+  sessionId: string;
+  timestamp: number;
+  type: string;
+  journeyName?: string;
+  journeyId?: string;
+  journeyStep?: string;
+  payload: {
+    pathname?: string;
+  };
+};
+
+export type DataContextValueType = EventType[];
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-const JourneyIndicator = ({
-  data,
-}: {
-  data?: { name: string; value: number }[];
-}) => {
-  if (!data) {
-    return null;
-  }
+const parseToJourney = (journeyName: string, data: DataContextValueType) => {
+  const journeys = data.filter(
+    (entry) =>
+      entry?.type.match(/^journey-/) && entry?.journeyName === journeyName
+  );
+  const groups = journeys.reduce<{
+    [key: string]: EventType[];
+  }>((acc, curr) => {
+    if (!acc[curr.journeyId!]) {
+      return {
+        ...acc,
+        [curr.journeyId!]: [curr],
+      };
+    }
+
+    return {
+      ...acc,
+      [curr.journeyId!]: [...acc[curr.journeyId!], curr],
+    };
+  }, {});
+  return groups;
+};
+
+const JourneyIndicator = ({ data }: { data: DataContextValueType }) => {
+  const groups = parseToJourney("journey-events", data);
+  const journeyGroups = Object.values(groups).reduce(
+    (acc, curr) => {
+      let resolved = false;
+      curr.forEach(({ type }) => {
+        if (type === "journey-start") {
+          // acc.started += 1
+        }
+        if (type === "journey-finish") {
+          acc.finished += 1;
+          resolved = true;
+        }
+        if (type === "journey-cancel") {
+          acc.canceled += 1;
+          resolved = true;
+        }
+      });
+      if (!resolved) {
+        acc.unresolved += 1;
+      }
+      return acc;
+    },
+    {
+      // started: 0,
+      canceled: 0,
+      finished: 0,
+      unresolved: 0,
+    }
+  );
+
+  const internalData = Object.entries(journeyGroups).map(([key, value]) => ({
+    name: key,
+    value,
+  }));
   return (
     <div>
       <Typography variant="h4" gutterBottom>
@@ -28,17 +92,42 @@ const JourneyIndicator = ({
             width: 400,
             type: "donut",
           },
-          labels: data.map(({ name }) => name),
+          labels: internalData.map(({ name }) => name),
         }}
-        series={data.map(({ value }) => value)}
+        series={internalData.map(({ value }) => value)}
         type="donut"
       />
     </div>
   );
 };
 
-const JourneyLastStep = ({ data }: { data: { [key: string]: number } }) => {
-  const parsedData = Object.entries(data).map(([name, value]) => ({
+const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
+  const journeys = parseToJourney("journey-events", data);
+  const lastSteps = Object.values(journeys)
+    .map((group) => group.slice(group.length - 1))
+    .flat()
+    .reduce<{ [key: string]: number }>((acc, curr) => {
+      if (
+        curr.type === "journey-start" ||
+        curr.type === "journey-finish" ||
+        curr.type === "journey-cancel"
+      ) {
+        return acc[curr.type]
+          ? { ...acc, [curr.type]: (acc[curr.type] += 1) }
+          : { ...acc, [curr.type]: 1 };
+      }
+
+      return acc[curr.journeyStep!]
+        ? {
+            ...acc,
+            [curr.journeyStep!]: acc[curr.journeyStep!] + 1,
+          }
+        : {
+            ...acc,
+            [curr.journeyStep!]: 1,
+          };
+    }, {});
+  const parsedData = Object.entries(lastSteps).map(([name, value]) => ({
     name,
     value,
   }));
@@ -67,64 +156,20 @@ const JourneyLastStep = ({ data }: { data: { [key: string]: number } }) => {
   );
 };
 
-const EventActivity = () => {
-  const [eventActivity, setEventActivity] = useState<{ [key: number]: number }>(
-    {}
-  );
-  const [range, setRange] = useState<[number | null, number | null]>([
-    null,
-    null,
-  ]);
-
-  useEffect(() => {
-    const params = new URLSearchParams();
-    if (range[0]) {
-      params.append("start", `${new Date(range[0]?.toString()).getTime()}`);
-    }
-
-    if (range[1]) {
-      params.append("end", `${new Date(range[1]?.toString()).getTime()}`);
-    }
-
-    fetch(`/api/event/activity?${params.toString()}`)
-      .then((r) => r.json())
-      .then(({ events }: { events: { timestamp: number }[] }) => {
-        const groupedEvents = events.reduce<{ [key: number]: number }>(
-          (acc, curr) => {
-            const hour = new Date(curr.timestamp).getHours();
-            return {
-              ...acc,
-              [hour]: acc[hour] ? acc[hour] + 1 : 1,
-            };
-          },
-          {}
-        );
-        setEventActivity(groupedEvents);
-      });
-  }, [range]);
+const EventActivity = ({ data = [] }: { data: DataContextValueType }) => {
+  const eventActivity = data.reduce<{ [key: number]: number }>((acc, curr) => {
+    const hour = new Date(curr.timestamp).getHours();
+    return {
+      ...acc,
+      [hour]: acc[hour] ? acc[hour] + 1 : 1,
+    };
+  }, {});
 
   const graphData = Object.values(eventActivity);
   return (
     <Grid container spacing={3}>
       <Grid item xs={12}>
         <Typography variant="h4">Active events count by hour</Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DateRangePicker
-            value={range}
-            onChange={(newValue) => {
-              setRange(newValue);
-            }}
-            renderInput={(startProps, endProps) => (
-              <Fragment>
-                <TextField {...startProps} />
-                <Box sx={{ mx: 2 }}> to </Box>
-                <TextField {...endProps} />
-              </Fragment>
-            )}
-          />
-        </LocalizationProvider>
       </Grid>
       <Grid item xs={12}>
         <ReactApexChart
@@ -149,7 +194,8 @@ const EventActivity = () => {
   );
 };
 
-const ActiveUsers = ({ count }: { count: number }) => {
+const ActiveUsers = ({ data = [] }: { data: DataContextValueType }) => {
+  const count = new Set(data.map(({ sessionId }) => sessionId)).size;
   return (
     <div>
       <Typography variant="h4">Active Users</Typography>
@@ -172,17 +218,43 @@ const colorScale = [
   "#DEEDCF",
 ].reverse();
 
-const ActivityHeatmap = ({
-  data,
-}: {
-  data: {
+const generateEmptyHeatMap = () =>
+  [...Array(7)].reduce<{
     [key: number]: {
       count: number;
       activeSessions: string[];
     }[];
-  };
-}) => {
-  const maximumAcitvity = Object.entries(data).reduce<number>(
+  }>((acc, _, index) => {
+    return {
+      ...acc,
+      [index + 1]: [...Array(24)].fill({ count: 0, activeSessions: [] }),
+    };
+  }, {});
+
+const getUserActivityHeatmap = (events: EventType[]) => {
+  const activeByDays = events.reduce((acc, curr) => {
+    const eventDate = new Date(curr.timestamp);
+    const eventDay = eventDate.getDay();
+    const eventHour = eventDate.getHours();
+    const eventSession = curr.sessionId;
+    const sessionDatapoint = { ...acc[eventDay][eventHour] };
+    if (!sessionDatapoint.activeSessions.includes(eventSession)) {
+      sessionDatapoint.activeSessions.push(eventSession);
+      sessionDatapoint.count += 1;
+    }
+    return {
+      ...acc,
+      [eventDay]: acc[eventDay].map((val, index) =>
+        index === eventHour ? sessionDatapoint : val
+      ),
+    };
+  }, generateEmptyHeatMap());
+  return activeByDays;
+};
+
+const ActivityHeatmap = ({ data = [] }: { data: DataContextValueType }) => {
+  const internalData = useRef(getUserActivityHeatmap(data));
+  const maximumAcitvity = Object.entries(internalData.current).reduce<number>(
     (acc, [, dayData]) => {
       const dayMax = Math.max(...dayData.map(({ count }) => count));
       return Math.max(acc, dayMax);
@@ -191,7 +263,7 @@ const ActivityHeatmap = ({
   );
   const step = maximumAcitvity / colorScale.length;
 
-  const heatmapData = Object.entries(data).reduce<
+  const heatmapData = Object.entries(internalData.current).reduce<
     {
       name: string;
       data: {
@@ -265,9 +337,12 @@ const ActivityHeatmap = ({
   );
 };
 
-const PageEventsGraph = ({ data }: { data: string[] }) => {
+const PageEventsGraph = ({ data = [] }: { data: DataContextValueType }) => {
+  const pathnames = data
+    .filter(({ type }) => type === "page")
+    .map(({ payload: { pathname } }) => pathname as string);
   const sum = Object.entries(
-    data.reduce<{ [key: string]: number }>((acc, curr) => {
+    pathnames.reduce<{ [key: string]: number }>((acc, curr) => {
       return {
         ...acc,
         [curr]: acc[curr] ? acc[curr] + 1 : 1,
@@ -280,6 +355,7 @@ const PageEventsGraph = ({ data }: { data: string[] }) => {
     x: pathname,
     y: count,
   }));
+  console.log({ sum, series, pathnames });
   return (
     <div>
       <Typography variant="h4">Most visited pages</Typography>

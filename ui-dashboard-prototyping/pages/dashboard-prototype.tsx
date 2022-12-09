@@ -9,9 +9,10 @@ import {
 } from "@mui/x-date-pickers-pro/DateRangePicker";
 import { Container } from "@mui/system";
 import DnDLayout, { DnDLayoutItem } from "../src/Dashboard/DnDLayout";
+import { DataContextValueType } from "../src/Dashboard/componentMapper";
 
 const DashboardPrototype = () => {
-  const [allEvents, setAllEvents] = useState(undefined);
+  const [allEvents, setAllEvents] = useState<DataContextValueType>(undefined);
   useEffect(() => {
     fetch("/api/event/all")
       .then((r) => r.json())
@@ -23,7 +24,7 @@ const DashboardPrototype = () => {
     {
       component: "JourneyIndicator",
       i: "JourneyIndicator",
-      h: 1,
+      h: 4,
       w: 6,
       x: 0,
       y: 0,
@@ -31,7 +32,7 @@ const DashboardPrototype = () => {
     {
       component: "JourneyLastStep",
       i: "JourneyLastStep",
-      h: 1,
+      h: 3,
       w: 6,
       x: 6,
       y: 0,
@@ -39,7 +40,7 @@ const DashboardPrototype = () => {
     {
       component: "EventActivity",
       i: "EventActivity",
-      h: 1,
+      h: 4,
       w: 8,
       x: 0,
       y: 1,
@@ -48,14 +49,14 @@ const DashboardPrototype = () => {
       component: "ActiveUsers",
       i: "ActiveUsers",
       h: 1,
-      w: 4,
-      x: 8,
+      w: 6,
+      x: 6,
       y: 1,
     },
     {
       component: "ActivityHeatmap",
       i: "ActivityHeatmap",
-      h: 1,
+      h: 5,
       w: 12,
       x: 0,
       y: 2,
@@ -63,10 +64,10 @@ const DashboardPrototype = () => {
     {
       component: "PageEventsGraph",
       i: "PageEventsGraph",
-      h: 1,
+      h: 3,
       w: 6,
       x: 0,
-      y: 3,
+      y: 4,
     },
   ];
   return (
@@ -76,7 +77,9 @@ const DashboardPrototype = () => {
           <Typography variant="h1">Dashboard prototype</Typography>
         </Grid>
         <Grid item sm={12}>
-          <DnDLayout layout={initialLayout} allEvents={allEvents} />
+          {allEvents ? (
+            <DnDLayout layout={initialLayout} allEvents={allEvents} />
+          ) : null}
         </Grid>
         {/*
         <Grid item sm={6}>
