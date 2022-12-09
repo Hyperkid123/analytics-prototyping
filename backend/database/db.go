@@ -1,17 +1,18 @@
 package database
 
 import (
-	"os"
 	"flag"
 	"fmt"
+	"os"
 
 	"encoding/json"
+
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/models"
-	"gorm.io/driver/postgres"
-	"gorm.io/gorm"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
 )
 
 var DB *gorm.DB
@@ -67,9 +68,9 @@ func Init() *gorm.DB {
 		}
 
 		logrus.Infoln("Running auto-migration...")
-		DB.AutoMigrate(&models.User{},&models.Session{},&models.Journey{},&models.Event{})
+		DB.AutoMigrate(&models.User{}, &models.Session{}, &models.Journey{}, &models.Event{})
 	}
-	
+
 	if err != nil {
 		logrus.Fatal("Database connection failed:", err.Error())
 	}
@@ -91,8 +92,8 @@ func Init() *gorm.DB {
 		// Unmarshal Raw JSON file bytes
 		var seedData interface{}
 		unmarshalErr := json.Unmarshal(rawData, &seedData)
-		if unmarshalErr != nil { 
-		    logrus.Fatal("Seed JSON Unmarshal failed:", unmarshalErr.Error())
+		if unmarshalErr != nil {
+			logrus.Fatal("Seed JSON Unmarshal failed:", unmarshalErr.Error())
 		}
 		seedJson := seedData.(map[string]interface{})
 
@@ -125,15 +126,9 @@ func Init() *gorm.DB {
 			}
 
 			delete(user, "id") // Delete the ID, Store the rest in the "data" JSON blob
-			userMarshal, userMarshalErr := json.Marshal(user)
-			if userMarshalErr != nil {
-				logrus.Fatal("User Marshal failed:", userMarshalErr.Error())
-			}
-			
-			newUser := models.User{UserID:userUUID, Data:userMarshal}
+
 			newUserUUID := uuid.New()
-			newUser.ID = newUserUUID
-			result := DB.Create(&newUser)
+			result := DB.Create(&user)
 
 			if result.Error != nil {
 				logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
@@ -190,11 +185,10 @@ func Init() *gorm.DB {
 
 			// Create Session
 			sessionData := []byte("{}")
-			newSession := models.Session{SessionID:sessionUUID,
-										 UserRefID:userRefID,
-										 Data:sessionData}
+			newSession := models.Session{SessionID: sessionUUID,
+				UserRefID: userRefID,
+				Data:      sessionData}
 			newSessionUUID := uuid.New()
-			newSession.ID = newSessionUUID
 			result := DB.Create(&newSession)
 
 			if result.Error != nil {
