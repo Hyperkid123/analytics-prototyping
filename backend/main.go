@@ -43,8 +43,8 @@ func main() {
 	router.Get("/user", getUser)
 	router.Post("/user", postUser)
 	router.Delete("/user", deleteUser)
+	router.Put("/user", updateUser)
 
-	
 	logrus.Infoln("----------------------------------")
 	logrus.Infoln("Starting http server on port: 8000")
 	logrus.Infoln("----------------------------------")
@@ -144,4 +144,37 @@ func deleteUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	respondWithJSON(w, http.StatusOK, err)
+}
+
+func updateUser(w http.ResponseWriter, r *http.Request) {
+	var user models.User
+	var pMsg strings.Builder
+
+	// Try to decode the request body into the struct. If there is an error,
+	// respond to the client with the error message and a 400 status code.
+	err := json.NewDecoder(r.Body).Decode(&user)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
+	}
+
+	msgPayload := user.Data.Get().(map[string]interface{})
+
+	pMsg.WriteString("Updating user with values:")
+
+	pMsg.WriteString(fmt.Sprintf(" id=%v ", user.ID))
+	for key, value := range msgPayload {
+		pMsg.WriteString(fmt.Sprintf(" %s=%s ", key, value))
+	}
+	logrus.Infoln(pMsg.String())
+
+	payload, payloadError := models.UpdateUser(DB, user)
+
+	if payloadError != nil {
+		http.Error(w, payloadError.Error(), http.StatusBadRequest)
+		return
+	}
+
+	respondWithJSON(w, http.StatusOK, payload)
 }
