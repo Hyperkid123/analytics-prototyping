@@ -70,7 +70,7 @@ app.prepare().then(() => {
           res.end(JSON.stringify({ events: getEventsByDate() }));
           return;
         }
-        if (pathname === "/api/layout" && req.method === "GET") {
+        if (pathname === "/api/guide-layout" && req.method === "GET") {
           req.setEncoding("utf-8");
           const layoutId = query.layout;
           if (!layoutId) {

@@ -17099,6 +17099,144 @@
       },
       "sessionId": "f57a7332-2539-4ea0-b441-f805e8da9c50",
       "timestamp": 1670595880834
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide"
+      },
+      "user": {
+        "id": "a414bebd-10e1-4219-b515-486038ff6c02",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/651.jpg",
+        "birthday": "1949-05-26T07:06:12.158Z",
+        "email": "Taryn65@gmail.com",
+        "firstName": "Vernie",
+        "lastName": "Zulauf",
+        "subscriptionTier": "basic"
+      },
+      "sessionId": "f57a7332-2539-4ea0-b441-f805e8da9c50",
+      "timestamp": 1670596039394
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide"
+      },
+      "user": {
+        "id": "4dc85854-8073-415e-8d58-d1b49b2fd191",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/64.jpg",
+        "birthday": "1986-01-13T04:10:48.095Z",
+        "email": "Jeffrey_Huels58@gmail.com",
+        "firstName": "Jeffery",
+        "lastName": "Smith",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670596140669
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/create-guide",
+        "url": "http://localhost:3000/create-guide"
+      },
+      "user": {
+        "id": "4dc85854-8073-415e-8d58-d1b49b2fd191",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/64.jpg",
+        "birthday": "1986-01-13T04:10:48.095Z",
+        "email": "Jeffrey_Huels58@gmail.com",
+        "firstName": "Jeffery",
+        "lastName": "Smith",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670596140674
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building?guide-launch=simple-banner"
+      },
+      "user": {
+        "id": "7681b871-c601-4a25-abf9-accf0a58ef78",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/9.jpg",
+        "birthday": "1986-10-06T07:20:19.115Z",
+        "email": "Idell.Runolfsson84@gmail.com",
+        "firstName": "Maggie",
+        "lastName": "Lehner",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670596151684
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/pendo-building",
+        "url": "http://localhost:3000/pendo-building?guide-launch=simple-banner"
+      },
+      "user": {
+        "id": "7681b871-c601-4a25-abf9-accf0a58ef78",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/9.jpg",
+        "birthday": "1986-10-06T07:20:19.115Z",
+        "email": "Idell.Runolfsson84@gmail.com",
+        "firstName": "Maggie",
+        "lastName": "Lehner",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670596151687
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "7681b871-c601-4a25-abf9-accf0a58ef78",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/9.jpg",
+        "birthday": "1986-10-06T07:20:19.115Z",
+        "email": "Idell.Runolfsson84@gmail.com",
+        "firstName": "Maggie",
+        "lastName": "Lehner",
+        "subscriptionTier": "business"
+      },
+      "sessionId": "e87410a6-dd4c-4357-8df5-422506a97865",
+      "timestamp": 1670596166739
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "7208a42b-b2c1-4384-aa99-a32c322ba00f",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/461.jpg",
+        "birthday": "1972-06-17T14:34:02.296Z",
+        "email": "Lorenzo26@yahoo.com",
+        "firstName": "Michaela",
+        "lastName": "Olson",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670596170955
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "7208a42b-b2c1-4384-aa99-a32c322ba00f",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/461.jpg",
+        "birthday": "1972-06-17T14:34:02.296Z",
+        "email": "Lorenzo26@yahoo.com",
+        "firstName": "Michaela",
+        "lastName": "Olson",
+        "subscriptionTier": "free"
+      },
+      "timestamp": 1670596170958
     }
   ],
   "users": [
@@ -21592,6 +21730,33 @@
       "firstName": "Brandy",
       "lastName": "Trantow",
       "subscriptionTier": "basic"
+    },
+    {
+      "id": "4dc85854-8073-415e-8d58-d1b49b2fd191",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/64.jpg",
+      "birthday": "1986-01-13T04:10:48.095Z",
+      "email": "Jeffrey_Huels58@gmail.com",
+      "firstName": "Jeffery",
+      "lastName": "Smith",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "7681b871-c601-4a25-abf9-accf0a58ef78",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/9.jpg",
+      "birthday": "1986-10-06T07:20:19.115Z",
+      "email": "Idell.Runolfsson84@gmail.com",
+      "firstName": "Maggie",
+      "lastName": "Lehner",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "7208a42b-b2c1-4384-aa99-a32c322ba00f",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/461.jpg",
+      "birthday": "1972-06-17T14:34:02.296Z",
+      "email": "Lorenzo26@yahoo.com",
+      "firstName": "Michaela",
+      "lastName": "Olson",
+      "subscriptionTier": "free"
     }
   ],
   "layout": {
