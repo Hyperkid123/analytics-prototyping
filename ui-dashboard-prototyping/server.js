@@ -9,6 +9,8 @@ const {
   getActiveUsers,
   getUserActivityHeatmap,
   getPageEvents,
+  getLayout,
+  storeLayout,
 } = require("./backend/database");
 const { getLayoutById, layouts } = require("./backend/guide-layouts");
 
@@ -28,6 +30,34 @@ app.prepare().then(() => {
       const { pathname, query } = parsedUrl;
 
       if (pathname.match(/^\/api/)) {
+        // dashboard user based value
+        if (pathname === "/api/layout" && req.method === "GET") {
+          req.setEncoding("utf-8");
+          res.end(JSON.stringify({ layout: getLayout() }));
+          return;
+        }
+        // store new layout
+        if (pathname === "/api/layout" && req.method === "POST") {
+          req.setEncoding("utf-8");
+          const rb = [];
+          req.on("data", (chunks) => {
+            rb.push(chunks);
+          });
+          req.on("end", () => {
+            const body = JSON.parse(rb.join(""));
+            res.writeHead(200, {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            });
+            const layout = storeLayout(body);
+            const response = {
+              error: false,
+              layout,
+            };
+            res.end(JSON.stringify(response));
+            return;
+          });
+        }
         if (pathname === "/api/event/all" && req.method === "GET") {
           req.setEncoding("utf-8");
           res.end(JSON.stringify({ events: getEventsByDate() }));

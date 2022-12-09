@@ -8,63 +8,34 @@ const DashboardPrototype = () => {
   const [allEvents, setAllEvents] = useState<DataContextValueType | undefined>(
     undefined
   );
+  const [layout, setLayout] = useState<DnDLayoutItem[] | undefined>(undefined);
   useEffect(() => {
     fetch("/api/event/all")
       .then((r) => r.json())
       .then(({ events }: { events: any }) => {
         setAllEvents(events);
       });
+    fetch("/api/layout")
+      .then((r) => r.json())
+      .then(({ layout }: { layout: DnDLayoutItem[] }) => setLayout(layout));
   }, []);
-  const initialLayout: DnDLayoutItem[] = [
-    {
-      component: "JourneyIndicator",
-      i: "JourneyIndicator",
-      h: 13,
-      w: 6,
-      x: 0,
-      y: 0,
-    },
-    {
-      component: "JourneyLastStep",
-      i: "JourneyLastStep",
-      h: 10,
-      w: 6,
-      x: 6,
-      y: 0,
-    },
-    {
-      component: "EventActivity",
-      i: "EventActivity",
-      h: 11,
-      w: 6,
-      x: 0,
-      y: 1,
-    },
-    {
-      component: "ActiveUsers",
-      i: "ActiveUsers",
-      h: 4,
-      w: 6,
-      x: 6,
-      y: 0,
-    },
-    {
-      component: "ActivityHeatmap",
-      i: "ActivityHeatmap",
-      h: 20,
-      w: 12,
-      x: 0,
-      y: 4,
-    },
-    {
-      component: "PageEventsGraph",
-      i: "PageEventsGraph",
-      h: 10,
-      w: 6,
-      x: 6,
-      y: 1,
-    },
-  ];
+
+  const handleLayoutUpdate = (layout: DnDLayoutItem[]) => {
+    fetch("/api/layout", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(
+        layout.map(({ i, ...rest }) => ({
+          ...rest,
+          i,
+          component: i,
+        }))
+      ),
+    });
+  };
+
   return (
     <Container maxWidth="lg">
       <Grid container spacing={3}>
@@ -72,8 +43,12 @@ const DashboardPrototype = () => {
           <Typography variant="h1">Dashboard prototype</Typography>
         </Grid>
         <Grid item sm={12}>
-          {allEvents ? (
-            <DnDLayout layout={initialLayout} allEvents={allEvents} />
+          {allEvents && layout ? (
+            <DnDLayout
+              handleLayoutUpdate={handleLayoutUpdate}
+              layout={layout}
+              allEvents={allEvents}
+            />
           ) : null}
         </Grid>
       </Grid>

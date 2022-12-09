@@ -49,9 +49,11 @@ const DragHandle = () => {
 const DnDLayout = ({
   allEvents,
   layout,
+  handleLayoutUpdate,
 }: {
   allEvents: DataContextValueType;
   layout: DnDLayoutItem[];
+  handleLayoutUpdate: (layout: DnDLayoutItem[]) => void;
 }) => {
   return (
     <div className="grid-dashboard">
@@ -64,6 +66,7 @@ const DnDLayout = ({
           cols={12}
           width={1200}
           rowHeight={30}
+          onLayoutChange={handleLayoutUpdate}
         >
           {layout.map(({ i, component, ...rest }) => (
             <Card key={i} data-grid={rest} sx={{ overflow: "hidden" }}>
