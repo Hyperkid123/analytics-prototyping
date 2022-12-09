@@ -7,9 +7,7 @@ import componentMapper, {
   DataContextValueType,
 } from "./componentMapper";
 
-export type DnDLayoutItem = Layout & {
-  component: ComponentTypes;
-};
+export type DnDLayoutItem = Layout;
 
 const DataContext = React.createContext<DataContextValueType>([]);
 
@@ -52,8 +50,14 @@ const DnDLayout = ({
   handleLayoutUpdate,
 }: {
   allEvents: DataContextValueType;
-  layout: DnDLayoutItem[];
-  handleLayoutUpdate: (layout: DnDLayoutItem[]) => void;
+  layout: {
+    componentMapping: { [key: string]: ComponentTypes };
+    gridLayout: DnDLayoutItem[];
+  };
+  handleLayoutUpdate: (
+    gridLayout: DnDLayoutItem[],
+    componentMapping: { [key: string]: ComponentTypes }
+  ) => void;
 }) => {
   return (
     <div className="grid-dashboard">
@@ -66,13 +70,17 @@ const DnDLayout = ({
           cols={12}
           width={1200}
           rowHeight={30}
-          onLayoutChange={handleLayoutUpdate}
+          onLayoutChange={(newLayout) =>
+            handleLayoutUpdate(newLayout, layout.componentMapping)
+          }
         >
-          {layout.map(({ i, component, ...rest }) => (
+          {layout.gridLayout.map(({ i, ...rest }) => (
             <Card key={i} data-grid={rest} sx={{ overflow: "hidden" }}>
               <DragHandle />
               <CardContent>
-                <LayoutComponentWrapper component={component} />
+                <LayoutComponentWrapper
+                  component={layout.componentMapping[i]}
+                />
               </CardContent>
             </Card>
           ))}

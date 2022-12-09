@@ -2,13 +2,22 @@ import { Grid, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { Container } from "@mui/system";
 import DnDLayout, { DnDLayoutItem } from "../src/Dashboard/DnDLayout";
-import { DataContextValueType } from "../src/Dashboard/componentMapper";
+import {
+  ComponentTypes,
+  DataContextValueType,
+} from "../src/Dashboard/componentMapper";
 
 const DashboardPrototype = () => {
   const [allEvents, setAllEvents] = useState<DataContextValueType | undefined>(
     undefined
   );
-  const [layout, setLayout] = useState<DnDLayoutItem[] | undefined>(undefined);
+  const [layout, setLayout] = useState<
+    | {
+        gridLayout: DnDLayoutItem[];
+        componentMapping: { [key: string]: ComponentTypes };
+      }
+    | undefined
+  >(undefined);
   useEffect(() => {
     fetch("/api/event/all")
       .then((r) => r.json())
@@ -17,22 +26,31 @@ const DashboardPrototype = () => {
       });
     fetch("/api/layout")
       .then((r) => r.json())
-      .then(({ layout }: { layout: DnDLayoutItem[] }) => setLayout(layout));
+      .then(
+        ({
+          layout: { gridLayout, componentMapping },
+        }: {
+          layout: {
+            componentMapping: { [key: string]: ComponentTypes };
+            gridLayout: DnDLayoutItem[];
+          };
+        }) => setLayout({ gridLayout, componentMapping })
+      );
   }, []);
 
-  const handleLayoutUpdate = (layout: DnDLayoutItem[]) => {
+  const handleLayoutUpdate = (
+    gridLayout: DnDLayoutItem[],
+    componentMapping: { [key: string]: ComponentTypes }
+  ) => {
     fetch("/api/layout", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(
-        layout.map(({ i, ...rest }) => ({
-          ...rest,
-          i,
-          component: i,
-        }))
-      ),
+      body: JSON.stringify({
+        gridLayout,
+        componentMapping,
+      }),
     });
   };
 

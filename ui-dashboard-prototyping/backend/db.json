@@ -14091,6 +14091,176 @@
         "subscriptionTier": "business"
       },
       "timestamp": 1670589809128
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "a51d1e41-23b4-477e-b6fc-ae5e3a338c38",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/700.jpg",
+        "birthday": "1974-08-01T14:44:04.168Z",
+        "email": "Susan_Schinner64@hotmail.com",
+        "firstName": "Ladarius",
+        "lastName": "Tillman",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670590264464
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "a51d1e41-23b4-477e-b6fc-ae5e3a338c38",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/700.jpg",
+        "birthday": "1974-08-01T14:44:04.168Z",
+        "email": "Susan_Schinner64@hotmail.com",
+        "firstName": "Ladarius",
+        "lastName": "Tillman",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670590264481
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "426b0006-f7f6-45c5-b12b-ee2d9663ed23",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+        "birthday": "1982-03-20T17:47:19.230Z",
+        "email": "Aurelia.Blick@yahoo.com",
+        "firstName": "Eloisa",
+        "lastName": "Kutch",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670590267868
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "426b0006-f7f6-45c5-b12b-ee2d9663ed23",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+        "birthday": "1982-03-20T17:47:19.230Z",
+        "email": "Aurelia.Blick@yahoo.com",
+        "firstName": "Eloisa",
+        "lastName": "Kutch",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670590267871
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d379d5da-42cf-4f79-b751-2dce26de46b2",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "1991-07-27T00:01:41.504Z",
+        "email": "Orin_Haag7@yahoo.com",
+        "firstName": "Kylee",
+        "lastName": "Cole",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670590404384
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d379d5da-42cf-4f79-b751-2dce26de46b2",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+        "birthday": "1991-07-27T00:01:41.504Z",
+        "email": "Orin_Haag7@yahoo.com",
+        "firstName": "Kylee",
+        "lastName": "Cole",
+        "subscriptionTier": "business"
+      },
+      "timestamp": 1670590404385
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "1be1c3d4-d1cf-4e17-93e2-00dad0e2302c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/604.jpg",
+        "birthday": "1990-08-09T02:53:46.657Z",
+        "email": "Tremayne_Orn@yahoo.com",
+        "firstName": "Kasandra",
+        "lastName": "Green",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670590476194
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "1be1c3d4-d1cf-4e17-93e2-00dad0e2302c",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/604.jpg",
+        "birthday": "1990-08-09T02:53:46.657Z",
+        "email": "Tremayne_Orn@yahoo.com",
+        "firstName": "Kasandra",
+        "lastName": "Green",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670590476199
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d6a05224-c9cf-4924-b9ce-90d42b559401",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+        "birthday": "1945-05-20T20:49:18.596Z",
+        "email": "Frederik_Kihn77@gmail.com",
+        "firstName": "Deanna",
+        "lastName": "Feil",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670590588956
+    },
+    {
+      "type": "page",
+      "payload": {
+        "pathname": "/dashboard-prototype",
+        "url": "http://localhost:3000/dashboard-prototype"
+      },
+      "user": {
+        "id": "d6a05224-c9cf-4924-b9ce-90d42b559401",
+        "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+        "birthday": "1945-05-20T20:49:18.596Z",
+        "email": "Frederik_Kihn77@gmail.com",
+        "firstName": "Deanna",
+        "lastName": "Feil",
+        "subscriptionTier": "basic"
+      },
+      "timestamp": 1670590588962
     }
   ],
   "users": [
@@ -17684,118 +17854,172 @@
       "firstName": "Lisandro",
       "lastName": "Rodriguez",
       "subscriptionTier": "business"
+    },
+    {
+      "id": "a51d1e41-23b4-477e-b6fc-ae5e3a338c38",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/700.jpg",
+      "birthday": "1974-08-01T14:44:04.168Z",
+      "email": "Susan_Schinner64@hotmail.com",
+      "firstName": "Ladarius",
+      "lastName": "Tillman",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "426b0006-f7f6-45c5-b12b-ee2d9663ed23",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1105.jpg",
+      "birthday": "1982-03-20T17:47:19.230Z",
+      "email": "Aurelia.Blick@yahoo.com",
+      "firstName": "Eloisa",
+      "lastName": "Kutch",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "d379d5da-42cf-4f79-b751-2dce26de46b2",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
+      "birthday": "1991-07-27T00:01:41.504Z",
+      "email": "Orin_Haag7@yahoo.com",
+      "firstName": "Kylee",
+      "lastName": "Cole",
+      "subscriptionTier": "business"
+    },
+    {
+      "id": "1be1c3d4-d1cf-4e17-93e2-00dad0e2302c",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/604.jpg",
+      "birthday": "1990-08-09T02:53:46.657Z",
+      "email": "Tremayne_Orn@yahoo.com",
+      "firstName": "Kasandra",
+      "lastName": "Green",
+      "subscriptionTier": "basic"
+    },
+    {
+      "id": "d6a05224-c9cf-4924-b9ce-90d42b559401",
+      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/370.jpg",
+      "birthday": "1945-05-20T20:49:18.596Z",
+      "email": "Frederik_Kihn77@gmail.com",
+      "firstName": "Deanna",
+      "lastName": "Feil",
+      "subscriptionTier": "basic"
     }
   ],
-  "layout": [
-    {
-      "w": 6,
-      "h": 13,
-      "x": 0,
-      "y": 0,
-      "moved": false,
-      "static": false,
-      "i": "JourneyIndicator",
-      "component": "JourneyIndicator"
-    },
-    {
-      "w": 6,
-      "h": 10,
-      "x": 6,
-      "y": 4,
-      "moved": false,
-      "static": false,
-      "i": "JourneyLastStep",
-      "component": "JourneyLastStep"
-    },
-    {
-      "w": 6,
-      "h": 11,
-      "x": 0,
-      "y": 13,
-      "moved": false,
-      "static": false,
-      "i": "EventActivity",
-      "component": "EventActivity"
-    },
-    {
-      "w": 6,
-      "h": 4,
-      "x": 6,
-      "y": 0,
-      "moved": false,
-      "static": false,
-      "i": "ActiveUsers",
-      "component": "ActiveUsers"
-    },
-    {
-      "w": 12,
-      "h": 20,
-      "x": 0,
-      "y": 24,
-      "moved": false,
-      "static": false,
-      "i": "ActivityHeatmap",
-      "component": "ActivityHeatmap"
-    },
-    {
-      "w": 6,
-      "h": 10,
-      "x": 6,
-      "y": 14,
-      "moved": false,
-      "static": false,
-      "i": "PageEventsGraph",
-      "component": "PageEventsGraph"
+  "layout": {
+    "gridLayout": [
+      {
+        "w": 6,
+        "h": 13,
+        "x": 0,
+        "y": 0,
+        "i": "1",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 10,
+        "x": 6,
+        "y": 0,
+        "i": "2",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 11,
+        "x": 0,
+        "y": 17,
+        "i": "3",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 4,
+        "x": 1,
+        "y": 13,
+        "i": "4",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 12,
+        "h": 20,
+        "x": 0,
+        "y": 28,
+        "i": "5",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 10,
+        "x": 6,
+        "y": 17,
+        "i": "6",
+        "moved": false,
+        "static": false
+      }
+    ],
+    "componentMapping": {
+      "1": "JourneyIndicator",
+      "2": "JourneyLastStep",
+      "3": "EventActivity",
+      "4": "ActiveUsers",
+      "5": "ActivityHeatmap",
+      "6": "PageEventsGraph"
     }
-  ],
-  "defaultLayout": [
-    {
-      "component": "JourneyIndicator",
-      "i": "JourneyIndicator",
-      "h": 13,
-      "w": 6,
-      "x": 0,
-      "y": 0
+  },
+  "defaultLayout": {
+    "componentMapping": {
+      "1": "JourneyIndicator",
+      "2": "JourneyLastStep",
+      "3": "EventActivity",
+      "4": "ActiveUsers",
+      "5": "ActivityHeatmap",
+      "6": "PageEventsGraph"
     },
-    {
-      "component": "JourneyLastStep",
-      "i": "JourneyLastStep",
-      "h": 10,
-      "w": 6,
-      "x": 6,
-      "y": 0
-    },
-    {
-      "component": "EventActivity",
-      "i": "EventActivity",
-      "h": 11,
-      "w": 6,
-      "x": 0,
-      "y": 1
-    },
-    {
-      "component": "ActiveUsers",
-      "i": "ActiveUsers",
-      "h": 4,
-      "w": 6,
-      "x": 6,
-      "y": 0
-    },
-    {
-      "component": "ActivityHeatmap",
-      "i": "ActivityHeatmap",
-      "h": 20,
-      "w": 12,
-      "x": 0,
-      "y": 4
-    },
-    {
-      "component": "PageEventsGraph",
-      "i": "PageEventsGraph",
-      "h": 10,
-      "w": 6,
-      "x": 6,
-      "y": 1
-    }
-  ]
+    "gridLayout": [
+      {
+        "i": "1",
+        "h": 13,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "i": "2",
+        "h": 10,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      {
+        "i": "3",
+        "h": 11,
+        "w": 6,
+        "x": 0,
+        "y": 1
+      },
+      {
+        "i": "4",
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      {
+        "i": "5",
+        "h": 20,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      {
+        "component": "PageEventsGraph",
+        "i": "6",
+        "h": 10,
+        "w": 6,
+        "x": 6,
+        "y": 1
+      }
+    ]
+  }
 }
