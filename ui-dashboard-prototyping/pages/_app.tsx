@@ -35,11 +35,11 @@ const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
 const NestedLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
   if (pathname === "/") {
-    return <>{children}</>;
+    return <Box sx={{ minHeight: "100vh" }}>{children}</Box>;
   }
 
   return (
-    <Box sx={{ display: "flex", bgcolor: "#e7ebf0" }}>
+    <Box sx={{ display: "flex", bgcolor: "#e7ebf0", minHeight: "100vh" }}>
       <AppBar component="nav">
         <Box
           sx={{
