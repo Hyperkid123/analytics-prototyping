@@ -20,6 +20,8 @@ import Link from "../src/Link";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
 
+import "../styles/globals.css";
+
 const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
   const page = usePageEvent();
@@ -37,7 +39,7 @@ const NestedLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   }
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", bgcolor: "#e7ebf0" }}>
       <AppBar component="nav">
         <Box
           sx={{

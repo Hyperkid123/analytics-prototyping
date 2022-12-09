@@ -19,7 +19,7 @@ const DashboardPrototype = () => {
     {
       component: "JourneyIndicator",
       i: "JourneyIndicator",
-      h: 15,
+      h: 13,
       w: 6,
       x: 0,
       y: 0,
@@ -27,7 +27,7 @@ const DashboardPrototype = () => {
     {
       component: "JourneyLastStep",
       i: "JourneyLastStep",
-      h: 12,
+      h: 10,
       w: 6,
       x: 6,
       y: 0,
@@ -35,7 +35,7 @@ const DashboardPrototype = () => {
     {
       component: "EventActivity",
       i: "EventActivity",
-      h: 12,
+      h: 11,
       w: 6,
       x: 0,
       y: 1,
@@ -43,7 +43,7 @@ const DashboardPrototype = () => {
     {
       component: "ActiveUsers",
       i: "ActiveUsers",
-      h: 3,
+      h: 4,
       w: 6,
       x: 6,
       y: 0,
@@ -59,7 +59,7 @@ const DashboardPrototype = () => {
     {
       component: "PageEventsGraph",
       i: "PageEventsGraph",
-      h: 12,
+      h: 10,
       w: 6,
       x: 6,
       y: 1,

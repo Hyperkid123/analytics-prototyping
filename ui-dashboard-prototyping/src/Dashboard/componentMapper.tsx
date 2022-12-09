@@ -138,6 +138,11 @@ const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
       </Typography>
       <ReactApexChart
         options={{
+          plotOptions: {
+            bar: {
+              horizontal: true,
+            },
+          },
           chart: {
             type: "bar",
             height: "100%",
@@ -361,6 +366,16 @@ const PageEventsGraph = ({ data = [] }: { data: DataContextValueType }) => {
       <ReactApexChart
         type="bar"
         options={{
+          xaxis: {
+            labels: {
+              rotate: 0,
+            },
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+            },
+          },
           series: [
             {
               data: series,
