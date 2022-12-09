@@ -31,7 +31,9 @@ func main() {
 	router.Get("/", HealthProbe)
 	router.Get("/events", GetEvents)
 	
+	logrus.Infoln("----------------------------------")
 	logrus.Infoln("Starting http server on port: 8000")
+	logrus.Infoln("----------------------------------")
 	if err := http.ListenAndServe(":8000", router); err != nil && err != http.ErrServerClosed {
 		logrus.Fatal("Api server has stopped", err.Error())
 	}
