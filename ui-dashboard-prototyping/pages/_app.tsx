@@ -16,6 +16,12 @@ import { AppBar, Box, Typography } from "@mui/material";
 import navigationData from "../src/Navigation/navigation-data";
 import Link from "../src/Link";
 
+// grid layout CSS
+import "react-grid-layout/css/styles.css";
+import "react-resizable/css/styles.css";
+
+import "../styles/globals.css";
+
 const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
   const page = usePageEvent();
@@ -29,11 +35,11 @@ const PageEventWrapper: React.FC<React.PropsWithChildren> = ({ children }) => {
 const NestedLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { pathname } = useRouter();
   if (pathname === "/") {
-    return <>{children}</>;
+    return <Box sx={{ minHeight: "100vh" }}>{children}</Box>;
   }
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", bgcolor: "#e7ebf0", minHeight: "100vh" }}>
       <AppBar component="nav">
         <Box
           sx={{

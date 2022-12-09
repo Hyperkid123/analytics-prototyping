@@ -79,7 +79,7 @@ const CreateGuidePage = () => {
     undefined
   );
   useEffect(() => {
-    fetch("/api/layout")
+    fetch("/api/guide-layout")
       .then((r) => r.json())
       .then(({ layouts }: { layouts: DefaultLayout[] }) => {
         setLayouts(layouts);

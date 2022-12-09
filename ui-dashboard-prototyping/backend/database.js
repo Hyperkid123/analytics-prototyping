@@ -155,6 +155,51 @@ const getPageEvents = (startTimestamp, endTimestamp) => {
   return events.filter(({ type }) => type === "page");
 };
 
+const getLayout = () => {
+  let data = {};
+  try {
+    data = fse.readJsonSync(DATABASE_FILE);
+  } catch (error) {
+    data = {};
+  }
+
+  return data.layout || data.defaultLayout;
+};
+
+const storeLayout = (layout) => {
+  fse.ensureFileSync(DATABASE_FILE);
+  let uuid;
+
+  let data = {};
+  try {
+    data = fse.readJsonSync(DATABASE_FILE);
+  } catch (error) {
+    data = {};
+  }
+
+  data.layout = layout;
+
+  fse.writeJsonSync(DATABASE_FILE, data, {
+    spaces: 2,
+  });
+
+  return layout;
+};
+
+const getWidgets = () => {
+  let data = {};
+  try {
+    data = fse.readJsonSync(DATABASE_FILE);
+  } catch (error) {
+    data = {};
+  }
+
+  return data.widgets || [];
+};
+
+module.exports.getWidgets = getWidgets;
+module.exports.storeLayout = storeLayout;
+module.exports.getLayout = getLayout;
 module.exports.getPageEvents = getPageEvents;
 module.exports.getUserActivityHeatmap = getUserActivityHeatmap;
 module.exports.getActiveUsers = getActiveUsers;
