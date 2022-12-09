@@ -101,11 +101,24 @@ func Init() *gorm.DB {
 		logrus.Infoln("Number of users found:", lenUsers)
 
 		usersCreated := 0
+		userIDs := make(map[string]uuid.UUID) // Keep track of UserIDs for later reference
 
 		for i := 0; i < lenUsers; i++ {
 			user := users[i].(map[string]interface{})
 
-			userUUID, UUIDErr := uuid.Parse(user["id"].(string))
+			// Bail if there isnt a user ID
+			if user["id"] == nil {
+				continue
+			}
+			// Bail if we've already created this user
+			if val, ok := userIDs[user["id"].(string)]; ok {
+				logrus.Debugln(val, "user already exists. Skipping.")
+				continue
+			}
+
+			userIdString := user["id"].(string)
+
+			userUUID, UUIDErr := uuid.Parse(userIdString)
 			if UUIDErr != nil {
 				logrus.Fatal("User ID parse failed:", UUIDErr.Error())
 			}
@@ -117,21 +130,85 @@ func Init() *gorm.DB {
 			}
 			
 			newUser := models.User{UserID:userUUID, Data:userMarshal}
-			newUser.ID = uuid.New()
+			newUserUUID := uuid.New()
+			newUser.ID = newUserUUID
 			result := DB.Create(&newUser)
 
 			if result.Error != nil {
 				logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
 			} else {
 				usersCreated++
+				userIDs[userIdString] = newUserUUID // Track ref user ID
 			}
 		}
 
 		logrus.Infoln("Created users:", usersCreated)
 
-		// Get Events to Seed
+		// Get all Events
+		// Used for seeding other things
+		events := seedJson["events"].([]interface{})
+		lenEvents := len(events)
 
 		// Create Sessions from Events
+		logrus.Infoln("Events found for Sessions:", lenEvents)
+
+		sessionsCreated := 0
+		sessionIDs := make(map[string]uuid.UUID) // Keep Track of Session IDs for later reference
+
+		for i := 0; i < lenEvents; i++ {
+			event := events[i].(map[string]interface{})
+
+			// Bail if we don't find a session ID
+			if event["sessionId"] == nil {
+				continue
+			}
+			// Bail if we don't find a user ID
+			if event["user"] == nil {
+				continue
+			}
+			// Bail if this session already exists in the DB
+			if val, ok := sessionIDs[event["sessionId"].(string)]; ok {
+				logrus.Debugln(val, "session already exists. Skipping.")
+				continue
+			}
+
+			// Parse Session UUID
+			sessionUUID, UUIDErr := uuid.Parse(event["sessionId"].(string))
+			if UUIDErr != nil {
+				logrus.Fatal("Session ID parse failed:", UUIDErr.Error())
+			}
+
+			// Parse User to get ID to link to previously created
+			// users to obtain the UUID PK that was generated
+			user := event["user"].(map[string]interface{})
+			userRefID := userIDs[user["id"].(string)]
+
+			if UUIDErr != nil {
+				logrus.Fatal("Session User Ref ID parse failed:", UUIDErr.Error())
+			}
+
+			// Create Session
+			sessionData := []byte("{}")
+			newSession := models.Session{SessionID:sessionUUID,
+										 UserRefID:userRefID,
+										 Data:sessionData}
+			newSessionUUID := uuid.New()
+			newSession.ID = newSessionUUID
+			result := DB.Create(&newSession)
+
+			if result.Error != nil {
+				logrus.Fatal("Error creating session:", sessionUUID, result.Error.Error())
+			} else {
+				sessionsCreated++
+				sessionIDs[event["sessionId"].(string)] = newSessionUUID
+
+			}
+
+		}
+
+		logrus.Infoln("Created sessions:", sessionsCreated)
+
+		// Get Events to Seed
 
 		// Create Journeys from Events
 
