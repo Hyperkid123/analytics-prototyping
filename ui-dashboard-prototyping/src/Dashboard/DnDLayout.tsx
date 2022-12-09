@@ -1,4 +1,11 @@
-import { Box, Card, CardContent, CardHeader, Paper } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Paper,
+  styled,
+} from "@mui/material";
 import React, { useContext, useState } from "react";
 import GridLayout, { Layout } from "react-grid-layout";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
@@ -44,6 +51,10 @@ const DragHandle = () => {
   );
 };
 
+const LayoutWrapper = styled("div")({
+  transform: "translate(-10px)",
+});
+
 const DnDLayout = ({
   allEvents,
   layout,
@@ -60,15 +71,13 @@ const DnDLayout = ({
   ) => void;
 }) => {
   return (
-    <div className="grid-dashboard">
+    <LayoutWrapper>
       <DataContext.Provider value={allEvents}>
         <GridLayout
           draggableHandle=".drag-handle"
-          margin={[16, 16]}
-          containerPadding={[8, 8]}
           className="layout"
           cols={12}
-          width={1200}
+          width={1173}
           rowHeight={30}
           onLayoutChange={(newLayout) =>
             handleLayoutUpdate(newLayout, layout.componentMapping)
@@ -86,7 +95,7 @@ const DnDLayout = ({
           ))}
         </GridLayout>
       </DataContext.Provider>
-    </div>
+    </LayoutWrapper>
   );
 };
 

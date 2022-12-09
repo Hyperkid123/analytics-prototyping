@@ -6,6 +6,7 @@ import {
   ComponentTypes,
   DataContextValueType,
 } from "../src/Dashboard/componentMapper";
+import WidgetSelector from "../src/Dashboard/WidgetSelector";
 
 const DashboardPrototype = () => {
   const [allEvents, setAllEvents] = useState<DataContextValueType | undefined>(
@@ -18,6 +19,7 @@ const DashboardPrototype = () => {
       }
     | undefined
   >(undefined);
+  const [widgets, setWidgets] = useState<ComponentTypes[]>([]);
   useEffect(() => {
     fetch("/api/event/all")
       .then((r) => r.json())
@@ -35,6 +37,11 @@ const DashboardPrototype = () => {
             gridLayout: DnDLayoutItem[];
           };
         }) => setLayout({ gridLayout, componentMapping })
+      );
+    fetch("/api/widgets")
+      .then((r) => r.json())
+      .then(({ widgets }: { widgets: ComponentTypes[] }) =>
+        setWidgets(widgets)
       );
   }, []);
 
@@ -54,11 +61,32 @@ const DashboardPrototype = () => {
     });
   };
 
+  const handleAddWidget = (widgetType: ComponentTypes) => {
+    const i = `${widgetType}-${Date.now()}`;
+    const newWidget = {
+      w: 6,
+      h: 6,
+      x: 0,
+      y: 0,
+      i,
+    };
+    setLayout((prev) => ({
+      componentMapping: {
+        ...prev?.componentMapping,
+        [i]: widgetType,
+      },
+      gridLayout: [newWidget, ...(prev?.gridLayout || [])],
+    }));
+  };
+
   return (
     <Container maxWidth="lg">
       <Grid container spacing={3}>
         <Grid item sm={12}>
-          <Typography variant="h1">Dashboard prototype</Typography>
+          <WidgetSelector
+            handleAddWidget={handleAddWidget}
+            widgetList={widgets}
+          />
         </Grid>
         <Grid item sm={12}>
           {allEvents && layout ? (

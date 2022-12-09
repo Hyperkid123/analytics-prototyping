@@ -186,6 +186,18 @@ const storeLayout = (layout) => {
   return layout;
 };
 
+const getWidgets = () => {
+  let data = {};
+  try {
+    data = fse.readJsonSync(DATABASE_FILE);
+  } catch (error) {
+    data = {};
+  }
+
+  return data.widgets || [];
+};
+
+module.exports.getWidgets = getWidgets;
 module.exports.storeLayout = storeLayout;
 module.exports.getLayout = getLayout;
 module.exports.getPageEvents = getPageEvents;

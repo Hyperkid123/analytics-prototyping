@@ -11,6 +11,7 @@ const {
   getPageEvents,
   getLayout,
   storeLayout,
+  getWidgets,
 } = require("./backend/database");
 const { getLayoutById, layouts } = require("./backend/guide-layouts");
 
@@ -30,6 +31,12 @@ app.prepare().then(() => {
       const { pathname, query } = parsedUrl;
 
       if (pathname.match(/^\/api/)) {
+        // getWidgets
+        if (pathname === "/api/widgets" && req.method === "GET") {
+          req.setEncoding("utf-8");
+          res.end(JSON.stringify({ widgets: getWidgets() }));
+          return;
+        }
         // dashboard user based value
         if (pathname === "/api/layout" && req.method === "GET") {
           req.setEncoding("utf-8");
