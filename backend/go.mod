@@ -3,9 +3,6 @@ module github.com/Hyperkid123/analytics-prototyping
 go 1.18
 
 require (
-	github.com/Hyperkid123/analytics-prototyping/config v0.0.0
-	github.com/Hyperkid123/analytics-prototyping/database v0.0.0
-	github.com/Hyperkid123/analytics-prototyping/models v0.0.0
 	github.com/go-chi/chi/v5 v5.0.7
 	github.com/google/uuid v1.3.0
 	github.com/joho/godotenv v1.4.0
