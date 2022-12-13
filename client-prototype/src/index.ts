@@ -86,7 +86,7 @@ class AnalyticsClient<
         sessionId: this._sessionId,
         timestamp: Date.now(),
       })
-      if(this.getReady()) {
+      if(this.getReady() || eventPayload?.type === 'identify') {
         this.fetchData(url, payload)
       } else {
         this._buffer.push({url, payload})
@@ -107,6 +107,7 @@ class AnalyticsClient<
     const data = await this.emit(this._customEventEndpoint, event);
     this._ready = true
     if(this._buffer.length > 0) {
+      console.log(this._buffer)
       this._buffer.forEach(({ url, payload }) => this.fetchData(url, payload))
     }
     this._buffer = []
