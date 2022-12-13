@@ -113,7 +113,7 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	user.UserID = userUUID
-	payload := user.Data.Get().(map[string]interface{})
+	payload := user.Data
 
 	pMsg.WriteString("Inserting user into DB:")
 
@@ -163,7 +163,7 @@ func updateUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	msgPayload := user.Data.Get().(map[string]interface{})
+	msgPayload := user.Data
 
 	pMsg.WriteString("Updating user with values:")
 

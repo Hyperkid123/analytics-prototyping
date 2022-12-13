@@ -4,15 +4,15 @@ import (
 	"fmt"
 
 	"github.com/google/uuid"
-	"github.com/jackc/pgtype"
+	"gorm.io/datatypes"
 	"gorm.io/gorm"
 )
 
 // Users
 type User struct {
-	BaseModel              // Store the internal ID for that user
-	UserID    uuid.UUID    `json:"userID"`
-	Data      pgtype.JSONB `json:"data" gorm:"type:jsonb;column:data"` // Store additional metadata for users
+	BaseModel                // Store the internal ID for that user
+	UserID    uuid.UUID      `json:"userID"`
+	Data      datatypes.JSON `json:"data" gorm:"type:JSONB;column:data"` // Store additional metadata for users
 }
 
 func (user *User) CreateUser(db *gorm.DB, payload User) (User, error) {

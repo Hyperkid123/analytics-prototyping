@@ -10,7 +10,6 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/models"
 	"github.com/google/uuid"
-	"github.com/jackc/pgtype"
 	"github.com/sirupsen/logrus"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -128,7 +127,11 @@ func Init() *gorm.DB {
 			}
 
 			delete(user, "id") // Delete the ID, Store the rest in the "data" JSON blob
-			newUser := models.User{UserID: userUUID, Data: userB.(pgtype.JSONB)}
+			b, err := json.Marshal(userB)
+			if err != nil {
+				logrus.Fatal("Error marshaling user:", err)
+			}
+			newUser := models.User{UserID: userUUID, Data: b}
 			result := DB.Create(&newUser)
 
 			if result.Error != nil {
