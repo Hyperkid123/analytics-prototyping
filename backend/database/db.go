@@ -11,6 +11,7 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/models"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
+	"github.com/thedevsaddam/gojsonq/v2"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -54,21 +55,21 @@ func Init() *gorm.DB {
 			logrus.Infoln("Creating User table...")
 			DB.Migrator().CreateTable(&models.User{})
 		}
-		if !DB.Migrator().HasTable(&models.Session{}) {
-			logrus.Infoln("Creating Session table...")
-			DB.Migrator().CreateTable(&models.Session{})
-		}
-		if !DB.Migrator().HasTable(&models.Journey{}) {
-			logrus.Infoln("Creating Journey table...")
-			DB.Migrator().CreateTable(&models.Journey{})
-		}
+		// if !DB.Migrator().HasTable(&models.Session{}) {
+		// 	logrus.Infoln("Creating Session table...")
+		// 	DB.Migrator().CreateTable(&models.Session{})
+		// }
+		// if !DB.Migrator().HasTable(&models.Journey{}) {
+		// 	logrus.Infoln("Creating Journey table...")
+		// 	DB.Migrator().CreateTable(&models.Journey{})
+		// }
 		if !DB.Migrator().HasTable(&models.Event{}) {
 			logrus.Infoln("Creating Event table...")
 			DB.Migrator().CreateTable(&models.Event{})
 		}
 
 		logrus.Infoln("Running auto-migration...")
-		DB.AutoMigrate(&models.User{}, &models.Session{}, &models.Journey{}, &models.Event{})
+		DB.AutoMigrate(&models.User{}, &models.Event{})
 	}
 
 	if err != nil {
@@ -103,7 +104,9 @@ func Init() *gorm.DB {
 		logrus.Infoln("Number of users found:", lenUsers)
 
 		usersCreated := 0
+		usersUpdated := 0
 		userIDs := make(map[string]uint) // Keep track of UserIDs for later reference
+		eventsCreated := 0
 
 		for i := 0; i < lenUsers; i++ {
 			user := users[i].(map[string]interface{})
@@ -131,18 +134,27 @@ func Init() *gorm.DB {
 			if err != nil {
 				logrus.Fatal("Error marshaling user:", err)
 			}
-			newUser := models.User{UserID: userUUID, Data: b}
-			result := DB.Create(&newUser)
-
-			if result.Error != nil {
-				logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
+			var existingUser models.User
+			result := DB.Where("user_id = ?", userUUID).First(&existingUser)
+			if result.RowsAffected > 0 {
+				existingUser.Data = b
+				DB.Save(&user)
+				usersUpdated += 1
 			} else {
-				usersCreated++
-				userIDs[userIdString] = newUser.ID // Track ref user ID
+				newUser := models.User{UserID: userUUID, Data: b}
+				result = DB.Create(&newUser)
+
+				if result.Error != nil {
+					logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
+				} else {
+					usersCreated++
+					userIDs[userIdString] = newUser.ID // Track ref user ID
+				}
 			}
 		}
 
 		logrus.Infoln("Created users:", usersCreated)
+		logrus.Infoln("Updated users:", usersUpdated)
 
 		// Get all Events
 		// Used for seeding other things
@@ -152,59 +164,69 @@ func Init() *gorm.DB {
 		// Create Sessions from Events
 		logrus.Infoln("Events found for Sessions:", lenEvents)
 
-		sessionsCreated := 0
-		sessionIDs := make(map[string]uint) // Keep Track of Session IDs for later reference
-
 		for i := 0; i < lenEvents; i++ {
 			event := events[i].(map[string]interface{})
-
-			// Bail if we don't find a session ID
-			if event["sessionId"] == nil {
-				continue
-			}
+			// get user ref
+			userRef := gojsonq.New().FromInterface(event).Find("user.id")
 			// Bail if we don't find a user ID
-			if event["user"] == nil {
+			if userRef == nil {
 				continue
 			}
-			// Bail if this session already exists in the DB
-			if val, ok := sessionIDs[event["sessionId"].(string)]; ok {
-				logrus.Debugln(val, "session already exists. Skipping.")
+
+			// remove user propery from event
+			delete(event, "user")
+			uuidString := fmt.Sprintf("%v", userRef)
+			uuidVal, err := uuid.Parse(uuidString)
+			if err != nil {
+				logrus.Fatal("User Ref uuid parse failed:", err.Error())
+			}
+
+			var eventUser models.User
+			result := DB.Where("user_id   = ?", uuidString).First(&eventUser)
+
+			if result.Error != nil || result.RowsAffected == 0 {
+				// no user associated with the event
+				logrus.Infoln("Unable to find event user: ", result.Error.Error(), "skipping")
 				continue
 			}
+
+			b, err := json.Marshal(event)
+
+			if err != nil {
+				logrus.Fatal("Unable to parse event data: ", err.Error())
+			}
+
+			newEvent := models.Event{
+				UserRef: uuidVal,
+				Data:    b,
+			}
+
+			result = DB.Create(&newEvent)
+
+			if result.Error != nil {
+				logrus.Fatal("Error creating event:", newEvent, result.Error.Error())
+			}
+
+			DB.Model(&eventUser).Association("Events").Append(&newEvent)
+			eventsCreated += 1
 
 			// Parse Session UUID
-			sessionUUID, UUIDErr := uuid.Parse(event["sessionId"].(string))
-			if UUIDErr != nil {
-				logrus.Fatal("Session ID parse failed:", UUIDErr.Error())
-			}
+			// sessionUUID, UUIDErr := uuid.Parse(event["sessionId"].(string))
+			// if UUIDErr != nil {
+			// 	logrus.Fatal("Session ID parse failed:", UUIDErr.Error())
+			// }
 
 			// Parse User to get ID to link to previously created
 			// users to obtain the UUID PK that was generated
-			user := event["user"].(map[string]interface{})
-			userRefID := userIDs[user["id"].(string)]
+			// user := event["user"].(map[string]interface{})
+			// userRefID := userIDs[user["id"].(string)]
 
-			if UUIDErr != nil {
-				logrus.Fatal("Session User Ref ID parse failed:", UUIDErr.Error())
-			}
-
-			// Create Session
-			sessionData := []byte("{}")
-			newSession := models.Session{SessionID: sessionUUID,
-				UserRefID: userRefID,
-				Data:      sessionData}
-			result := DB.Create(&newSession)
-
-			if result.Error != nil {
-				logrus.Fatal("Error creating session:", sessionUUID, result.Error.Error())
-			} else {
-				sessionsCreated++
-				sessionIDs[event["sessionId"].(string)] = newSession.ID
-
-			}
-
+			// if UUIDErr != nil {
+			// 	logrus.Fatal("Session User Ref ID parse failed:", UUIDErr.Error())
+			// }
 		}
 
-		logrus.Infoln("Created sessions:", sessionsCreated)
+		logrus.Infoln("Created events:", eventsCreated)
 
 		// Get Events to Seed
 
