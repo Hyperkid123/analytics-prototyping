@@ -76,3 +76,9 @@ func IdentifyUser(userID uuid.UUID, payload interface{}) (models.User, error) {
 	err = database.DB.Create(&user).Error
 	return user, err
 }
+
+func CheckExistingUser(userID uuid.UUID) (bool, models.User) {
+	var user models.User
+	result := database.DB.Where("user_id = ?", userID).First(&user)
+	return result.RowsAffected > 0, user
+}
