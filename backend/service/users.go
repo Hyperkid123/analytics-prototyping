@@ -1,10 +1,13 @@
 package service
 
 import (
+	"encoding/json"
 	"fmt"
 
 	"github.com/Hyperkid123/analytics-prototyping/database"
 	"github.com/Hyperkid123/analytics-prototyping/models"
+	"github.com/google/uuid"
+	"github.com/sirupsen/logrus"
 )
 
 func GetUsers() []models.User {
@@ -48,4 +51,28 @@ func UpdateUser(payload models.User) (models.User, error) {
 	}
 
 	return payload, nil
+}
+
+func IdentifyUser(userID uuid.UUID, payload interface{}) (models.User, error) {
+	// remove extra id in payload
+	delete(payload.(map[string]interface{}), "id")
+	b, err := json.Marshal(payload)
+	if err != nil {
+		logrus.Fatal("Error marshaling user:", err)
+		return models.User{}, err
+	}
+	var existingUser models.User
+	result := database.DB.Where("user_id = ?", userID).First(&existingUser)
+	if result.RowsAffected > 0 {
+		existingUser.Data = b
+		database.DB.Save(&existingUser)
+		return existingUser, nil
+	}
+	user := models.User{
+		UserID: userID,
+		Data:   b,
+	}
+
+	err = database.DB.Create(&user).Error
+	return user, err
 }

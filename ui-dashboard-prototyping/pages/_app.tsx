@@ -81,7 +81,7 @@ export default function MyApp(props: MyAppProps) {
   // mock user data call
   const user = React.useRef(createRandomUser());
   const clientProps: ReactClientProviderProps<User> = {
-    endpoint: "/api",
+    endpoint: "http://localhost:8000",
     user: user.current,
   };
   return (

@@ -9,6 +9,7 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/util"
 
 	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
 )
@@ -23,8 +24,13 @@ func main() {
 	initDependencies()
 	router := chi.NewRouter()
 
+	router.Use(cors.Handler(cors.Options{
+		AllowedOrigins: []string{"*"},
+	}))
+
 	router.Route("/", func(subrouter chi.Router) {
 		subrouter.Get("/", healthProbe)
+		subrouter.Post("/event", routes.PostEvent)
 		subrouter.Get("/events", routes.GetEvents)
 		subrouter.Get("/users", routes.GetUsers)
 		subrouter.Get("/user", routes.GetUser)

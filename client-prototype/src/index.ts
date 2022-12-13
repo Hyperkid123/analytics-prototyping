@@ -107,7 +107,6 @@ class AnalyticsClient<
     const data = await this.emit(this._customEventEndpoint, event);
     this._ready = true
     if(this._buffer.length > 0) {
-      console.log(this._buffer)
       this._buffer.forEach(({ url, payload }) => this.fetchData(url, payload))
     }
     this._buffer = []
