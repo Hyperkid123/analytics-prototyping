@@ -9,21 +9,17 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/database"
 	"github.com/Hyperkid123/analytics-prototyping/models"
+	"github.com/Hyperkid123/analytics-prototyping/service"
 	"github.com/Hyperkid123/analytics-prototyping/util"
 	"github.com/go-chi/chi/v5"
 	"github.com/google/uuid"
 	"github.com/joho/godotenv"
 	"github.com/sirupsen/logrus"
-	"gorm.io/gorm"
 )
 
-var DB *gorm.DB
-
-func initDependencies() *gorm.DB {
+func initDependencies() {
 	config.Init()
-	DB = database.Init()
-
-	return DB
+	database.Init()
 }
 
 func main() {
@@ -31,8 +27,12 @@ func main() {
 	initDependencies()
 	router := chi.NewRouter()
 
-	router.Get("/", healthProbe)
-	router.Get("/events", getEvents)
+	router.Route("/", func(subrouter chi.Router) {
+		subrouter.Get("/", healthProbe)
+		subrouter.Get("/events", getEvents)
+
+	})
+
 	router.Get("/users", getUsers)
 	router.Get("/user", getUser)
 	router.Post("/user", postUser)
@@ -55,7 +55,7 @@ func healthProbe(response http.ResponseWriter, request *http.Request) {
 }
 
 func getUsers(response http.ResponseWriter, request *http.Request) {
-	payload := models.GetUsers(DB)
+	payload := service.GetUsers()
 
 	logrus.Infoln(payload)
 
@@ -74,7 +74,7 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	payload, payloadError := models.GetUser(DB, user.ID)
+	payload, payloadError := service.GetUser(user.ID)
 
 	if payloadError != nil {
 		http.Error(w, payloadError.Error(), http.StatusBadRequest)
@@ -109,7 +109,7 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 	}
 	logrus.Infoln(pMsg.String())
 
-	user.CreateUser(DB, user)
+	user.CreateUser(database.DB, user)
 
 	util.RespondWithJSON(w, http.StatusOK, user)
 }
@@ -126,7 +126,7 @@ func deleteUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = models.DeleteUser(DB, user.ID)
+	err = service.DeleteUser(user.ID)
 
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
@@ -159,7 +159,7 @@ func updateUser(w http.ResponseWriter, r *http.Request) {
 	}
 	logrus.Infoln(pMsg.String())
 
-	payload, payloadError := models.UpdateUser(DB, user)
+	payload, payloadError := service.UpdateUser(user)
 
 	if payloadError != nil {
 		http.Error(w, payloadError.Error(), http.StatusBadRequest)
