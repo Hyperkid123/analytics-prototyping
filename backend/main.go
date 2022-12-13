@@ -9,6 +9,7 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/database"
 	"github.com/Hyperkid123/analytics-prototyping/models"
+	"github.com/Hyperkid123/analytics-prototyping/util"
 	"github.com/go-chi/chi/v5"
 	"github.com/google/uuid"
 	"github.com/joho/godotenv"
@@ -17,14 +18,6 @@ import (
 )
 
 var DB *gorm.DB
-
-func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
-	response, _ := json.Marshal(payload)
-
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(code)
-	w.Write(response)
-}
 
 func initDependencies() *gorm.DB {
 	config.Init()
@@ -58,14 +51,7 @@ func healthProbe(response http.ResponseWriter, request *http.Request) {
 	payload := "Lookin' good"
 	logrus.Infoln("handled request on / ")
 
-	respondWithJSON(response, http.StatusOK, payload)
-}
-
-func getEvents(response http.ResponseWriter, request *http.Request) {
-	payload := models.GetEvents(DB)
-	logrus.Infoln("handled request on /events ")
-
-	respondWithJSON(response, http.StatusOK, payload)
+	util.RespondWithJSON(response, http.StatusOK, payload)
 }
 
 func getUsers(response http.ResponseWriter, request *http.Request) {
@@ -73,7 +59,7 @@ func getUsers(response http.ResponseWriter, request *http.Request) {
 
 	logrus.Infoln(payload)
 
-	respondWithJSON(response, http.StatusOK, payload)
+	util.RespondWithJSON(response, http.StatusOK, payload)
 }
 
 func getUser(w http.ResponseWriter, r *http.Request) {
@@ -95,7 +81,7 @@ func getUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, payload)
+	util.RespondWithJSON(w, http.StatusOK, payload)
 }
 
 func postUser(w http.ResponseWriter, r *http.Request) {
@@ -125,7 +111,7 @@ func postUser(w http.ResponseWriter, r *http.Request) {
 
 	user.CreateUser(DB, user)
 
-	respondWithJSON(w, http.StatusOK, user)
+	util.RespondWithJSON(w, http.StatusOK, user)
 }
 
 func deleteUser(w http.ResponseWriter, r *http.Request) {
@@ -147,7 +133,7 @@ func deleteUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, err)
+	util.RespondWithJSON(w, http.StatusOK, err)
 }
 
 func updateUser(w http.ResponseWriter, r *http.Request) {
@@ -180,5 +166,5 @@ func updateUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	respondWithJSON(w, http.StatusOK, payload)
+	util.RespondWithJSON(w, http.StatusOK, payload)
 }
