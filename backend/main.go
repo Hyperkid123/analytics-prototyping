@@ -62,7 +62,7 @@ func healthProbe(response http.ResponseWriter, request *http.Request) {
 }
 
 func getEvents(response http.ResponseWriter, request *http.Request) {
-	payload := "Fetch stuff from the database after we get models."
+	payload := models.GetEvents(DB)
 	logrus.Infoln("handled request on /events ")
 
 	respondWithJSON(response, http.StatusOK, payload)
