@@ -21,9 +21,9 @@ const DashboardPrototype = () => {
   >(undefined);
   const [widgets, setWidgets] = useState<ComponentTypes[]>([]);
   useEffect(() => {
-    fetch("/api/event/all")
+    fetch("http://localhost:8000/events")
       .then((r) => r.json())
-      .then(({ events }: { events: any }) => {
+      .then((events: DataContextValueType) => {
         setAllEvents(events);
       });
     fetch("/api/layout")
