@@ -3,7 +3,7 @@ services:
   analytics-service-db:
     image: postgres:14.1-alpine
     ports:
-      - 5432:5432
+      - 5555:5432
     environment:
       - POSTGRES_DB=analytics-service-db
       - POSTGRES_USER=analytics-service-user
