@@ -21762,17 +21762,26 @@
   "layout": {
     "gridLayout": [
       {
+        "w": 3,
+        "h": 6,
+        "x": 0,
+        "y": 0,
+        "i": "EventDelta-1671011634517",
+        "moved": false,
+        "static": false
+      },
+      {
         "w": 6,
         "h": 14,
         "x": 0,
-        "y": 12,
+        "y": 18,
         "i": "1",
         "moved": false,
         "static": false
       },
       {
         "w": 6,
-        "h": 11,
+        "h": 12,
         "x": 6,
         "y": 0,
         "i": "2",
@@ -21783,7 +21792,7 @@
         "w": 6,
         "h": 12,
         "x": 0,
-        "y": 0,
+        "y": 6,
         "i": "3",
         "moved": false,
         "static": false
@@ -21792,7 +21801,7 @@
         "w": 6,
         "h": 5,
         "x": 6,
-        "y": 22,
+        "y": 23,
         "i": "4",
         "moved": false,
         "static": false
@@ -21801,7 +21810,7 @@
         "w": 12,
         "h": 20,
         "x": 0,
-        "y": 27,
+        "y": 32,
         "i": "5",
         "moved": false,
         "static": false
@@ -21810,7 +21819,7 @@
         "w": 6,
         "h": 11,
         "x": 6,
-        "y": 11,
+        "y": 12,
         "i": "6",
         "moved": false,
         "static": false
@@ -21819,25 +21828,27 @@
     "componentMapping": {
       "1": "JourneyIndicator",
       "2": "JourneyLastStep",
-      "3": "EventActivity",
+      "3": "EventActivityHours",
       "4": "ActiveUsers",
       "5": "ActivityHeatmap",
-      "6": "PageEventsGraph"
+      "6": "PageEventsGraph",
+      "EventDelta-1671011634517": "EventDelta"
     }
   },
   "widgets": [
     "JourneyIndicator",
     "JourneyLastStep",
-    "EventActivity",
+    "EventActivityHours",
     "ActiveUsers",
     "ActivityHeatmap",
-    "PageEventsGraph"
+    "PageEventsGraph",
+    "EventDelta"
   ],
   "defaultLayout": {
     "componentMapping": {
       "1": "JourneyIndicator",
       "2": "JourneyLastStep",
-      "3": "EventActivity",
+      "3": "EventActivityHours",
       "4": "ActiveUsers",
       "5": "ActivityHeatmap",
       "6": "PageEventsGraph"

@@ -21819,7 +21819,7 @@
     "componentMapping": {
       "1": "JourneyIndicator",
       "2": "JourneyLastStep",
-      "3": "EventActivity",
+      "3": "EventActivityHours",
       "4": "ActiveUsers",
       "5": "ActivityHeatmap",
       "6": "PageEventsGraph"
@@ -21828,16 +21828,17 @@
   "widgets": [
     "JourneyIndicator",
     "JourneyLastStep",
-    "EventActivity",
+    "EventActivityHours",
     "ActiveUsers",
     "ActivityHeatmap",
-    "PageEventsGraph"
+    "PageEventsGraph",
+    "EventDelta"
   ],
   "defaultLayout": {
     "componentMapping": {
       "1": "JourneyIndicator",
       "2": "JourneyLastStep",
-      "3": "EventActivity",
+      "3": "EventActivityHours",
       "4": "ActiveUsers",
       "5": "ActivityHeatmap",
       "6": "PageEventsGraph"

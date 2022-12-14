@@ -1,9 +1,9 @@
-import { Grid, TextField, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import { DateRangePicker, LocalizationProvider } from "@mui/x-date-pickers-pro";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { Grid, Stack, Typography } from "@mui/material";
 import dynamic from "next/dynamic";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { Box } from "@mui/system";
 
 export type EventType = {
   data: {
@@ -165,7 +165,7 @@ const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
   );
 };
 
-const EventActivity = ({ data = [] }: { data: DataContextValueType }) => {
+const EventActivityHours = ({ data = [] }: { data: DataContextValueType }) => {
   const eventActivity = data.reduce<{ [key: number]: number }>((acc, curr) => {
     const hour = new Date(curr.data.timestamp).getHours();
     return {
@@ -200,6 +200,87 @@ const EventActivity = ({ data = [] }: { data: DataContextValueType }) => {
         />
       </Grid>
     </Grid>
+  );
+};
+
+const EventDelta = ({ data = [] }: { data: DataContextValueType }) => {
+  const today = new Date().getDate();
+  const prevWeekLimit = today - 7;
+  const hardLimit = today - 14;
+  const { currentSessions, prevSessions } = useMemo(() => {
+    const { currentWeek, prevWeek } = data.reduce<{
+      currentWeek: EventType[];
+      prevWeek: EventType[];
+    }>(
+      (acc, curr) => {
+        const currentDay = new Date(curr.data.timestamp).getDate();
+        if (currentDay >= prevWeekLimit) {
+          acc.currentWeek.push(curr);
+        } else if (currentDay < prevWeekLimit && currentDay > hardLimit) {
+          acc.prevWeek.push(curr);
+        }
+        return {
+          ...acc,
+        };
+      },
+      {
+        currentWeek: [],
+        prevWeek: [],
+      }
+    );
+    const currentSessions = Array.from(
+      new Set(currentWeek.map(({ data: { sessionId } }) => sessionId))
+    );
+    const prevSessions = Array.from(
+      new Set(prevWeek.map(({ data: { sessionId } }) => sessionId))
+    );
+    return {
+      currentSessions,
+      prevSessions,
+    };
+  }, [data, hardLimit, prevWeekLimit]);
+
+  const delta = currentSessions.length / (prevSessions.length / 100);
+
+  return (
+    <div>
+      <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
+        Weekly users
+      </Typography>
+      <Stack direction="row" spacing={3}>
+        <Stack>
+          <Typography>Last week</Typography>
+          <Typography component="h3" variant="h2">
+            {prevSessions.length}
+          </Typography>
+        </Stack>
+        <Stack>
+          <Typography>This week</Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Typography
+              component="h3"
+              variant="h2"
+              sx={{ overflowWrap: "normal", whiteSpace: "nowrap", mr: 1 }}
+            >
+              {currentSessions.length}
+            </Typography>
+            <div>
+              {delta > 100 ? (
+                <ArrowUpwardIcon fontSize="large" color="success" />
+              ) : (
+                <ArrowDownwardIcon fontSize="large" color="error" />
+              )}
+              <Typography
+                variant="subtitle2"
+                color={delta > 100 ? "#2e7d32" : "#ff1744"}
+              >
+                {delta}&nbsp;%
+              </Typography>
+            </div>
+          </Box>
+        </Stack>
+      </Stack>
+    </div>
   );
 };
 
@@ -402,9 +483,10 @@ const componentMapper = {
   PageEventsGraph,
   ActivityHeatmap,
   ActiveUsers,
-  EventActivity,
+  EventActivityHours,
   JourneyLastStep,
   JourneyIndicator,
+  EventDelta,
 };
 
 export type ComponentTypes = keyof typeof componentMapper;
