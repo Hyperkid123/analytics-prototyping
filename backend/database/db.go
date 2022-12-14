@@ -124,28 +124,23 @@ func Init() *gorm.DB {
 
 			userIdString := user["id"].(string)
 
-			userUUID, UUIDErr := uuid.Parse(userIdString)
-			if UUIDErr != nil {
-				logrus.Fatal("User ID parse failed:", UUIDErr.Error())
-			}
-
 			delete(user, "id") // Delete the ID, Store the rest in the "data" JSON blob
 			b, err := json.Marshal(userB)
 			if err != nil {
 				logrus.Fatal("Error marshaling user:", err)
 			}
 			var existingUser models.User
-			result := DB.Where("user_id = ?", userUUID).First(&existingUser)
+			result := DB.Where("user_id = ?", userIdString).First(&existingUser)
 			if result.RowsAffected > 0 {
 				existingUser.Data = b
 				DB.Save(&user)
 				usersUpdated += 1
 			} else {
-				newUser := models.User{UserID: userUUID, Data: b}
+				newUser := models.User{UserID: userIdString, Data: b}
 				result = DB.Create(&newUser)
 
 				if result.Error != nil {
-					logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
+					logrus.Fatal("Error creating user:", userIdString, result.Error.Error())
 				} else {
 					usersCreated++
 					userIDs[userIdString] = newUser.ID // Track ref user ID

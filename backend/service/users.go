@@ -53,7 +53,7 @@ func UpdateUser(payload models.User) (models.User, error) {
 	return payload, nil
 }
 
-func IdentifyUser(userID uuid.UUID, payload interface{}) (models.User, error) {
+func IdentifyUser(userID string, payload interface{}) (models.User, error) {
 	// remove extra id in payload
 	delete(payload.(map[string]interface{}), "id")
 	b, err := json.Marshal(payload)

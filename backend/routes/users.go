@@ -58,7 +58,8 @@ func PostUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user.UserID = userUUID
+	// FIXME: The user ID has to come in the request payload
+	user.UserID = userUUID.String()
 	payload := user.Data
 
 	pMsg.WriteString("Inserting user into DB:")

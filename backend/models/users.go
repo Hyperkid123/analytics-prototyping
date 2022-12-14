@@ -1,7 +1,6 @@
 package models
 
 import (
-	"github.com/google/uuid"
 	"gorm.io/datatypes"
 	"gorm.io/gorm"
 )
@@ -9,7 +8,7 @@ import (
 // Users
 type User struct {
 	BaseModel                // Store the internal ID for that user
-	UserID    uuid.UUID      `json:"userID"gorm:"unique"`
+	UserID    string         `json:"userID" gorm:"unique;type:text"`
 	Events    []Event        `gorm:"foreignKey:UserRef;references:UserID"` // user FK
 	Data      datatypes.JSON `json:"data" gorm:"type:JSONB;column:data"`   // Store additional metadata for users
 }

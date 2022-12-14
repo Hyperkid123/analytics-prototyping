@@ -56,12 +56,11 @@ func HandleEvent(event interface{}) (interface{}, error) {
 	if fmt.Sprintf("%v", eventType) == "identify" {
 		userId := gojsonq.New().FromInterface(event).Find("payload.id")
 		userPayload := gojsonq.New().FromInterface(event).Find("payload")
-		fmt.Println(eventType, userId)
-		userUUID, err := uuid.Parse(userId.(string))
-		if err != nil {
-			return nil, err
+
+		if userId == nil {
+			return nil, fmt.Errorf("no valid userid")
 		}
-		IdentifyUser(userUUID, userPayload)
+		IdentifyUser(userId.(string), userPayload)
 
 		sessionId, err := uuid.NewUUID()
 		if err != nil {
