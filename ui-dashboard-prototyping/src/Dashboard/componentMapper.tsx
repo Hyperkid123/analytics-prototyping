@@ -1,6 +1,6 @@
 import { Grid, Stack, Typography } from "@mui/material";
 import dynamic from "next/dynamic";
-import { useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Box } from "@mui/system";
@@ -21,6 +21,13 @@ export type EventType = {
 };
 
 export type DataContextValueType = EventType[];
+
+export type DashboardComponentProps = {
+  widgetId: string;
+  handleAddAlert: (id: string, message: string) => void;
+  handleRemoveAlert: (id: string) => void;
+  data: DataContextValueType;
+};
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -50,7 +57,7 @@ const parseToJourney = (journeyName: string, data: DataContextValueType) => {
   return groups;
 };
 
-const JourneyIndicator = ({ data }: { data: DataContextValueType }) => {
+const JourneyIndicator = ({ data }: DashboardComponentProps) => {
   const groups = parseToJourney("journey-events", data);
   const journeyGroups = Object.values(groups).reduce(
     (acc, curr) => {
@@ -105,7 +112,7 @@ const JourneyIndicator = ({ data }: { data: DataContextValueType }) => {
   );
 };
 
-const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
+const JourneyLastStep = ({ data }: DashboardComponentProps) => {
   const journeys = parseToJourney("journey-events", data);
   const lastSteps = Object.values(journeys)
     .map((group) => group.slice(group.length - 1))
@@ -165,7 +172,7 @@ const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
   );
 };
 
-const EventActivityHours = ({ data = [] }: { data: DataContextValueType }) => {
+const EventActivityHours = ({ data = [] }: DashboardComponentProps) => {
   const eventActivity = data.reduce<{ [key: number]: number }>((acc, curr) => {
     const hour = new Date(curr.data.timestamp).getHours();
     return {
@@ -203,7 +210,12 @@ const EventActivityHours = ({ data = [] }: { data: DataContextValueType }) => {
   );
 };
 
-const EventDelta = ({ data = [] }: { data: DataContextValueType }) => {
+const EventDelta = ({
+  data = [],
+  handleRemoveAlert,
+  handleAddAlert,
+  widgetId,
+}: DashboardComponentProps) => {
   const today = new Date().getDate();
   const prevWeekLimit = today - 7;
   const hardLimit = today - 14;
@@ -241,6 +253,13 @@ const EventDelta = ({ data = [] }: { data: DataContextValueType }) => {
   }, [data, hardLimit, prevWeekLimit]);
 
   const delta = currentSessions.length / (prevSessions.length / 100);
+  useEffect(() => {
+    if (delta > 100) {
+      handleRemoveAlert(widgetId);
+    } else {
+      handleAddAlert(widgetId, "Weekly users decrease");
+    }
+  }, [delta]);
 
   return (
     <div>
@@ -284,7 +303,7 @@ const EventDelta = ({ data = [] }: { data: DataContextValueType }) => {
   );
 };
 
-const ActiveUsers = ({ data = [] }: { data: DataContextValueType }) => {
+const ActiveUsers = ({ data = [] }: DashboardComponentProps) => {
   const count = new Set(data.map(({ data: { sessionId } }) => sessionId)).size;
   return (
     <div>
@@ -342,7 +361,7 @@ const getUserActivityHeatmap = (events: EventType[]) => {
   return activeByDays;
 };
 
-const ActivityHeatmap = ({ data = [] }: { data: DataContextValueType }) => {
+const ActivityHeatmap = ({ data = [] }: DashboardComponentProps) => {
   const internalData = useRef(getUserActivityHeatmap(data));
   const maximumAcitvity = Object.entries(internalData.current).reduce<number>(
     (acc, [, dayData]) => {
@@ -427,7 +446,7 @@ const ActivityHeatmap = ({ data = [] }: { data: DataContextValueType }) => {
   );
 };
 
-const PageEventsGraph = ({ data = [] }: { data: DataContextValueType }) => {
+const PageEventsGraph = ({ data = [] }: DashboardComponentProps) => {
   const pathnames = data
     .filter(({ data: { type } }) => type === "page")
     .map(
