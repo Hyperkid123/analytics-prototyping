@@ -21760,6 +21760,9 @@
     }
   ],
   "layout": {
+    "user": {
+      "id": "6ef966c5-0a0b-4055-a879-2606ef7bf223"
+    },
     "gridLayout": [
       {
         "w": 6,
@@ -21825,14 +21828,19 @@
       "6": "PageEventsGraph"
     }
   },
-  "widgets": [
-    "JourneyIndicator",
-    "JourneyLastStep",
-    "EventActivity",
-    "ActiveUsers",
-    "ActivityHeatmap",
-    "PageEventsGraph"
-  ],
+  "widgets": {
+    "user": {
+      "id": "6ef966c5-0a0b-4055-a879-2606ef7bf223"
+    },
+    "entries": [
+      "JourneyIndicator",
+      "JourneyLastStep",
+      "EventActivity",
+      "ActiveUsers",
+      "ActivityHeatmap",
+      "PageEventsGraph"
+    ]
+  },
   "defaultLayout": {
     "componentMapping": {
       "1": "JourneyIndicator",

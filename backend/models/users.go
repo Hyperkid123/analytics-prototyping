@@ -9,8 +9,10 @@ import (
 // Users
 type User struct {
 	BaseModel                // Store the internal ID for that user
-	UserID    uuid.UUID      `json:"userID"gorm:"unique"`
+	UserID    uuid.UUID      `json:"userID" gorm:"unique"`
 	Events    []Event        `gorm:"foreignKey:UserRef;references:UserID"` // user FK
+	Widgets   []Widget       `gorm:"foreignKey:UserRef;references:UserID"` // user FK`
+	Layout    Layout         `gorm:"foreignKey:UserRef;references:UserID"` // user FK
 	Data      datatypes.JSON `json:"data" gorm:"type:JSONB;column:data"`   // Store additional metadata for users
 }
 
