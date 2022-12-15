@@ -68,8 +68,13 @@ func Init() *gorm.DB {
 			DB.Migrator().CreateTable(&models.Event{})
 		}
 
+		if !DB.Migrator().HasTable(&models.EventType{}) {
+			logrus.Infoln("Creating EventType table...")
+			DB.Migrator().CreateTable(&models.EventType{})
+		}
+
 		logrus.Infoln("Running auto-migration...")
-		DB.AutoMigrate(&models.User{}, &models.Event{})
+		DB.AutoMigrate(&models.User{}, &models.Event{}, &models.EventType{})
 	}
 
 	if err != nil {
@@ -107,6 +112,7 @@ func Init() *gorm.DB {
 		usersUpdated := 0
 		userIDs := make(map[string]uint) // Keep track of UserIDs for later reference
 		eventsCreated := 0
+		eventTypesCreated := 0
 
 		for i := 0; i < lenUsers; i++ {
 			user := users[i].(map[string]interface{})
@@ -159,8 +165,25 @@ func Init() *gorm.DB {
 		// Create Sessions from Events
 		logrus.Infoln("Events found for Sessions:", lenEvents)
 
+		// Clear all events before seeding
+		DB.Unscoped().Where("1 = 1").Delete(&models.Event{})
+		DB.Unscoped().Where("1 = 1").Delete(&models.EventType{})
+
+		eventTypes := map[string]models.EventType{}
+
 		for i := 0; i < lenEvents; i++ {
 			event := events[i].(map[string]interface{})
+
+			eventTypeString := gojsonq.New().FromInterface(event).Find("type").(string)
+			eventType, typeExists := eventTypes[eventTypeString]
+			if !typeExists {
+				eventType = models.EventType{
+					EventName: eventTypeString,
+				}
+				DB.Create(&eventType)
+				eventTypes[eventTypeString] = eventType
+				eventTypesCreated += 1
+			}
 			// get user ref
 			userRef := gojsonq.New().FromInterface(event).Find("user.id")
 			// Bail if we don't find a user ID
@@ -192,8 +215,9 @@ func Init() *gorm.DB {
 			}
 
 			newEvent := models.Event{
-				UserRef: uuidVal,
-				Data:    b,
+				UserRef:     uuidVal,
+				Data:        b,
+				EventTypeID: eventType.ID,
 			}
 
 			result = DB.Create(&newEvent)
@@ -203,6 +227,7 @@ func Init() *gorm.DB {
 			}
 
 			DB.Model(&eventUser).Association("Events").Append(&newEvent)
+			DB.Model(&eventType).Association("Events").Append(&newEvent)
 			eventsCreated += 1
 
 			// Parse Session UUID
@@ -222,6 +247,7 @@ func Init() *gorm.DB {
 		}
 
 		logrus.Infoln("Created events:", eventsCreated)
+		logrus.Infoln("Created event types:", eventTypesCreated)
 
 		// Get Events to Seed
 
