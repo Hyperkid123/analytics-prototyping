@@ -22,8 +22,14 @@ const port = 3000;
 const app = next({ dev, hostname, port });
 const handle = app.getRequestHandler();
 
-app.prepare().then(() => {
+app.prepare().then((r) => {
   createServer(async (req, res) => {
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "*"
+    ); /* @dev First, read about security */
+    res.setHeader("Access-Control-Allow-Methods", "OPTIONS, GET");
+    res.setHeader("Access-Control-Max-Age", 2592000); // 30 days
     try {
       // Be sure to pass `true` as the second argument to `url.parse`.
       // This tells it to parse the query portion of the URL.
