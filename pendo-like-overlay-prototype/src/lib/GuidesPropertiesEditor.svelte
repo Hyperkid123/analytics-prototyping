@@ -45,11 +45,8 @@
 </div>
 
 <style>
-  .editor-body,
   .drag-handle {
     padding: 0.5em;
-  }
-  .drag-handle {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     background: #212121;
@@ -78,12 +75,13 @@
     height: 50%;
   }
   .overlay {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    background-color: azure;
     position: fixed;
     width: 300px;
     height: 300px;
     top: 0;
+    background: white;
   }
 </style>
