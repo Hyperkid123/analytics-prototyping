@@ -8,11 +8,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "serve-assets": "http-server dist -p 9009 --cors"
+    "serve-assets": "http-server dist -p 9009 --cors",
+    "format": "prettier --write '{public,src}/**/*.{css,html,js,svelte}'"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.1.0",
     "http-server": "^14.1.1",
+    "prettier": "^2.8.1",
+    "prettier-plugin-svelte": "^2.9.0",
     "svelte": "^3.52.0",
     "vite": "^3.2.3"
   },
