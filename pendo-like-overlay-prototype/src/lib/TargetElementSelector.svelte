@@ -2,6 +2,7 @@
     import { onDestroy } from "svelte";
     import { selectedElement } from "../stores/selectedElement";
     let isEnabled = false
+    let hoverIndicator;
 
     function mouseOverListener(ev) {
       const isValid = !ev.target.closest("[data-guide-control=true]")
@@ -10,6 +11,13 @@
         ev.preventDefault()
         return
       }
+      const pos = ev.target.getBoundingClientRect()
+
+      hoverIndicator.style.left = `${pos.x}px`
+      hoverIndicator.style.top = `${pos.y}px`
+      hoverIndicator.style.width = `${pos.width}px`
+      hoverIndicator.style.height = `${pos.height}px`
+
     }
 
     function targetClickListener(ev) {
@@ -23,6 +31,13 @@
       handleToggleSelect(false)
     }
 
+    function resetIndicator() {
+      hoverIndicator.style.left = `0px`
+      hoverIndicator.style.top = `0px`
+      hoverIndicator.style.width = `0px`
+      hoverIndicator.style.height = `0px`
+    }
+
     function handleToggleSelect(selected) {
       isEnabled = selected;
       if(isEnabled) {
@@ -31,12 +46,14 @@
       } else {
         document.removeEventListener('mouseover', mouseOverListener)
         document.removeEventListener('click', targetClickListener)
+        resetIndicator()
       }
     }
 
     onDestroy(() => {
       document.removeEventListener('mouseover', mouseOverListener)
       document.removeEventListener('click', targetClickListener)
+      resetIndicator()
     })
 </script>
 
@@ -48,3 +65,22 @@
     Stop element selection
   {/if}
 </button>
+
+<div bind:this={hoverIndicator} class="hover-indicator"></div>
+
+<style>
+  .hover-indicator {
+    position: fixed;
+    pointer-events: none;
+  }
+
+  .hover-indicator:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    border: 2px solid black;
+  }
+</style>
