@@ -1,5 +1,7 @@
 <script>
   import { activeEditorTab } from '../../stores/activeEditorTab'
+  import PositionTab from './PositionTab.svelte'
+  import TabBody from './TabBody.svelte'
 
   let tabItems = [
     {
@@ -30,6 +32,11 @@
       >
     {/each}
   </div>
+  <TabBody>
+    {#if $activeEditorTab === 'position'}
+      <PositionTab />
+    {/if}
+  </TabBody>
 </div>
 
 <style>

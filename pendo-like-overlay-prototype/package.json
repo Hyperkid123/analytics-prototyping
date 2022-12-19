@@ -20,6 +20,7 @@
     "vite": "^3.2.3"
   },
   "dependencies": {
-    "interactjs": "^1.10.17"
+    "interactjs": "^1.10.17",
+    "svelte-select": "^5.0.0"
   }
 }

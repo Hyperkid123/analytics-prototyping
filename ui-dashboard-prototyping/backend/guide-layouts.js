@@ -1,5 +1,9 @@
 const layouts = [
   {
+    rootPosition: {
+      type: "element",
+      direction: "bottom",
+    },
     id: "simple-banner",
     title: "Simple banner",
     defaultElement: "div",
@@ -29,6 +33,7 @@ const layouts = [
           cursor: "pointer",
         },
       },
+      "Simple banner",
     ],
   },
 ];

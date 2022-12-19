@@ -1,19 +1,36 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onDestroy, onMount } from 'svelte'
   import { guideLayout } from '../stores/guideLayouts'
   import { selectedElement } from '../stores/selectedElement'
+  import getGuidePosition from './GuideRenderer/getGuidePosition'
   import RenderChildren from './GuideRenderer/RenderChildren.svelte'
 
   let containerElement
   const position = { x: 0, y: 0 }
-  onMount(() => {
-    if ($selectedElement) {
-      const { x, bottom } = $selectedElement.getBoundingClientRect()
-      position.x = x + 16
-      position.y = bottom + 16
+
+  function updatePosition(newPosition) {
+    if(containerElement) {
+      position.x = newPosition.x
+      position.y = newPosition.y
       containerElement.style.top = `${position.y}px`
       containerElement.style.left = `${position.x}px`
     }
+  }
+  onMount(() => {
+    if ($selectedElement) {
+      const newPosition = getGuidePosition($selectedElement, containerElement, $guideLayout.rootPosition)
+      updatePosition(newPosition)
+    }
+  })
+
+  const unsubGuideLayout = guideLayout.subscribe(() => {
+    if($selectedElement && containerElement) {
+      updatePosition(getGuidePosition($selectedElement, containerElement, $guideLayout.rootPosition))
+    }
+  })
+
+  onDestroy(() => {
+    unsubGuideLayout()
   })
 </script>
 

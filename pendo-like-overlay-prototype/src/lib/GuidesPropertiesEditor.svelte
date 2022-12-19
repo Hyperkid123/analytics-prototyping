@@ -10,9 +10,9 @@
 
   onMount(() => {
     if ($selectedElement && overlayElement && dragHandleElement) {
-      const { x, bottom } = $selectedElement.getBoundingClientRect()
-      position.x = x + 16
-      position.y = bottom + 16
+      const { width } = document.body.getBoundingClientRect()
+      position.x = width - 350
+      position.y = 48
       overlayElement.style.transform = `translate(${position.x}px, ${position.y}px)`
       interact(overlayElement)
         .allowFrom(dragHandleElement)
