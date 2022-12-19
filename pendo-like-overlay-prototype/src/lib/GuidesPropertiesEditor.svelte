@@ -9,6 +9,10 @@
 
   onMount(() => {
     if($selectedElement && overlayElement && dragHandleElement) {
+      const {x, bottom} = $selectedElement.getBoundingClientRect()
+      position.x = x + 16
+      position.y = bottom + 16
+      overlayElement.style.transform = `translate(${position.x}px, ${position.y}px)`
       interact(overlayElement)
       .allowFrom(dragHandleElement)
       .draggable({
@@ -46,6 +50,6 @@
     position: fixed;
     width: 300px;
     height: 300px;
-    top: 0
+    top: 0;
   }
 </style>
