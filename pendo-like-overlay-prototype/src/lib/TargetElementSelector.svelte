@@ -36,6 +36,7 @@
       hoverIndicator.style.top = `0px`
       hoverIndicator.style.width = `0px`
       hoverIndicator.style.height = `0px`
+      hoverIndicator.style.display = 'none'
     }
 
     function handleToggleSelect(selected) {
@@ -43,6 +44,7 @@
       if(isEnabled) {
         document.addEventListener('mouseover', mouseOverListener)
         document.addEventListener('click', targetClickListener)
+        hoverIndicator.style.display = 'block'
       } else {
         document.removeEventListener('mouseover', mouseOverListener)
         document.removeEventListener('click', targetClickListener)
@@ -70,6 +72,7 @@
 
 <style>
   .hover-indicator {
+    display: none;
     position: fixed;
     pointer-events: none;
   }
