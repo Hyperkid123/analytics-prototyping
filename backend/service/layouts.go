@@ -7,11 +7,12 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/database"
 	"github.com/Hyperkid123/analytics-prototyping/models"
 	"github.com/google/uuid"
+	"github.com/sirupsen/logrus"
 	"github.com/thedevsaddam/gojsonq/v2"
 )
 
-func GetLayout(userId uuid.UUID) models.Layout {
-	var layout models.Layout
+func GetLayout(userId uuid.UUID) []models.Layout {
+	var layout []models.Layout
 
 	database.DB.Where("user_ref = ?", userId).Find(&layout)
 
@@ -33,11 +34,13 @@ func createLayout(layout interface{}, user models.User) (models.Layout, error) {
 	uuidString := fmt.Sprintf("%v", user.UserID)
 	uuidVal, err := uuid.Parse(uuidString)
 	if err != nil {
+		logrus.Infoln("Cannot get user from layout", err)
 		return models.Layout{}, err
 	}
 
 	b, err := json.Marshal(layout)
 	if err != nil {
+		logrus.Infoln("Cannot marshall layout", err)
 		return models.Layout{}, err
 	}
 
@@ -48,41 +51,20 @@ func createLayout(layout interface{}, user models.User) (models.Layout, error) {
 
 	err = database.DB.Create(&newLayout).Error
 	if err != nil {
+		logrus.Infoln("Cannot create layout", err)
 		return models.Layout{}, err
 	}
 
-	err = database.DB.Model(&user).Association("Events").Append(&newLayout)
-	if err != nil {
-		return models.Layout{}, err
-	}
+	// err = database.DB.Model(&user).Association("Layouts").Append(&newLayout)
+	// if err != nil {
+	// 	return models.Layout{}, err
+	// }
 
 	return newLayout, nil
 }
 
-func StoreLayout(event interface{}) (interface{}, error) {
-	eventType := gojsonq.New().FromInterface(event).Find("type")
-	if fmt.Sprintf("%v", eventType) == "identify" {
-		userId := gojsonq.New().FromInterface(event).Find("payload.id")
-		userPayload := gojsonq.New().FromInterface(event).Find("payload")
-		fmt.Println(eventType, userId)
-		userUUID, err := uuid.Parse(userId.(string))
-		if err != nil {
-			return nil, err
-		}
-		IdentifyUser(userUUID, userPayload)
-
-		sessionId, err := uuid.NewUUID()
-		if err != nil {
-			return nil, err
-		}
-		response := map[string]interface{}{}
-		response["error"] = false
-		response["init"] = true
-		response["uuid"] = sessionId
-		return response, nil
-	}
-	// Check for correct user associated with event
-	userId := gojsonq.New().FromInterface(event).Find("user.id")
+func StoreLayout(layout interface{}) (interface{}, error) {
+	userId := gojsonq.New().FromInterface(layout).Find("user.id")
 	userUUID, err := uuid.Parse(userId.(string))
 
 	if err != nil {
@@ -91,18 +73,14 @@ func StoreLayout(event interface{}) (interface{}, error) {
 
 	exists, user := CheckExistingUser(userUUID)
 	if !exists {
-		return nil, fmt.Errorf("event is not associate with any user")
+		return nil, fmt.Errorf("layout is not associate with any user")
 	}
 
 	// create new event in DB
-	_, err = createEvent(event, user)
+	payload, err := createLayout(layout, user)
 	if err != nil {
 		return nil, err
 	}
-	// Default event response
-	payload := map[string]interface{}{}
-	payload["error"] = false
-	payload["init"] = false
 
 	return payload, nil
 }

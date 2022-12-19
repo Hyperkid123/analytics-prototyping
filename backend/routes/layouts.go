@@ -18,7 +18,7 @@ func GetLayout(response http.ResponseWriter, request *http.Request) {
 		UserID: uuid.MustParse(userString),
 	}
 	payload := service.GetLayout(user.UserID)
-	logrus.Infoln("handled request on /layout for ", user.ID)
+	logrus.Infoln("handled request on /layout for ", user.UserID)
 
 	util.RespondWithJSON(response, http.StatusOK, payload)
 }
@@ -29,12 +29,15 @@ func StoreLayout(response http.ResponseWriter, request *http.Request) {
 	err := json.NewDecoder(request.Body).Decode(&layout)
 
 	if err != nil {
+		logrus.Infoln("Cannot decode layout", err)
 		http.Error(response, err.Error(), http.StatusBadRequest)
 		return
 	}
 
+	logrus.Infoln("handled request on /layout")
 	payload, err := service.StoreLayout(layout)
 	if err != nil {
+		logrus.Infoln("can't create layout ", err)
 		util.RespondWithJSON(response, http.StatusBadRequest, err)
 	}
 
