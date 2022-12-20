@@ -39,7 +39,9 @@ func main() {
 		subrouter.Post("/user", routes.PostUser)
 		subrouter.Delete("/user", routes.DeleteUser)
 		subrouter.Put("/user", routes.UpdateUser)
-		subrouter.Get("/layouts", routes.GetLayout)
+		subrouter.Get("/layouts", routes.GetLayouts)
+		subrouter.Get("/activeLayout", routes.GetActiveLayout)
+		subrouter.Post("/activeLayout/{id}", routes.SetActiveLayout)
 		// TODO: implement post /layout
 		subrouter.Post("/layouts", routes.StoreLayout)
 		subrouter.Get("/widgets", routes.GetWidgets)

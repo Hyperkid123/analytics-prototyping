@@ -11,12 +11,48 @@ import (
 	"github.com/thedevsaddam/gojsonq/v2"
 )
 
-func GetLayout(userId uuid.UUID) []models.Layout {
+const DEFAULT_LAYOUT_ID = 1
+
+func GetLayouts(userId uuid.UUID) []models.Layout {
 	var layout []models.Layout
 
 	database.DB.Where("user_ref = ?", userId).Find(&layout)
 
 	return layout
+}
+
+func GetActiveLayoutID(userId uuid.UUID) uint {
+
+	var user models.User
+	err := database.DB.Where("user_id = ? ", userId).First(&user).Error
+
+	if err != nil {
+		logrus.Infoln("Cannot find user", userId)
+		return 0
+	}
+
+	// TODO: Better type check here. It's a uint, not uuid
+	if user.ActiveLayout > 0 {
+		return user.ActiveLayout
+	}
+
+	return DEFAULT_LAYOUT_ID
+}
+
+func SetActiveLayout(userId uuid.UUID, layoutId uint) uint {
+	var user models.User
+	err := database.DB.Where("user_id = ? ", userId).First(&user).Error
+	if err != nil {
+		logrus.Infoln("No such user", userId)
+		return 0
+	}
+	user.ActiveLayout = layoutId
+	err = database.DB.Model(&user).Update("active_layout", user.ActiveLayout).Error
+	if err != nil {
+		logrus.Errorln("Cannot uptdate layout for user", user.UserID)
+		return 0
+	}
+	return layoutId
 }
 
 func GetWidgets(userId uuid.UUID) []models.Widget {
