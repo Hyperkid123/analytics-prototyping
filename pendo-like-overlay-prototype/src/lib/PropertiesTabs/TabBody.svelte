@@ -4,6 +4,6 @@
 
 <style>
   .tab-body {
-    padding: 0px .5em .5em .5em
+    padding: 0px 0.5em 0.5em 0.5em;
   }
 </style>

@@ -9,7 +9,7 @@
   const position = { x: 0, y: 0 }
 
   function updatePosition(newPosition) {
-    if(containerElement) {
+    if (containerElement) {
       position.x = newPosition.x
       position.y = newPosition.y
       containerElement.style.top = `${position.y}px`
@@ -18,14 +18,24 @@
   }
   onMount(() => {
     if ($selectedElement) {
-      const newPosition = getGuidePosition($selectedElement, containerElement, $guideLayout.rootPosition)
+      const newPosition = getGuidePosition(
+        $selectedElement,
+        containerElement,
+        $guideLayout.rootPosition
+      )
       updatePosition(newPosition)
     }
   })
 
   const unsubGuideLayout = guideLayout.subscribe(() => {
-    if($selectedElement && containerElement) {
-      updatePosition(getGuidePosition($selectedElement, containerElement, $guideLayout.rootPosition))
+    if ($selectedElement && containerElement) {
+      updatePosition(
+        getGuidePosition(
+          $selectedElement,
+          containerElement,
+          $guideLayout.rootPosition
+        )
+      )
     }
   })
 
