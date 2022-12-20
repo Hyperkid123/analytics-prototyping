@@ -53,7 +53,6 @@ func SetActiveLayout(response http.ResponseWriter, request *http.Request) {
 	util.RespondWithJSON(response, http.StatusOK, payload)
 }
 
-// TODO: Add userId header here
 func StoreLayout(response http.ResponseWriter, request *http.Request) {
 	var layout map[string]interface{}
 	err := json.NewDecoder(request.Body).Decode(&layout)
