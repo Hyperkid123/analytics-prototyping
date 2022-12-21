@@ -1,23 +1,33 @@
-import { Grid, TextField, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import { DateRangePicker, LocalizationProvider } from "@mui/x-date-pickers-pro";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { Grid, Stack, Typography } from "@mui/material";
 import dynamic from "next/dynamic";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { Box } from "@mui/system";
 
 export type EventType = {
-  sessionId: string;
-  timestamp: number;
-  type: string;
-  journeyName?: string;
-  journeyId?: string;
-  journeyStep?: string;
-  payload: {
-    pathname?: string;
+  data: {
+    sessionId: string;
+    timestamp: number;
+    type: string;
+    journeyName?: string;
+    journeyId?: string;
+    journeyStep?: string;
+    payload: {
+      pathname?: string;
+    };
   };
+  userID: string;
 };
 
 export type DataContextValueType = EventType[];
+
+export type DashboardComponentProps = {
+  widgetId: string;
+  handleAddAlert: (id: string, message: string) => void;
+  handleRemoveAlert: (id: string) => void;
+  data: DataContextValueType;
+};
 
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
@@ -26,32 +36,33 @@ const ReactApexChart = dynamic(() => import("react-apexcharts"), {
 const parseToJourney = (journeyName: string, data: DataContextValueType) => {
   const journeys = data.filter(
     (entry) =>
-      entry?.type.match(/^journey-/) && entry?.journeyName === journeyName
+      entry?.data?.type.match(/^journey-/) &&
+      entry?.data?.journeyName === journeyName
   );
   const groups = journeys.reduce<{
     [key: string]: EventType[];
   }>((acc, curr) => {
-    if (!acc[curr.journeyId!]) {
+    if (!acc[curr.data.journeyId!]) {
       return {
         ...acc,
-        [curr.journeyId!]: [curr],
+        [curr.data.journeyId!]: [curr],
       };
     }
 
     return {
       ...acc,
-      [curr.journeyId!]: [...acc[curr.journeyId!], curr],
+      [curr.data.journeyId!]: [...acc[curr.data.journeyId!], curr],
     };
   }, {});
   return groups;
 };
 
-const JourneyIndicator = ({ data }: { data: DataContextValueType }) => {
+const JourneyIndicator = ({ data }: DashboardComponentProps) => {
   const groups = parseToJourney("journey-events", data);
   const journeyGroups = Object.values(groups).reduce(
     (acc, curr) => {
       let resolved = false;
-      curr.forEach(({ type }) => {
+      curr.forEach(({ data: { type } }) => {
         if (type === "journey-start") {
           // acc.started += 1
         }
@@ -101,30 +112,30 @@ const JourneyIndicator = ({ data }: { data: DataContextValueType }) => {
   );
 };
 
-const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
+const JourneyLastStep = ({ data }: DashboardComponentProps) => {
   const journeys = parseToJourney("journey-events", data);
   const lastSteps = Object.values(journeys)
     .map((group) => group.slice(group.length - 1))
     .flat()
     .reduce<{ [key: string]: number }>((acc, curr) => {
       if (
-        curr.type === "journey-start" ||
-        curr.type === "journey-finish" ||
-        curr.type === "journey-cancel"
+        curr.data.type === "journey-start" ||
+        curr.data.type === "journey-finish" ||
+        curr.data.type === "journey-cancel"
       ) {
-        return acc[curr.type]
-          ? { ...acc, [curr.type]: (acc[curr.type] += 1) }
-          : { ...acc, [curr.type]: 1 };
+        return acc[curr.data.type]
+          ? { ...acc, [curr.data.type]: (acc[curr.data.type] += 1) }
+          : { ...acc, [curr.data.type]: 1 };
       }
 
-      return acc[curr.journeyStep!]
+      return acc[curr.data.journeyStep!]
         ? {
             ...acc,
-            [curr.journeyStep!]: acc[curr.journeyStep!] + 1,
+            [curr.data.journeyStep!]: acc[curr.data.journeyStep!] + 1,
           }
         : {
             ...acc,
-            [curr.journeyStep!]: 1,
+            [curr.data.journeyStep!]: 1,
           };
     }, {});
   const parsedData = Object.entries(lastSteps).map(([name, value]) => ({
@@ -161,9 +172,9 @@ const JourneyLastStep = ({ data }: { data: DataContextValueType }) => {
   );
 };
 
-const EventActivity = ({ data = [] }: { data: DataContextValueType }) => {
+const EventActivityHours = ({ data = [] }: DashboardComponentProps) => {
   const eventActivity = data.reduce<{ [key: number]: number }>((acc, curr) => {
-    const hour = new Date(curr.timestamp).getHours();
+    const hour = new Date(curr.data.timestamp).getHours();
     return {
       ...acc,
       [hour]: acc[hour] ? acc[hour] + 1 : 1,
@@ -199,8 +210,101 @@ const EventActivity = ({ data = [] }: { data: DataContextValueType }) => {
   );
 };
 
-const ActiveUsers = ({ data = [] }: { data: DataContextValueType }) => {
-  const count = new Set(data.map(({ sessionId }) => sessionId)).size;
+const EventDelta = ({
+  data = [],
+  handleRemoveAlert,
+  handleAddAlert,
+  widgetId,
+}: DashboardComponentProps) => {
+  const today = new Date().getDate();
+  const prevWeekLimit = today - 7;
+  const hardLimit = today - 14;
+  const { currentSessions, prevSessions } = useMemo(() => {
+    const { currentWeek, prevWeek } = data.reduce<{
+      currentWeek: EventType[];
+      prevWeek: EventType[];
+    }>(
+      (acc, curr) => {
+        const currentDay = new Date(curr.data.timestamp).getDate();
+        if (currentDay >= prevWeekLimit) {
+          acc.currentWeek.push(curr);
+        } else if (currentDay < prevWeekLimit && currentDay > hardLimit) {
+          acc.prevWeek.push(curr);
+        }
+        return {
+          ...acc,
+        };
+      },
+      {
+        currentWeek: [],
+        prevWeek: [],
+      }
+    );
+    const currentSessions = Array.from(
+      new Set(currentWeek.map(({ data: { sessionId } }) => sessionId))
+    );
+    const prevSessions = Array.from(
+      new Set(prevWeek.map(({ data: { sessionId } }) => sessionId))
+    );
+    return {
+      currentSessions,
+      prevSessions,
+    };
+  }, [data, hardLimit, prevWeekLimit]);
+
+  const delta = currentSessions.length / (prevSessions.length / 100);
+  useEffect(() => {
+    if (delta > 100) {
+      handleRemoveAlert(widgetId);
+    } else {
+      handleAddAlert(widgetId, "Weekly users decrease");
+    }
+  }, [delta]);
+
+  return (
+    <div>
+      <Typography component="h2" variant="h4" sx={{ mb: 2 }}>
+        Weekly users
+      </Typography>
+      <Stack direction="row" spacing={3}>
+        <Stack>
+          <Typography>Last week</Typography>
+          <Typography component="h3" variant="h2">
+            {prevSessions.length}
+          </Typography>
+        </Stack>
+        <Stack>
+          <Typography>This week</Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Typography
+              component="h3"
+              variant="h2"
+              sx={{ overflowWrap: "normal", whiteSpace: "nowrap", mr: 1 }}
+            >
+              {currentSessions.length}
+            </Typography>
+            <div>
+              {delta > 100 ? (
+                <ArrowUpwardIcon fontSize="large" color="success" />
+              ) : (
+                <ArrowDownwardIcon fontSize="large" color="error" />
+              )}
+              <Typography
+                variant="subtitle2"
+                color={delta > 100 ? "#2e7d32" : "#ff1744"}
+              >
+                {delta}&nbsp;%
+              </Typography>
+            </div>
+          </Box>
+        </Stack>
+      </Stack>
+    </div>
+  );
+};
+
+const ActiveUsers = ({ data = [] }: DashboardComponentProps) => {
+  const count = new Set(data.map(({ data: { sessionId } }) => sessionId)).size;
   return (
     <div>
       <Typography variant="h4">Active Users</Typography>
@@ -238,10 +342,10 @@ const generateEmptyHeatMap = () =>
 
 const getUserActivityHeatmap = (events: EventType[]) => {
   const activeByDays = events.reduce((acc, curr) => {
-    const eventDate = new Date(curr.timestamp);
+    const eventDate = new Date(curr.data.timestamp);
     const eventDay = eventDate.getDay();
     const eventHour = eventDate.getHours();
-    const eventSession = curr.sessionId;
+    const eventSession = curr.data.sessionId;
     const sessionDatapoint = { ...acc[eventDay][eventHour] };
     if (!sessionDatapoint.activeSessions.includes(eventSession)) {
       sessionDatapoint.activeSessions.push(eventSession);
@@ -257,7 +361,7 @@ const getUserActivityHeatmap = (events: EventType[]) => {
   return activeByDays;
 };
 
-const ActivityHeatmap = ({ data = [] }: { data: DataContextValueType }) => {
+const ActivityHeatmap = ({ data = [] }: DashboardComponentProps) => {
   const internalData = useRef(getUserActivityHeatmap(data));
   const maximumAcitvity = Object.entries(internalData.current).reduce<number>(
     (acc, [, dayData]) => {
@@ -342,10 +446,16 @@ const ActivityHeatmap = ({ data = [] }: { data: DataContextValueType }) => {
   );
 };
 
-const PageEventsGraph = ({ data = [] }: { data: DataContextValueType }) => {
+const PageEventsGraph = ({ data = [] }: DashboardComponentProps) => {
   const pathnames = data
-    .filter(({ type }) => type === "page")
-    .map(({ payload: { pathname } }) => pathname as string);
+    .filter(({ data: { type } }) => type === "page")
+    .map(
+      ({
+        data: {
+          payload: { pathname },
+        },
+      }) => pathname as string
+    );
   const sum = Object.entries(
     pathnames.reduce<{ [key: string]: number }>((acc, curr) => {
       return {
@@ -392,9 +502,10 @@ const componentMapper = {
   PageEventsGraph,
   ActivityHeatmap,
   ActiveUsers,
-  EventActivity,
+  EventActivityHours,
   JourneyLastStep,
   JourneyIndicator,
+  EventDelta,
 };
 
 export type ComponentTypes = keyof typeof componentMapper;

@@ -76,8 +76,13 @@ func Init() *gorm.DB {
 			DB.Migrator().CreateTable(&models.Layout{})
 		}
 
+		if !DB.Migrator().HasTable(&models.EventType{}) {
+			logrus.Infoln("Creating EventType table...")
+			DB.Migrator().CreateTable(&models.EventType{})
+		}
+
 		logrus.Infoln("Running auto-migration...")
-		DB.AutoMigrate(&models.User{}, &models.Event{}, &models.Widget{}, &models.Layout{})
+		DB.AutoMigrate(&models.User{}, &models.Event{}, &models.EventType{}, &models.Widget{}, &models.Layout{})
 	}
 
 	if err != nil {
@@ -116,6 +121,7 @@ func Init() *gorm.DB {
 		userIDs := make(map[string]uint) // Keep track of UserIDs for later reference
 		widgetsCreated := 0
 		eventsCreated := 0
+		eventTypesCreated := 0
 
 		for i := 0; i < lenUsers; i++ {
 			user := users[i].(map[string]interface{})
@@ -133,28 +139,23 @@ func Init() *gorm.DB {
 
 			userIdString := user["id"].(string)
 
-			userUUID, UUIDErr := uuid.Parse(userIdString)
-			if UUIDErr != nil {
-				logrus.Fatal("User ID parse failed:", UUIDErr.Error())
-			}
-
 			delete(user, "id") // Delete the ID, Store the rest in the "data" JSON blob
 			b, err := json.Marshal(userB)
 			if err != nil {
 				logrus.Fatal("Error marshaling user:", err)
 			}
 			var existingUser models.User
-			result := DB.Where("user_id = ?", userUUID).First(&existingUser)
+			result := DB.Where("user_id = ?", userIdString).First(&existingUser)
 			if result.RowsAffected > 0 {
 				existingUser.Data = b
 				DB.Save(&user)
 				usersUpdated += 1
 			} else {
-				newUser := models.User{UserID: userUUID, Data: b}
+				newUser := models.User{UserID: userIdString, Data: b}
 				result = DB.Create(&newUser)
 
 				if result.Error != nil {
-					logrus.Fatal("Error creating user:", userUUID, result.Error.Error())
+					logrus.Fatal("Error creating user:", userIdString, result.Error.Error())
 				} else {
 					usersCreated++
 					userIDs[userIdString] = newUser.ID // Track ref user ID
@@ -173,8 +174,25 @@ func Init() *gorm.DB {
 		// Create Sessions from Events
 		logrus.Infoln("Events found for Sessions:", lenEvents)
 
+		// Clear all events before seeding
+		DB.Unscoped().Where("1 = 1").Delete(&models.Event{})
+		DB.Unscoped().Where("1 = 1").Delete(&models.EventType{})
+
+		eventTypes := map[string]models.EventType{}
+
 		for i := 0; i < lenEvents; i++ {
 			event := events[i].(map[string]interface{})
+
+			eventTypeString := gojsonq.New().FromInterface(event).Find("type").(string)
+			eventType, typeExists := eventTypes[eventTypeString]
+			if !typeExists {
+				eventType = models.EventType{
+					EventName: eventTypeString,
+				}
+				DB.Create(&eventType)
+				eventTypes[eventTypeString] = eventType
+				eventTypesCreated += 1
+			}
 			// get user ref
 			userRef := gojsonq.New().FromInterface(event).Find("user.id")
 			// Bail if we don't find a user ID
@@ -206,8 +224,9 @@ func Init() *gorm.DB {
 			}
 
 			newEvent := models.Event{
-				UserRef: uuidVal,
-				Data:    b,
+				UserRef:     uuidVal,
+				Data:        b,
+				EventTypeID: eventType.ID,
 			}
 
 			result = DB.Create(&newEvent)
@@ -217,6 +236,7 @@ func Init() *gorm.DB {
 			}
 
 			DB.Model(&eventUser).Association("Events").Append(&newEvent)
+			DB.Model(&eventType).Association("Events").Append(&newEvent)
 			eventsCreated += 1
 
 		}
@@ -228,6 +248,8 @@ func Init() *gorm.DB {
 		if userRef == nil {
 			return DB
 		}
+		logrus.Infoln("Created events:", eventsCreated)
+		logrus.Infoln("Created event types:", eventTypesCreated)
 
 		// remove user propery from event
 		delete(layout, "user")

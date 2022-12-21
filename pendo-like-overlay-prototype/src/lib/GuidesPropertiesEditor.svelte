@@ -1,53 +1,87 @@
 <script>
-  import { onDestroy, onMount } from "svelte";
-  import { selectedElement } from "../stores/selectedElement";
+  import { onMount } from 'svelte'
+  import { selectedElement } from '../stores/selectedElement'
+  import interact from 'interactjs'
+  import PropertiesTabs from './PropertiesTabs/PropertiesTabs.svelte'
 
-  let containerPositionTop = 0
-  let containerPositionLeft = 0
-
-  var isMouseDown = false;
-  addEventListener("mousedown", ()=>isMouseDown = true);
-  addEventListener("mouseup", ()=>isMouseDown = false);
-
-  function drag(ev) {
-    const rect = ev.target.getBoundingClientRect();
-    containerPositionTop = ev.pageY
-    containerPositionLeft = ev.pageX
-  }
-
-  function dragEnd(ev) {
-    containerPositionTop = ev.pageY
-    containerPositionLeft = ev.pageX
-  }
-
-  function dragStart(ev) {        
-    const crt = this.cloneNode(true);
-    // crt.style.display = "none"; hide the drag ghost
-    ev.dataTransfer.setDragImage(crt, 0, 0);
-    ev.dataTransfer.dropEffect = "move";
-    ev.dataTransfer
-    .setData("text", ev.target.getAttribute('id'));
-  }
+  let overlayElement
+  let dragHandleElement
+  const position = { x: 0, y: 0 }
 
   onMount(() => {
-    if($selectedElement) {
-      // update initial position to prevent target element blocking
-      const rect = $selectedElement.getBoundingClientRect()
-      containerPositionTop = rect.top + rect.height + 8
+    if ($selectedElement && overlayElement && dragHandleElement) {
+      const { width } = document.body.getBoundingClientRect()
+      position.x = width - 350
+      position.y = 48
+      overlayElement.style.transform = `translate(${position.x}px, ${position.y}px)`
+      interact(overlayElement)
+        .allowFrom(dragHandleElement)
+        .draggable({
+          listeners: {
+            move(event) {
+              position.x += event.dx
+              position.y += event.dy
+
+              event.target.style.transform = `translate(${position.x}px, ${position.y}px)`
+            },
+          },
+        })
     }
   })
 </script>
 
-
-<div id="guide-overlay-main-container" style="left: {containerPositionLeft}px; top: {containerPositionTop}px" class="overlay" on:dragstart={dragStart} on:dragend={dragEnd} on:drag={drag} draggable="true">
-  <div draggable="false">
-    <h1>There will be dragons</h1>
+<div
+  bind:this={overlayElement}
+  id="guide-overlay-main-container"
+  class="overlay"
+>
+  <div bind:this={dragHandleElement} class="drag-handle">
+    <span class="drag-handle-icon" />
+    Edit properties
+  </div>
+  <div class="editor-body">
+    <PropertiesTabs />
   </div>
 </div>
 
 <style>
+  .drag-handle {
+    padding: 0.5em;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background: #212121;
+    color: white;
+    display: flex;
+    align-items: baseline;
+  }
+  .drag-handle-icon {
+    display: inline-block;
+    width: 1.2em;
+    height: 0.8em;
+    margin-right: 0.8em;
+  }
+
+  .drag-handle-icon,
+  .drag-handle-icon::before {
+    background-image: radial-gradient(white 40%, transparent 40%);
+    background-size: 6px 6px;
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+  }
+  .drag-handle-icon::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
   .overlay {
-    background-color: azure;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    background: white;
   }
 </style>

@@ -1,7 +1,15 @@
-import { Box, Card, CardContent, IconButton, styled } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  IconButton,
+  styled,
+  Tooltip,
+} from "@mui/material";
 import React, { useContext, useState } from "react";
 import GridLayout, { Layout } from "react-grid-layout";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
+import WarningIcon from "@mui/icons-material/Warning";
 import DeleteIcon from "@mui/icons-material/Delete";
 import componentMapper, {
   ComponentTypes,
@@ -14,15 +22,34 @@ const DataContext = React.createContext<DataContextValueType>([]);
 
 const LayoutComponentWrapper = ({
   component,
+  handleAddAlert,
+  handleRemoveAlert,
+  widgetId,
 }: {
   component: ComponentTypes;
+  handleAddAlert: (id: string, message: string) => void;
+  handleRemoveAlert: (id: string) => void;
+  widgetId: string;
 }) => {
   const Cmp = componentMapper[component];
   const data = useContext(DataContext);
-  return <Cmp data={data} />;
+  return (
+    <Cmp
+      widgetId={widgetId}
+      handleAddAlert={handleAddAlert}
+      handleRemoveAlert={handleRemoveAlert}
+      data={data}
+    />
+  );
 };
 
-const DragHandle = ({ handleRemoveItem }: { handleRemoveItem: () => void }) => {
+const DragHandle = ({
+  handleRemoveItem,
+  alert,
+}: {
+  alert?: string;
+  handleRemoveItem: () => void;
+}) => {
   const [isDragging, setIsDragging] = useState(false);
   return (
     <Box
@@ -44,6 +71,19 @@ const DragHandle = ({ handleRemoveItem }: { handleRemoveItem: () => void }) => {
         },
       }}
     >
+      {alert && (
+        <Box sx={{ position: "absolute", left: 0, top: 0 }}>
+          <Tooltip placement="bottom" title={<Box>{alert}</Box>}>
+            <IconButton
+              onMouseDown={(e) => e.stopPropagation()}
+              color="warning"
+              sx={{ cursor: "help" }}
+            >
+              <WarningIcon />
+            </IconButton>
+          </Tooltip>
+        </Box>
+      )}
       <Box
         sx={{
           display: "flex",
@@ -81,17 +121,23 @@ const DnDLayout = ({
   layout,
   handleLayoutUpdate,
   handleRemoveItem,
+  handleAddAlert,
+  handleRemoveAlert,
+  alerts,
 }: {
   allEvents: DataContextValueType;
   layout: {
     componentMapping: { [key: string]: ComponentTypes };
     gridLayout: DnDLayoutItem[];
   };
+  handleAddAlert: (id: string, message: string) => void;
+  handleRemoveAlert: (id: string) => void;
   handleLayoutUpdate: (
     gridLayout: DnDLayoutItem[],
     componentMapping: { [key: string]: ComponentTypes }
   ) => void;
   handleRemoveItem: (itemId: string) => void;
+  alerts: { [key: string]: string };
 }) => {
   return (
     <LayoutWrapper>
@@ -108,9 +154,15 @@ const DnDLayout = ({
         >
           {layout.gridLayout.map(({ i, ...rest }) => (
             <Card key={i} data-grid={rest} sx={{ overflow: "hidden" }}>
-              <DragHandle handleRemoveItem={() => handleRemoveItem(i)} />
+              <DragHandle
+                alert={alerts[i]}
+                handleRemoveItem={() => handleRemoveItem(i)}
+              />
               <CardContent>
                 <LayoutComponentWrapper
+                  widgetId={i}
+                  handleAddAlert={handleAddAlert}
+                  handleRemoveAlert={handleRemoveAlert}
                   component={layout.componentMapping[i]}
                 />
               </CardContent>

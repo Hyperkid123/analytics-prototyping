@@ -1,9 +1,7 @@
 <script>
-  import TargetElementSelector from "./TargetElementSelector.svelte";
+  import TargetElementSelector from './TargetElementSelector.svelte'
   let controlsAlign = 'bottom'
-  const controlAlignOptions = [
-    'left', 'top', 'right', 'bottom'
-  ]
+  const controlAlignOptions = ['left', 'top', 'right', 'bottom']
 </script>
 
 <div class="controls {controlsAlign}" id="guide-builder-controls">
@@ -14,7 +12,7 @@
 </div>
 
 <style>
-.controls {
+  .controls {
     position: fixed;
     background-color: coral;
     padding: 8px;

@@ -18,7 +18,7 @@ func GetEvents() []models.Event {
 	return events
 }
 
-func createEvent(event interface{}, user models.User) (models.Event, error) {
+func createEvent(event interface{}, user models.User, eventType models.EventType) (models.Event, error) {
 	var newEvent models.Event
 
 	delete(event.(map[string]interface{}), "user")
@@ -34,8 +34,9 @@ func createEvent(event interface{}, user models.User) (models.Event, error) {
 	}
 
 	newEvent = models.Event{
-		UserRef: uuidVal,
-		Data:    b,
+		UserRef:     uuidVal,
+		EventTypeID: eventType.ID,
+		Data:        b,
 	}
 
 	err = database.DB.Create(&newEvent).Error
@@ -52,29 +53,37 @@ func createEvent(event interface{}, user models.User) (models.Event, error) {
 }
 
 func HandleEvent(event interface{}) (interface{}, error) {
-	eventType := gojsonq.New().FromInterface(event).Find("type")
-	if fmt.Sprintf("%v", eventType) == "identify" {
-		userId := gojsonq.New().FromInterface(event).Find("payload.id")
+	userId := gojsonq.New().FromInterface(event).Find("user.id")
+
+	// Default event response
+	payload := map[string]interface{}{}
+	payload["error"] = false
+	payload["init"] = false
+
+	// event type
+	eventTypeString := gojsonq.New().FromInterface(event).Find("type").(string)
+	eventType := models.EventType{
+		EventName: eventTypeString,
+	}
+	database.DB.Where("event_name = ?", eventTypeString).FirstOrCreate(&eventType)
+
+	if eventTypeString == "identify" {
+		userId = gojsonq.New().FromInterface(event).Find("payload.id")
 		userPayload := gojsonq.New().FromInterface(event).Find("payload")
-		fmt.Println(eventType, userId)
-		userUUID, err := uuid.Parse(userId.(string))
-		if err != nil {
-			return nil, err
+
+		if userId == nil {
+			return nil, fmt.Errorf("no valid userid")
 		}
-		IdentifyUser(userUUID, userPayload)
+		IdentifyUser(userId.(string), userPayload)
 
 		sessionId, err := uuid.NewUUID()
 		if err != nil {
 			return nil, err
 		}
-		response := map[string]interface{}{}
-		response["error"] = false
-		response["init"] = true
-		response["uuid"] = sessionId
-		return response, nil
+		payload["error"] = false
+		payload["init"] = true
+		payload["uuid"] = sessionId
 	}
-	// Check for correct user associated with event
-	userId := gojsonq.New().FromInterface(event).Find("user.id")
 	userUUID, err := uuid.Parse(userId.(string))
 
 	if err != nil {
@@ -87,14 +96,12 @@ func HandleEvent(event interface{}) (interface{}, error) {
 	}
 
 	// create new event in DB
-	_, err = createEvent(event, user)
+	eventEntity, err := createEvent(event, user, eventType)
 	if err != nil {
 		return nil, err
 	}
-	// Default event response
-	payload := map[string]interface{}{}
-	payload["error"] = false
-	payload["init"] = false
+
+	database.DB.Model(&eventType).Association("Events").Append(&eventEntity)
 
 	return payload, nil
 }

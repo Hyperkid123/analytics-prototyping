@@ -7,11 +7,13 @@ import {
   DataContextValueType,
 } from "../src/Dashboard/componentMapper";
 import WidgetSelector from "../src/Dashboard/WidgetSelector";
+import AlertsBar from "../src/Dashboard/AlertsBar";
 
 const DashboardPrototype = () => {
   const [allEvents, setAllEvents] = useState<DataContextValueType | undefined>(
     undefined
   );
+  const [alerts, setAlerts] = useState<{ [key: string]: string }>({});
   const [layout, setLayout] = useState<
     | {
         gridLayout: DnDLayoutItem[];
@@ -21,9 +23,9 @@ const DashboardPrototype = () => {
   >(undefined);
   const [widgets, setWidgets] = useState<ComponentTypes[]>([]);
   useEffect(() => {
-    fetch("/api/event/all")
+    fetch("http://localhost:8000/events")
       .then((r) => r.json())
-      .then(({ events }: { events: any }) => {
+      .then((events: DataContextValueType) => {
         setAllEvents(events);
       });
     fetch("/api/layout")
@@ -96,6 +98,19 @@ const DashboardPrototype = () => {
     }));
   };
 
+  const handleAddAlert = (id: string, message: string) => {
+    if (id.length > 0 && message.length > 0) {
+      setAlerts((prev) => ({ ...prev, [id]: message }));
+    }
+  };
+
+  const handleRemoveAlert = (id: string) =>
+    setAlerts((prev) => {
+      const newState = { ...prev };
+      delete newState[id];
+      return newState;
+    });
+
   return (
     <Container maxWidth="lg">
       <Grid container spacing={3}>
@@ -105,9 +120,17 @@ const DashboardPrototype = () => {
             widgetList={widgets}
           />
         </Grid>
+        {Object.values(alerts).length > 0 && (
+          <Grid item sm={12}>
+            <AlertsBar alerts={Object.values(alerts)} />
+          </Grid>
+        )}
         <Grid item sm={12}>
           {allEvents && layout ? (
             <DnDLayout
+              alerts={alerts}
+              handleAddAlert={handleAddAlert}
+              handleRemoveAlert={handleRemoveAlert}
               handleRemoveItem={handleRemoveItem}
               handleLayoutUpdate={handleLayoutUpdate}
               layout={layout}
