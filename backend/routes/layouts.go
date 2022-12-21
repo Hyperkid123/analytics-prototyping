@@ -9,7 +9,6 @@ import (
 	"github.com/Hyperkid123/analytics-prototyping/service"
 	"github.com/Hyperkid123/analytics-prototyping/util"
 	"github.com/go-chi/chi/v5"
-	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 )
 
@@ -17,9 +16,9 @@ func GetLayouts(response http.ResponseWriter, request *http.Request) {
 	// TODO: Setup better error handling
 	userString := request.Context().Value("USER").(string)
 	user := models.User{
-		UserID: uuid.MustParse(userString),
+		UserID: userString,
 	}
-	payload := service.GetLayouts(user.UserID)
+	payload := service.GetLayouts(userString)
 	logrus.Infoln("handled request on /layout for ", user.UserID)
 
 	util.RespondWithJSON(response, http.StatusOK, payload)
@@ -28,9 +27,9 @@ func GetLayouts(response http.ResponseWriter, request *http.Request) {
 func GetActiveLayout(response http.ResponseWriter, request *http.Request) {
 	userString := request.Context().Value("USER").(string)
 	user := models.User{
-		UserID: uuid.MustParse(userString),
+		UserID: userString,
 	}
-	payload := service.GetActiveLayoutID(user.UserID)
+	payload := service.GetActiveLayoutID(userString)
 	logrus.Infoln("handled request on /active for ", user.UserID)
 
 	util.RespondWithJSON(response, http.StatusOK, payload)
@@ -39,7 +38,7 @@ func GetActiveLayout(response http.ResponseWriter, request *http.Request) {
 func SetActiveLayout(response http.ResponseWriter, request *http.Request) {
 	userString := request.Context().Value("USER").(string)
 	user := models.User{
-		UserID: uuid.MustParse(userString),
+		UserID: userString,
 	}
 	layoutId := chi.URLParam(request, "id")
 	l64, err := strconv.ParseUint(layoutId, 10, 32)
@@ -77,7 +76,7 @@ func StoreLayout(response http.ResponseWriter, request *http.Request) {
 func GetWidgets(response http.ResponseWriter, request *http.Request) {
 	userString := request.Context().Value("USER").(string)
 	user := models.User{
-		UserID: uuid.MustParse(userString),
+		UserID: userString,
 	}
 	payload := service.GetWidgets(user.UserID)
 

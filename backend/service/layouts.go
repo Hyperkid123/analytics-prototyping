@@ -13,7 +13,7 @@ import (
 
 const DEFAULT_LAYOUT_ID = 1
 
-func GetLayouts(userId uuid.UUID) []models.Layout {
+func GetLayouts(userId string) []models.Layout {
 	var layout []models.Layout
 
 	database.DB.Where("user_ref = ?", userId).Find(&layout)
@@ -21,7 +21,7 @@ func GetLayouts(userId uuid.UUID) []models.Layout {
 	return layout
 }
 
-func GetActiveLayoutID(userId uuid.UUID) uint {
+func GetActiveLayoutID(userId string) uint {
 
 	var user models.User
 	err := database.DB.Where("user_id = ? ", userId).First(&user).Error
@@ -39,7 +39,7 @@ func GetActiveLayoutID(userId uuid.UUID) uint {
 	return DEFAULT_LAYOUT_ID
 }
 
-func SetActiveLayout(userId uuid.UUID, layoutId uint) uint {
+func SetActiveLayout(userId string, layoutId uint) uint {
 	var user models.User
 	err := database.DB.Where("user_id = ? ", userId).First(&user).Error
 	if err != nil {
@@ -55,7 +55,7 @@ func SetActiveLayout(userId uuid.UUID, layoutId uint) uint {
 	return layoutId
 }
 
-func GetWidgets(userId uuid.UUID) []models.Widget {
+func GetWidgets(userId string) []models.Widget {
 	var widgets []models.Widget
 
 	database.DB.Where("user_ref = ?", userId).Find(&widgets)
