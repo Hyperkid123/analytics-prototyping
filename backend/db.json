@@ -20626,87 +20626,135 @@
       "id": "7208a42b-b2c1-4384-aa99-a32c322ba00f",
       "lastName": "Olson",
       "subscriptionTier": "free"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/9.jpg",
-      "birthday": "1986-10-06T07:20:19.115Z",
-      "email": "Idell.Runolfsson84@gmail.com",
-      "firstName": "Maggie",
-      "id": "7681b871-c601-4a25-abf9-accf0a58ef78",
-      "lastName": "Lehner",
-      "subscriptionTier": "business"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/837.jpg",
-      "birthday": "1991-07-27T00:01:41.504Z",
-      "email": "Orin_Haag7@yahoo.com",
-      "firstName": "Kylee",
-      "id": "d379d5da-42cf-4f79-b751-2dce26de46b2",
-      "lastName": "Cole",
-      "subscriptionTier": "business"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/484.jpg",
-      "birthday": "1974-09-21T19:35:32.319Z",
-      "email": "Pattie_Haag@hotmail.com",
-      "firstName": "Layla",
-      "id": "1bcf214b-af40-4b09-aefd-b019be92babe",
-      "lastName": "Bruen",
-      "subscriptionTier": "free"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/779.jpg",
-      "birthday": "2004-06-27T07:11:30.857Z",
-      "email": "Willa_Hackett51@yahoo.com",
-      "firstName": "Nora",
-      "id": "8b799a11-d688-4e98-a875-60c7c9145ab1",
-      "lastName": "Bartell",
-      "subscriptionTier": "free"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/800.jpg",
-      "birthday": "1965-05-23T11:03:47.545Z",
-      "email": "Madyson_Larson@gmail.com",
-      "firstName": "Muhammad",
-      "id": "88022dba-d93d-4d4f-97df-5f92735aa1c0",
-      "lastName": "Hegmann",
-      "subscriptionTier": "basic"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/331.jpg",
-      "birthday": "1951-12-14T21:19:18.827Z",
-      "email": "Eva_Gleason@yahoo.com",
-      "firstName": "Coy",
-      "id": "4f971f41-8e83-413e-9383-c285ae4ffa6f",
-      "lastName": "Miller",
-      "subscriptionTier": "basic"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/643.jpg",
-      "birthday": "1953-04-14T10:37:08.479Z",
-      "email": "Charlotte_Will17@yahoo.com",
-      "firstName": "Judson",
-      "id": "14c039ad-c351-4bae-9379-602343c480bb",
-      "lastName": "Becker",
-      "subscriptionTier": "basic"
-    },
-    {
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/286.jpg",
-      "birthday": "1987-01-19T10:13:24.003Z",
-      "email": "Laurence.Runolfsson98@hotmail.com",
-      "firstName": "Abbey",
-      "id": "befd5f4c-bbd6-4bca-8afe-7daf47a06561",
-      "lastName": "Hagenes",
-      "subscriptionTier": "basic"
     }
   ],
+  "layout": {
+    "gridLayout": [
+      {
+        "w": 6,
+        "h": 14,
+        "x": 0,
+        "y": 12,
+        "i": "1",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 11,
+        "x": 6,
+        "y": 0,
+        "i": "2",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 12,
+        "x": 0,
+        "y": 0,
+        "i": "3",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 5,
+        "x": 6,
+        "y": 22,
+        "i": "4",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 12,
+        "h": 20,
+        "x": 0,
+        "y": 27,
+        "i": "5",
+        "moved": false,
+        "static": false
+      },
+      {
+        "w": 6,
+        "h": 11,
+        "x": 6,
+        "y": 11,
+        "i": "6",
+        "moved": false,
+        "static": false
+      }
+    ],
+    "componentMapping": {
+      "1": "JourneyIndicator",
+      "2": "JourneyLastStep",
+      "3": "EventActivity",
+      "4": "ActiveUsers",
+      "5": "ActivityHeatmap",
+      "6": "PageEventsGraph"
+    }
+  },
   "widgets": [
     "JourneyIndicator",
     "JourneyLastStep",
-    "EventActivityHours",
+    "EventActivity",
     "ActiveUsers",
     "ActivityHeatmap",
-    "PageEventsGraph",
-    "EventDelta"
-  ]
+    "PageEventsGraph"
+  ],
+  "defaultLayout": {
+    "componentMapping": {
+      "1": "JourneyIndicator",
+      "2": "JourneyLastStep",
+      "3": "EventActivity",
+      "4": "ActiveUsers",
+      "5": "ActivityHeatmap",
+      "6": "PageEventsGraph"
+    },
+    "gridLayout": [
+      {
+        "i": "1",
+        "h": 13,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "i": "2",
+        "h": 10,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      {
+        "i": "3",
+        "h": 11,
+        "w": 6,
+        "x": 0,
+        "y": 1
+      },
+      {
+        "i": "4",
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      {
+        "i": "5",
+        "h": 20,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      {
+        "component": "PageEventsGraph",
+        "i": "6",
+        "h": 10,
+        "w": 6,
+        "x": 6,
+        "y": 1
+      }
+    ]
+  }
 }

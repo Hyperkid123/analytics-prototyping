@@ -5,6 +5,7 @@ import (
 
 	"github.com/Hyperkid123/analytics-prototyping/config"
 	"github.com/Hyperkid123/analytics-prototyping/database"
+	middleware "github.com/Hyperkid123/analytics-prototyping/middleware"
 	"github.com/Hyperkid123/analytics-prototyping/routes"
 	"github.com/Hyperkid123/analytics-prototyping/util"
 
@@ -29,6 +30,7 @@ func main() {
 	}))
 
 	router.Route("/", func(subrouter chi.Router) {
+		router.Use(middleware.GetUser)
 		subrouter.Get("/", healthProbe)
 		subrouter.Post("/event", routes.PostEvent)
 		subrouter.Get("/events", routes.GetEvents)
@@ -37,6 +39,11 @@ func main() {
 		subrouter.Post("/user", routes.PostUser)
 		subrouter.Delete("/user", routes.DeleteUser)
 		subrouter.Put("/user", routes.UpdateUser)
+		subrouter.Get("/layouts", routes.GetLayouts)
+		subrouter.Post("/layouts", routes.StoreLayout)
+		subrouter.Get("/activeLayout", routes.GetActiveLayout)
+		subrouter.Post("/activeLayout/{id}", routes.SetActiveLayout)
+		subrouter.Get("/widgets", routes.GetWidgets)
 	})
 
 	logrus.Infoln("----------------------------------")

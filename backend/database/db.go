@@ -67,6 +67,14 @@ func Init() *gorm.DB {
 			logrus.Infoln("Creating Event table...")
 			DB.Migrator().CreateTable(&models.Event{})
 		}
+		if !DB.Migrator().HasTable(&models.Widget{}) {
+			logrus.Infoln("Creating Widget table...")
+			DB.Migrator().CreateTable(&models.Widget{})
+		}
+		if !DB.Migrator().HasTable(&models.Layout{}) {
+			logrus.Infoln("Creating Layout table...")
+			DB.Migrator().CreateTable(&models.Layout{})
+		}
 
 		if !DB.Migrator().HasTable(&models.EventType{}) {
 			logrus.Infoln("Creating EventType table...")
@@ -74,7 +82,7 @@ func Init() *gorm.DB {
 		}
 
 		logrus.Infoln("Running auto-migration...")
-		DB.AutoMigrate(&models.User{}, &models.Event{}, &models.EventType{})
+		DB.AutoMigrate(&models.User{}, &models.Event{}, &models.EventType{}, &models.Widget{}, &models.Layout{})
 	}
 
 	if err != nil {
@@ -111,6 +119,7 @@ func Init() *gorm.DB {
 		usersCreated := 0
 		usersUpdated := 0
 		userIDs := make(map[string]uint) // Keep track of UserIDs for later reference
+		widgetsCreated := 0
 		eventsCreated := 0
 		eventTypesCreated := 0
 
@@ -230,29 +239,95 @@ func Init() *gorm.DB {
 			DB.Model(&eventType).Association("Events").Append(&newEvent)
 			eventsCreated += 1
 
-			// Parse Session UUID
-			// sessionUUID, UUIDErr := uuid.Parse(event["sessionId"].(string))
-			// if UUIDErr != nil {
-			// 	logrus.Fatal("Session ID parse failed:", UUIDErr.Error())
-			// }
-
-			// Parse User to get ID to link to previously created
-			// users to obtain the UUID PK that was generated
-			// user := event["user"].(map[string]interface{})
-			// userRefID := userIDs[user["id"].(string)]
-
-			// if UUIDErr != nil {
-			// 	logrus.Fatal("Session User Ref ID parse failed:", UUIDErr.Error())
-			// }
 		}
 
+		layout := seedJson["layout"].(map[string]interface{})
+		userRef := gojsonq.New().FromInterface(layout).Find("user.id")
+		logrus.Info(userRef)
+		// Bail if we don't find a user ID
+		if userRef == nil {
+			return DB
+		}
 		logrus.Infoln("Created events:", eventsCreated)
 		logrus.Infoln("Created event types:", eventTypesCreated)
 
-		// Get Events to Seed
+		// remove user propery from event
+		delete(layout, "user")
+		uuidString := fmt.Sprintf("%v", userRef)
+		uuidVal, err := uuid.Parse(uuidString)
+		if err != nil {
+			logrus.Fatal("User Ref uuid parse failed:", err.Error())
+		}
 
-		// Create Journeys from Events
+		var layoutUser models.User
+		result := DB.Where("user_id   = ?", uuidString).First(&layoutUser)
+		logrus.Info(layoutUser)
 
+		if result.Error != nil {
+			// no user associated with the event
+			logrus.Infoln("Unable to find layout user: ", result.Error.Error(), "skipping")
+			return DB
+		}
+
+		b, err := json.Marshal(layout)
+
+		if err != nil {
+			logrus.Fatal("Unable to parse layout data: ", err.Error())
+		}
+
+		newLayout := models.Layout{
+			UserRef: uuidVal,
+			Data:    b,
+		}
+
+		result = DB.Create(&newLayout)
+
+		if result.Error != nil {
+			logrus.Fatal("Error creating layout:", newLayout, result.Error.Error())
+		}
+
+		widgets := seedJson["widgets"].(map[string]interface{})
+
+		userRef = gojsonq.New().FromInterface(widgets).Find("user.id")
+		// Bail if we don't find a user ID
+		if userRef == nil {
+			return DB
+		}
+
+		// remove user propery from event
+		delete(widgets, "user")
+		uuidString = fmt.Sprintf("%v", userRef)
+		uuidVal, err = uuid.Parse(uuidString)
+		if err != nil {
+			logrus.Fatal("User Ref uuid parse failed:", err.Error())
+		}
+
+		var widgetUser models.User
+		result = DB.Where("user_id   = ?", uuidString).First(&widgetUser)
+
+		if result.Error != nil || result.RowsAffected == 0 {
+			// no user associated with the event
+			logrus.Infoln("Unable to find widget user: ", result.Error.Error(), "skipping")
+		}
+
+		b, err = json.Marshal(widgets)
+
+		if err != nil {
+			logrus.Fatal("Unable to parse widget data: ", err.Error())
+		}
+
+		newWidget := models.Widget{
+			UserRef: uuidVal,
+			Data:    b,
+		}
+
+		result = DB.Create(&newWidget)
+
+		if result.Error != nil {
+			logrus.Fatal("Error creating event:", newWidget, result.Error.Error())
+		}
+		widgetsCreated += 1
+		logrus.Infoln("Created widgets:", widgetsCreated)
 	}
 
 	return DB
